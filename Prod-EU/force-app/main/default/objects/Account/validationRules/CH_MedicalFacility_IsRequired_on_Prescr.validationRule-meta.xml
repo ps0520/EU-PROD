@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CH_MedicalFacility_IsRequired_on_Prescr</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND (
+RecordType.DeveloperName = &apos;CH_Prescriber&apos;,
+ISBLANK( Medical_Facility__c)
+)</errorConditionFormula>
+    <errorMessage>Medical Facility is required for Prescriber.</errorMessage>
+</ValidationRule>

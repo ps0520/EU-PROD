@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CH_Guardian_Required_For_Under18_Patient</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(OR(ISBLANK( Parent_Guardian_First_Name__c ), ISBLANK( Parent_Guardian_Last_Name__c )), BEGINS( RecordType.DeveloperName, &apos;CH_Consumer&apos;), ADDMONTHS( PersonBirthdate, 216) &gt; TODAY(),
+NOT($Profile.Name = &quot;System Administrator&quot;),
+NOT($User.Alias = &quot;autoproc&quot;),
+OR(ISBLANK(System_Of_Origin__c), System_Of_Origin__c = &apos;crm&apos;))</errorConditionFormula>
+    <errorMessage>Parent/Guardian First and Last Name are required for Under 18 Patient.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Training_Preference__c</fullName>
+    <externalId>false</externalId>
+    <label>Training Preference</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Initial Training in Doctors Office</fullName>
+                <default>false</default>
+                <label>Initial Training in Doctors Office</label>
+            </value>
+            <value>
+                <fullName>Initial Training by Sales Rep</fullName>
+                <default>false</default>
+                <label>Initial Training by Sales Rep</label>
+            </value>
+            <value>
+                <fullName>Initial Training done by Webinar</fullName>
+                <default>false</default>
+                <label>Initial Training done by Webinar</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DE_Ins_Company_Ident_Req_For_DE_Payor</fullName>
+    <active>true</active>
+    <description>Insurance Company Identification Number Required for Payors.</description>
+    <errorConditionFormula>AND (    
+ 	 RecordType.DeveloperName = &apos;DE_Payor&apos;,
+	 ISBLANK( Insurance_Company_Identification_Number__c)
+)</errorConditionFormula>
+    <errorMessage>&apos;Insurance Company Identification Number&apos; is required for Payors.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Credit_Hold__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Flag denotes if a customer is on Credit hold or not</description>
+    <externalId>false</externalId>
+    <label>Credit Hold</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

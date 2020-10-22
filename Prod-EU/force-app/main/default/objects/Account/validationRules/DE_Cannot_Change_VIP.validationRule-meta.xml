@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DE_Cannot_Change_VIP</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( BEGINS(RecordType.DeveloperName, &apos;DE&apos;),
+OR(Pediatric__c = True,
+Pregnant_or_Planning_Pregnancy__c = True),
+ISCHANGED(VIP__c),
+VIP__c = False
+)</errorConditionFormula>
+    <errorMessage>VIP field should be checked.</errorMessage>
+</ValidationRule>

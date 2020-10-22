@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CA_Bill_To_ZipCode_Validation</fullName>
+    <active>true</active>
+    <description>Validate the Zip Code for Cananda</description>
+    <errorConditionFormula>AND(
+BEGINS(RecordType.DeveloperName, &apos;CA&apos;),
+NOT(ISBLANK(  BillingPostalCode )),
+NOT( REGEX(BillingPostalCode, &quot;[A-Z][0-9][A-Z] [0-9][A-Z][0-9]&quot;)) )</errorConditionFormula>
+    <errorDisplayField>BillingPostalCode</errorDisplayField>
+    <errorMessage>Invalid Postal Code</errorMessage>
+</ValidationRule>

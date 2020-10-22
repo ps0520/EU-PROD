@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CA_OneKeyId_Req_For_Prescriber_MedFac</fullName>
+    <active>true</active>
+    <description>When creating Prescriber or MedFac OneKey Id is required</description>
+    <errorConditionFormula>AND(
+    ISNEW(),
+    NOT($Profile.Name = &quot;System Administrator&quot;),
+    NOT($User.Alias = &quot;autoproc&quot;),
+    OR(RecordType.DeveloperName = &apos;CA_Medical_Facility&apos;, RecordType.DeveloperName = &apos;CA_Prescriber&apos;),
+    ISBLANK(IQVIA_OneKeyId__c)
+)</errorConditionFormula>
+    <errorMessage>OneKey Id is required for Prescriber or Medical Facility.</errorMessage>
+</ValidationRule>

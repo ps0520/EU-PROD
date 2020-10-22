@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Efficacy_Status__c</fullName>
+    <defaultValue>&apos;Good&apos;</defaultValue>
+    <description>Used by GB and IE Consumers. Good is the default value.</description>
+    <externalId>false</externalId>
+    <label>Efficacy Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Good</fullName>
+                <default>false</default>
+                <label>Good</label>
+            </value>
+            <value>
+                <fullName>Watch List</fullName>
+                <default>false</default>
+                <label>Watch List</label>
+            </value>
+            <value>
+                <fullName>Assessment Needed</fullName>
+                <default>false</default>
+                <label>Assessment Needed</label>
+            </value>
+            <value>
+                <fullName>Training Hold</fullName>
+                <default>false</default>
+                <label>Training Hold</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

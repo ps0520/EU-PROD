@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CA_Inactive_Prescriber_or_Med_Fac_Check</fullName>
+    <active>true</active>
+    <description>Inactive prescribers or medical facilities cannot be tied to the consumer record. That need to be changed.</description>
+    <errorConditionFormula>AND(
+    NOT($Profile.Name = &quot;System Administrator&quot;),
+    NOT($Profile.Name = &quot;IT System Support&quot;),
+    NOT($User.Alias = &quot;autoproc&quot;),
+    RecordType.DeveloperName = &apos;CA_Consumer&apos;,
+    Inactive__c = false,
+    OR(Prescriber__r.Inactive__c = true, Medical_Facility__r.Inactive__c = true)
+)</errorConditionFormula>
+    <errorMessage>Associated Prescriber or Medical Facility to this Consumer is inactive, please verify.</errorMessage>
+</ValidationRule>

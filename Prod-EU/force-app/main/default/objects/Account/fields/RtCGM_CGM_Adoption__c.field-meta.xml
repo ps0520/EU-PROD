@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RtCGM_CGM_Adoption__c</fullName>
+    <description>Prescriber Segmentation Field</description>
+    <externalId>false</externalId>
+    <label>rtCGM Adoption</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No Interest in rtCGM</fullName>
+                <default>false</default>
+                <label>No Interest in rtCGM</label>
+            </value>
+            <value>
+                <fullName>No Interest in Dexcom</fullName>
+                <default>false</default>
+                <label>No Interest in Dexcom</label>
+            </value>
+            <value>
+                <fullName>CGM Prescriber</fullName>
+                <default>false</default>
+                <label>CGM Prescriber</label>
+            </value>
+            <value>
+                <fullName>Dexcom Prescriber </fullName>
+                <default>false</default>
+                <label>Dexcom Prescriber </label>
+            </value>
+            <value>
+                <fullName>Dexcom Advocate</fullName>
+                <default>false</default>
+                <label>Dexcom Advocate</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

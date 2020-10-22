@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_VAT_Registration_Number_Val_Std</fullName>
+    <active>true</active>
+    <description>Rule to make sure only Upper case is allowed when entering the Tax Registration Number.</description>
+    <errorConditionFormula>AND(
+NOT(ISBLANK( Tax_Registration_Number__c)),
+(Tax_Registration_Number__c &lt;&gt; UPPER(Tax_Registration_Number__c))
+)</errorConditionFormula>
+    <errorDisplayField>Tax_Registration_Number__c</errorDisplayField>
+    <errorMessage>Lower case is not allowed in VAT Registration Number.</errorMessage>
+</ValidationRule>

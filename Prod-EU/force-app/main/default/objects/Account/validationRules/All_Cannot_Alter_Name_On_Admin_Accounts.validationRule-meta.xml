@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Cannot_Alter_Name_On_Admin_Accounts</fullName>
+    <active>true</active>
+    <description>Validation rule will not let the users to alter the name or address on accounts created for admin purpose</description>
+    <errorConditionFormula>AND(
+	NOT($Profile.Name = &quot;System Administrator&quot;),
+	Is_Admin_Account__c = TRUE,
+	OR(
+		ISCHANGED(Name),
+		ISCHANGED(FirstName),
+		ISCHANGED(LastName),
+		ISCHANGED(BillingStreet),
+		ISCHANGED(BillingCity),
+		ISCHANGED(BillingPostalCode),
+		ISCHANGED(ShippingStreet),
+		ISCHANGED(ShippingCity),
+		ISCHANGED(ShippingPostalCode)
+	)
+)</errorConditionFormula>
+    <errorMessage>You cannot perform this action.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CH_Billing_Zip_Should_Be_4_Chars_In_Leng</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+NOT(ISBLANK(BillingPostalCode)),
+TEXT(Country__c) = &apos;Switzerland&apos;,
+OR (LEN(BillingPostalCode) &gt; 4, LEN(BillingPostalCode) &lt; 4)
+)</errorConditionFormula>
+    <errorMessage>Billing postal code should be 4 chars in length.</errorMessage>
+</ValidationRule>

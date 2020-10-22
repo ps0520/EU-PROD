@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CH_Billing_Address_Required_For_All_Acc</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+BEGINS(RecordType.DeveloperName, &apos;CH&apos;),
+OR(ISBLANK(System_Of_Origin__c), System_Of_Origin__c = &apos;crm&apos;),
+OR( ISBLANK(BillingCity )
+, ISBLANK( BillingCountry ),ISBLANK( BillingStreet ),ISBLANK( BillingPostalCode )))</errorConditionFormula>
+    <errorMessage>Street, City, Zip and Country on Billing address are required to create an Account.</errorMessage>
+</ValidationRule>

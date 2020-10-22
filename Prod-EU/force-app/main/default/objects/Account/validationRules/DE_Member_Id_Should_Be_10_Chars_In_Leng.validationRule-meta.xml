@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DE_Member_Id_Should_Be_10_Chars_In_Leng</fullName>
+    <active>true</active>
+    <description>Member Id tied to Benefit should be 10 characters in length</description>
+    <errorConditionFormula>AND(
+   BEGINS((RecordType.DeveloperName),&apos;DE_&apos;),
+NOT (ISBLANK( Benefit_Member_Id__c )),
+NOT ( LEN(Benefit_Member_Id__c) = 10 ) 
+)</errorConditionFormula>
+    <errorMessage>&apos;Member Id&apos; should be 10 characters in Length.</errorMessage>
+</ValidationRule>

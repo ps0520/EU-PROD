@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Benefit__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Tracks the primary benefit record</description>
+    <externalId>false</externalId>
+    <label>Primary Benefit</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>$Source.Id</field>
+            <operation>equals</operation>
+            <valueField>Benefit__c.Account__c</valueField>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Benefit__c</referenceTo>
+    <relationshipLabel>Accounts</relationshipLabel>
+    <relationshipName>AccountBenefits</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OK_Mail_Opt_Out__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>OneKey - The workplace does not want to receive mailings</description>
+    <externalId>false</externalId>
+    <label>Mail Opt Out</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

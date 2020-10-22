@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sample_Price_Book__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Name of the Sample Price Book associated to this customer. Mostly used for International Distributors.</description>
+    <externalId>false</externalId>
+    <label>Sample Price Book</label>
+    <referenceTo>Pricebook2</referenceTo>
+    <relationshipLabel>Accounts (Sample Price Book)</relationshipLabel>
+    <relationshipName>Accounts1</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

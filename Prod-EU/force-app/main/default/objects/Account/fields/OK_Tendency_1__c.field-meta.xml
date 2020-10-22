@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OK_Tendency_1__c</fullName>
+    <description>OneKey - Picklist Code = TEN</description>
+    <externalId>false</externalId>
+    <label>Tendency 1</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Acupuncture</fullName>
+                <default>false</default>
+                <label>Acupuncture</label>
+            </value>
+            <value>
+                <fullName>Allergology</fullName>
+                <default>false</default>
+                <label>Allergology</label>
+            </value>
+            <value>
+                <fullName>Andrology</fullName>
+                <default>false</default>
+                <label>Andrology</label>
+            </value>
+            <value>
+                <fullName>Medical Quality management</fullName>
+                <default>false</default>
+                <label>Medical Quality management</label>
+            </value>
+            <value>
+                <fullName>Balneology</fullName>
+                <default>false</default>
+                <label>Balneology</label>
+            </value>
+            <value>
+                <fullName>Company Medecine</fullName>
+                <default>false</default>
+                <label>Company Medecine</label>
+            </value>
+            <value>
+                <fullName>Blood transfusion</fullName>
+                <default>false</default>
+                <label>Blood transfusion</label>
+            </value>
+            <value>
+                <fullName>Chiropractor</fullName>
+                <default>false</default>
+                <label>Chiropractor</label>
+            </value>
+            <value>
+                <fullName>Dermatological histology</fullName>
+                <default>false</default>
+                <label>Dermatological histology</label>
+            </value>
+            <value>
+                <fullName>Diabetology</fullName>
+                <default>false</default>
+                <label>Diabetology</label>
+            </value>
+            <value>
+                <fullName>Aviation / Aerospacial Medecine</fullName>
+                <default>false</default>
+                <label>Aviation / Aerospacial Medecine</label>
+            </value>
+            <value>
+                <fullName>Geriatrics</fullName>
+                <default>false</default>
+                <label>Geriatrics</label>
+            </value>
+            <value>
+                <fullName>Gynaecological cytology</fullName>
+                <default>false</default>
+                <label>Gynaecological cytology</label>
+            </value>
+            <value>
+                <fullName>Hand Surgery</fullName>
+                <default>false</default>
+                <label>Hand Surgery</label>
+            </value>
+            <value>
+                <fullName>Haemostasiology</fullName>
+                <default>false</default>
+                <label>Haemostasiology</label>
+            </value>
+            <value>
+                <fullName>Homeopathy</fullName>
+                <default>false</default>
+                <label>Homeopathy</label>
+            </value>
+            <value>
+                <fullName>Infectology</fullName>
+                <default>false</default>
+                <label>Infectology</label>
+            </value>
+            <value>
+                <fullName>Intensive Care</fullName>
+                <default>false</default>
+                <label>Intensive Care</label>
+            </value>
+            <value>
+                <fullName>Child-Endocrinology and -Diabetology</fullName>
+                <default>false</default>
+                <label>Child-Endocrinology and -Diabetology</label>
+            </value>
+            <value>
+                <fullName>Child-Gastroenterology</fullName>
+                <default>false</default>
+                <label>Child-Gastroenterology</label>
+            </value>
+            <value>
+                <fullName>Child-Nephrology</fullName>
+                <default>false</default>
+                <label>Child-Nephrology</label>
+            </value>
+            <value>
+                <fullName>Child-Orthopaedics</fullName>
+                <default>false</default>
+                <label>Child-Orthopaedics</label>
+            </value>
+            <value>
+                <fullName>Child-Pneumology</fullName>
+                <default>false</default>
+                <label>Child-Pneumology</label>
+            </value>
+            <value>
+                <fullName>Child-Rheumatology</fullName>
+                <default>false</default>
+                <label>Child-Rheumatology</label>
+            </value>
+            <value>
+                <fullName>Laboratory diagnostics</fullName>
+                <default>false</default>
+                <label>Laboratory diagnostics</label>
+            </value>
+            <value>
+                <fullName>Medical genetics</fullName>
+                <default>false</default>
+                <label>Medical genetics</label>
+            </value>
+            <value>
+                <fullName>Medical Computing</fullName>
+                <default>false</default>
+                <label>Medical Computing</label>
+            </value>
+            <value>
+                <fullName>Magnetic resonance imaging</fullName>
+                <default>false</default>
+                <label>Magnetic resonance imaging</label>
+            </value>
+            <value>
+                <fullName>Naturopathic treatment</fullName>
+                <default>false</default>
+                <label>Naturopathic treatment</label>
+            </value>
+            <value>
+                <fullName>Emergency medical aid</fullName>
+                <default>false</default>
+                <label>Emergency medical aid</label>
+            </value>
+            <value>
+                <fullName>Orthopaedic Surgery</fullName>
+                <default>false</default>
+                <label>Orthopaedic Surgery</label>
+            </value>
+            <value>
+                <fullName>Orthopaedic Rheumatology</fullName>
+                <default>false</default>
+                <label>Orthopaedic Rheumatology</label>
+            </value>
+            <value>
+                <fullName>Psycho-analysis</fullName>
+                <default>false</default>
+                <label>Psycho-analysis</label>
+            </value>
+            <value>
+                <fullName>Phlebology</fullName>
+                <default>false</default>
+                <label>Phlebology</label>
+            </value>
+            <value>
+                <fullName>Terminal care</fullName>
+                <default>false</default>
+                <label>Terminal care</label>
+            </value>
+            <value>
+                <fullName>Plastic Surgery</fullName>
+                <default>false</default>
+                <label>Plastic Surgery</label>
+            </value>
+            <value>
+                <fullName>Proctology</fullName>
+                <default>false</default>
+                <label>Proctology</label>
+            </value>
+            <value>
+                <fullName>Psychotherapy</fullName>
+                <default>false</default>
+                <label>Psychotherapy</label>
+            </value>
+            <value>
+                <fullName>Physical Therapy</fullName>
+                <default>false</default>
+                <label>Physical Therapy</label>
+            </value>
+            <value>
+                <fullName>Rehabilitation</fullName>
+                <default>false</default>
+                <label>Rehabilitation</label>
+            </value>
+            <value>
+                <fullName>X-Ray diagnostics</fullName>
+                <default>false</default>
+                <label>X-Ray diagnostics</label>
+            </value>
+            <value>
+                <fullName>Emergency Medecine</fullName>
+                <default>false</default>
+                <label>Emergency Medecine</label>
+            </value>
+            <value>
+                <fullName>Sleep medecine</fullName>
+                <default>false</default>
+                <label>Sleep medecine</label>
+            </value>
+            <value>
+                <fullName>Social Medicine</fullName>
+                <default>false</default>
+                <label>Social Medicine</label>
+            </value>
+            <value>
+                <fullName>Sports Medicine</fullName>
+                <default>false</default>
+                <label>Sports Medicine</label>
+            </value>
+            <value>
+                <fullName>Phoniatrics</fullName>
+                <default>false</default>
+                <label>Phoniatrics</label>
+            </value>
+            <value>
+                <fullName>Addiction primary health care</fullName>
+                <default>false</default>
+                <label>Addiction primary health care</label>
+            </value>
+            <value>
+                <fullName>Pain therapy</fullName>
+                <default>false</default>
+                <label>Pain therapy</label>
+            </value>
+            <value>
+                <fullName>Tropical Medicine</fullName>
+                <default>false</default>
+                <label>Tropical Medicine</label>
+            </value>
+            <value>
+                <fullName>Drug tumor therapy</fullName>
+                <default>false</default>
+                <label>Drug tumor therapy</label>
+            </value>
+            <value>
+                <fullName>Specific Emergency surgery</fullName>
+                <default>false</default>
+                <label>Specific Emergency surgery</label>
+            </value>
+            <value>
+                <fullName>Environmental medecine</fullName>
+                <default>false</default>
+                <label>Environmental medecine</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

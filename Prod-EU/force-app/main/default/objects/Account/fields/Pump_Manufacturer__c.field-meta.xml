@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pump_Manufacturer__c</fullName>
+    <externalId>false</externalId>
+    <label>Pump Manufacturer</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Tandem</fullName>
+                <default>false</default>
+                <label>Tandem</label>
+            </value>
+            <value>
+                <fullName>Animas</fullName>
+                <default>false</default>
+                <label>Animas</label>
+            </value>
+            <value>
+                <fullName>Omnipod</fullName>
+                <default>false</default>
+                <label>Omnipod</label>
+            </value>
+            <value>
+                <fullName>Medtronic</fullName>
+                <default>false</default>
+                <label>Medtronic</label>
+            </value>
+            <value>
+                <fullName>Ypsomed</fullName>
+                <default>false</default>
+                <label>Ypsomed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Inactive_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Inactive Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Deceased</fullName>
+                <default>false</default>
+                <label>Deceased</label>
+            </value>
+            <value>
+                <fullName>Competition</fullName>
+                <default>false</default>
+                <label>Competition</label>
+            </value>
+            <value>
+                <fullName>Not Interested</fullName>
+                <default>false</default>
+                <label>Not Interested</label>
+            </value>
+            <value>
+                <fullName>Duplicate Account</fullName>
+                <default>false</default>
+                <label>Duplicate Account</label>
+            </value>
+            <value>
+                <fullName>Moved abroad</fullName>
+                <default>false</default>
+                <label>Moved abroad</label>
+            </value>
+            <value>
+                <fullName>Medical Reason</fullName>
+                <default>false</default>
+                <label>Medical Reason</label>
+            </value>
+            <value>
+                <fullName>Active</fullName>
+                <default>false</default>
+                <label>Active</label>
+            </value>
+            <value>
+                <fullName>Closed</fullName>
+                <default>false</default>
+                <label>Closed</label>
+            </value>
+            <value>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+                <label>Inactive</label>
+            </value>
+            <value>
+                <fullName>Maternity/Paternity Leave</fullName>
+                <default>false</default>
+                <label>Maternity/Paternity Leave</label>
+            </value>
+            <value>
+                <fullName>Open</fullName>
+                <default>false</default>
+                <label>Open</label>
+            </value>
+            <value>
+                <fullName>Is opening</fullName>
+                <default>false</default>
+                <label>Is opening</label>
+            </value>
+            <value>
+                <fullName>Reduced Activity</fullName>
+                <default>false</default>
+                <label>Reduced Activity</label>
+            </value>
+            <value>
+                <fullName>Retired</fullName>
+                <default>false</default>
+                <label>Retired</label>
+            </value>
+            <value>
+                <fullName>Temporarily Closed</fullName>
+                <default>false</default>
+                <label>Temporarily Closed</label>
+            </value>
+            <value>
+                <fullName>Temporarily Inactive</fullName>
+                <default>false</default>
+                <label>Temporarily Inactive</label>
+            </value>
+            <value>
+                <fullName>Change of Ownership</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Change of Ownership</label>
+            </value>
+            <value>
+                <fullName>Complete check</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Complete check</label>
+            </value>
+            <value>
+                <fullName>Creation</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Creation</label>
+            </value>
+            <value>
+                <fullName>Data Privacy Law</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Data Privacy Law</label>
+            </value>
+            <value>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Duplicate</label>
+            </value>
+            <value>
+                <fullName>Duplicate Reversal</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Duplicate Reversal</label>
+            </value>
+            <value>
+                <fullName>History forcing</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>History forcing</label>
+            </value>
+            <value>
+                <fullName>Incorrect Professional Type</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Incorrect Professional Type</label>
+            </value>
+            <value>
+                <fullName>Initial Loading</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Initial Loading</label>
+            </value>
+            <value>
+                <fullName>Invalidation</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Invalidation</label>
+            </value>
+            <value>
+                <fullName>Licence Expired</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Licence Expired</label>
+            </value>
+            <value>
+                <fullName>Licence Revoked</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Licence Revoked</label>
+            </value>
+            <value>
+                <fullName>Moved to another country</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Moved to another country</label>
+            </value>
+            <value>
+                <fullName>Moved/unknown address</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Moved/unknown address</label>
+            </value>
+            <value>
+                <fullName>No longer working</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>No longer working</label>
+            </value>
+            <value>
+                <fullName>Promotion</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Promotion</label>
+            </value>
+            <value>
+                <fullName>Quality control</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Quality control</label>
+            </value>
+            <value>
+                <fullName>Reactivation</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Reactivation</label>
+            </value>
+            <value>
+                <fullName>Relation : Creation / Suppression / Checking</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Relation : Creation / Suppression / Checking</label>
+            </value>
+            <value>
+                <fullName>Relation creation</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Relation creation</label>
+            </value>
+            <value>
+                <fullName>Relation suppression</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Relation suppression</label>
+            </value>
+            <value>
+                <fullName>Relocation</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Relocation</label>
+            </value>
+            <value>
+                <fullName>Removed from register</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Removed from register</label>
+            </value>
+            <value>
+                <fullName>Simple modification</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Simple modification</label>
+            </value>
+            <value>
+                <fullName>Unknown address (Postal return)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Unknown address (Postal return)</label>
+            </value>
+            <value>
+                <fullName>Unverified invalidation from rep</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Unverified invalidation from rep</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

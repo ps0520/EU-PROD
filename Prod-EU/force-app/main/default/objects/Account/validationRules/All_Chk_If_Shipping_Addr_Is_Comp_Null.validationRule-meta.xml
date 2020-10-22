@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Chk_If_Shipping_Addr_Is_Comp_Null</fullName>
+    <active>true</active>
+    <description>Shipping Address should be either completely filled or should be completely null.</description>
+    <errorConditionFormula>OR (
+AND ( 
+NOT(ISBLANK(ShippingStreet)), 
+OR (ISBLANK(ShippingCity), ISBLANK(ShippingPostalCode), ISBLANK(TEXT(ShippingCountryCode)))
+),	
+AND (
+NOT(ISBLANK(ShippingCity)), 
+OR (ISBLANK(ShippingStreet), ISBLANK(ShippingPostalCode), ISBLANK(TEXT(ShippingCountryCode)))
+),
+AND (
+NOT(ISBLANK(ShippingPostalCode)), 
+OR (ISBLANK(ShippingCity), ISBLANK(ShippingStreet), ISBLANK(TEXT(ShippingCountryCode)))
+),
+AND (
+NOT(ISBLANK(TEXT(ShippingCountryCode))), 
+OR (ISBLANK(ShippingPostalCode), ISBLANK(ShippingCity), ISBLANK(ShippingStreet))
+)
+)</errorConditionFormula>
+    <errorMessage>Shipping Address should be either completely filled in or should be left blank.</errorMessage>
+</ValidationRule>

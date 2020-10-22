@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CA_Determination_Response_Sent_To__c</fullName>
+    <description>In Canada, to whom the Pre-Auth Determination is communicated.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>To whom is the Pre-Auth Determination communicated</inlineHelpText>
+    <label>Determination Response Sent To</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Patient Only</fullName>
+                <default>false</default>
+                <label>Patient Only</label>
+            </value>
+            <value>
+                <fullName>Patient &amp; Dexcom</fullName>
+                <default>false</default>
+                <label>Patient &amp; Dexcom</label>
+            </value>
+            <value>
+                <fullName>Dexcom Only</fullName>
+                <default>false</default>
+                <label>Dexcom Only</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

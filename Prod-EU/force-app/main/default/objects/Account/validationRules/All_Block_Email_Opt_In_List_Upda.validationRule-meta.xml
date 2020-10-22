@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Block_Email_Opt_In_List_Upda</fullName>
+    <active>true</active>
+    <description>This Rule will not alllow to update the Email Opt-In picklist.</description>
+    <errorConditionFormula>AND(
+	$Profile.Name = &quot;System Administrator&quot;,
+	$Profile.Name = &quot;Data Integrator&quot;,
+	CONTAINS(RecordType.DeveloperName, &apos;Consumer&apos;),
+	OR(
+		AND(ISNEW(), ISPICKVAL(Email_Opt_In_List__c, &quot;True&quot;)),
+		ISCHANGED(Email_Opt_In_List__c)
+	)
+)</errorConditionFormula>
+    <errorMessage>You are not allowed to change this field. Please use the &apos;Email Pending Opt In&apos; and &apos;Email Pending Opt Out&apos; checkboxes instead.</errorMessage>
+</ValidationRule>

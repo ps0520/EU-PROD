@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Chk_Inactive_Reason_For_Active_Accnt</fullName>
+    <active>true</active>
+    <description>Check if Inactive reason can be filled only for Inactive accounts.</description>
+    <errorConditionFormula>AND (
+ NOT($Profile.Name = &quot;System Administrator&quot;),
+ Inactive__c = FALSE,
+ NOT(ISBLANK(TEXT(Inactive_Reason__c)))
+)</errorConditionFormula>
+    <errorMessage>&apos;Inactive Reason&apos; can be selected only for Inactive accounts.</errorMessage>
+</ValidationRule>

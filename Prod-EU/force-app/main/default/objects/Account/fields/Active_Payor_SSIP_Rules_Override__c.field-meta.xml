@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Active_Payor_SSIP_Rules_Override__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This flag is used to override the number of SSIP Rules associated with the Payor. Flag will be used in SFCC to hide the Pricing information.</description>
+    <externalId>false</externalId>
+    <label>Active Payor SSIP Rules Override</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

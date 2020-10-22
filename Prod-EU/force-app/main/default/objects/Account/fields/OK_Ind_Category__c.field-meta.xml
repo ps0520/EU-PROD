@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OK_Ind_Category__c</fullName>
+    <description>OneKey - Individual Category (CAT Code)</description>
+    <externalId>false</externalId>
+    <label>Ind. Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Other individual in consultation</fullName>
+                <default>false</default>
+                <label>Other individual in consultation</label>
+            </value>
+            <value>
+                <fullName>Other individual in dialysis</fullName>
+                <default>false</default>
+                <label>Other individual in dialysis</label>
+            </value>
+            <value>
+                <fullName>Other individual in public health sector</fullName>
+                <default>false</default>
+                <label>Other individual in public health sector</label>
+            </value>
+            <value>
+                <fullName>Other individual in insurance</fullName>
+                <default>false</default>
+                <label>Other individual in insurance</label>
+            </value>
+            <value>
+                <fullName>Other individual in administration</fullName>
+                <default>false</default>
+                <label>Other individual in administration</label>
+            </value>
+            <value>
+                <fullName>Other dentist</fullName>
+                <default>false</default>
+                <label>Other dentist</label>
+            </value>
+            <value>
+                <fullName>Veterinarian</fullName>
+                <default>false</default>
+                <label>Veterinarian</label>
+            </value>
+            <value>
+                <fullName>Not yet defined</fullName>
+                <default>false</default>
+                <label>Not yet defined</label>
+            </value>
+            <value>
+                <fullName>Physician in nursing home</fullName>
+                <default>false</default>
+                <label>Physician in nursing home</label>
+            </value>
+            <value>
+                <fullName>Physician in insurance</fullName>
+                <default>false</default>
+                <label>Physician in insurance</label>
+            </value>
+            <value>
+                <fullName>Physician in medical service center</fullName>
+                <default>false</default>
+                <label>Physician in medical service center</label>
+            </value>
+            <value>
+                <fullName>Physician in authority</fullName>
+                <default>false</default>
+                <label>Physician in authority</label>
+            </value>
+            <value>
+                <fullName>Attending physician</fullName>
+                <default>false</default>
+                <label>Attending physician</label>
+            </value>
+            <value>
+                <fullName>Consultation physician</fullName>
+                <default>false</default>
+                <label>Consultation physician</label>
+            </value>
+            <value>
+                <fullName>Dialysis physician</fullName>
+                <default>false</default>
+                <label>Dialysis physician</label>
+            </value>
+            <value>
+                <fullName>External address</fullName>
+                <default>false</default>
+                <label>External address</label>
+            </value>
+            <value>
+                <fullName>Functionary physician</fullName>
+                <default>false</default>
+                <label>Functionary physician</label>
+            </value>
+            <value>
+                <fullName>Alternative practitioner</fullName>
+                <default>false</default>
+                <label>Alternative practitioner</label>
+            </value>
+            <value>
+                <fullName>Hospital pharmacist</fullName>
+                <default>false</default>
+                <label>Hospital pharmacist</label>
+            </value>
+            <value>
+                <fullName>Physician in hospital</fullName>
+                <default>false</default>
+                <label>Physician in hospital</label>
+            </value>
+            <value>
+                <fullName>Hospital dentist</fullName>
+                <default>false</default>
+                <label>Hospital dentist</label>
+            </value>
+            <value>
+                <fullName>Laboratory consultant</fullName>
+                <default>false</default>
+                <label>Laboratory consultant</label>
+            </value>
+            <value>
+                <fullName>Physician in private practice</fullName>
+                <default>false</default>
+                <label>Physician in private practice</label>
+            </value>
+            <value>
+                <fullName>Dentist in private practice</fullName>
+                <default>false</default>
+                <label>Dentist in private practice</label>
+            </value>
+            <value>
+                <fullName>Officinal pharmacist</fullName>
+                <default>false</default>
+                <label>Officinal pharmacist</label>
+            </value>
+            <value>
+                <fullName>Nursing / support staff</fullName>
+                <default>false</default>
+                <label>Nursing / support staff</label>
+            </value>
+            <value>
+                <fullName>Physiotherapist / occupational therapist</fullName>
+                <default>false</default>
+                <label>Physiotherapist / occupational therapist</label>
+            </value>
+            <value>
+                <fullName>Private address</fullName>
+                <default>false</default>
+                <label>Private address</label>
+            </value>
+            <value>
+                <fullName>Other pharmacist</fullName>
+                <default>false</default>
+                <label>Other pharmacist</label>
+            </value>
+            <value>
+                <fullName>Other physician</fullName>
+                <default>false</default>
+                <label>Other physician</label>
+            </value>
+            <value>
+                <fullName>Other individual</fullName>
+                <default>false</default>
+                <label>Other individual</label>
+            </value>
+            <value>
+                <fullName>Other individual in nursing home</fullName>
+                <default>false</default>
+                <label>Other individual in nursing home</label>
+            </value>
+            <value>
+                <fullName>Other individual in pharmacy</fullName>
+                <default>false</default>
+                <label>Other individual in pharmacy</label>
+            </value>
+            <value>
+                <fullName>Other individual in authority</fullName>
+                <default>false</default>
+                <label>Other individual in authority</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

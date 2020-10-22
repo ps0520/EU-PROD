@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CA_Chk_If_Bill_Ship_Addr_Is_Comp_Null</fullName>
+    <active>true</active>
+    <description>Billing address or Shipping Address should be either completely filled or should be completely null.</description>
+    <errorConditionFormula>AND(
+NOT($Profile.Name = &quot;System Administrator&quot;),NOT($User.Alias = &quot;autoproc&quot;),
+BEGINS(RecordType.DeveloperName, &apos;CA&apos;),
+OR (
+AND (
+NOT(ISBLANK(ShippingStreet)),
+OR (ISBLANK(ShippingCity), ISBLANK(ShippingPostalCode), ISBLANK(TEXT(ShippingStateCode)), ISBLANK(TEXT(ShippingCountryCode)))
+),
+AND (
+NOT(ISBLANK(ShippingCity)),
+OR (ISBLANK(ShippingStreet), ISBLANK(ShippingPostalCode), ISBLANK(TEXT(ShippingStateCode)), ISBLANK(TEXT(ShippingCountryCode)))
+),
+AND (
+NOT(ISBLANK(ShippingPostalCode)),
+OR (ISBLANK(ShippingCity), ISBLANK(ShippingStreet), ISBLANK(TEXT(ShippingStateCode)), ISBLANK(TEXT(ShippingCountryCode)))
+),
+AND (
+NOT(ISBLANK(TEXT(ShippingCountryCode))),
+OR (ISBLANK(ShippingPostalCode), ISBLANK(ShippingCity), ISBLANK(TEXT(ShippingStateCode)), ISBLANK(ShippingStreet))
+),
+AND (
+NOT(ISBLANK(TEXT(ShippingStateCode))),
+OR (ISBLANK(ShippingPostalCode), ISBLANK(ShippingCity), ISBLANK(TEXT(ShippingCountryCode)), ISBLANK(ShippingStreet))
+),
+AND (
+NOT(ISBLANK(BillingStreet)),
+OR (ISBLANK(BillingCity), ISBLANK(BillingPostalCode), ISBLANK(TEXT(BillingStateCode)), ISBLANK(TEXT(BillingCountryCode)))
+),
+AND (
+NOT(ISBLANK(BillingCity)),
+OR (ISBLANK(BillingStreet), ISBLANK(BillingPostalCode), ISBLANK(TEXT(BillingStateCode)), ISBLANK(TEXT(BillingCountryCode)))
+),
+AND (
+NOT(ISBLANK(BillingPostalCode)),
+OR (ISBLANK(BillingCity), ISBLANK(BillingStreet), ISBLANK(TEXT(BillingStateCode)), ISBLANK(TEXT(BillingCountryCode)))
+),
+AND (
+NOT(ISBLANK(TEXT(BillingCountryCode))),
+OR (ISBLANK(BillingPostalCode), ISBLANK(BillingCity), ISBLANK(TEXT(BillingStateCode)), ISBLANK(BillingStreet))
+),
+AND (
+NOT(ISBLANK(TEXT(BillingStateCode))),
+OR (ISBLANK(BillingPostalCode), ISBLANK(BillingCity), ISBLANK(TEXT(BillingCountryCode)), ISBLANK(BillingStreet))
+)
+)
+)</errorConditionFormula>
+    <errorMessage>Billing Address or Shipping Address should be either completely filled in or should be left blank.</errorMessage>
+</ValidationRule>

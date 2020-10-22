@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DE_Ins_Comp_Contract_No_Should_B_7_Char</fullName>
+    <active>true</active>
+    <description>Insurance company contract number for Payor should be 7 characters in Length</description>
+    <errorConditionFormula>AND (
+ RecordType.DeveloperName = &apos;DE_Payor&apos;, 
+ NOT(ISBLANK(Insurance_Company_Contract_Number__c)),
+ LEN(Insurance_Company_Contract_Number__c) != 7
+)</errorConditionFormula>
+    <errorMessage>&apos;Insurance Company Contract Number&apos; should be 7 characters in length.</errorMessage>
+</ValidationRule>

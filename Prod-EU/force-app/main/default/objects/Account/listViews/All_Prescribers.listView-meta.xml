@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Prescribers</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Prescriber_Id__c</columns>
+    <columns>Gender__c</columns>
+    <columns>ACCOUNT.ADDRESS2_STREET</columns>
+    <columns>ACCOUNT.ADDRESS2_CITY</columns>
+    <columns>ACCOUNT.ADDRESS2_STATE</columns>
+    <columns>ACCOUNT.CREATED_DATE</columns>
+    <columns>ACCOUNT.ADDRESS2_ZIP</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <columns>ACCOUNT.PHONE2</columns>
+    <columns>PC_EMAIL</columns>
+    <columns>Cert_Dexcom_Instructor__c</columns>
+    <columns>Territory__c</columns>
+    <columns>ACCOUNT.ACCOUNT_NUMBER</columns>
+    <columns>ACCOUNT.RECORDTYPE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>PersonAccount.CH_Prescriber</value>
+    </filters>
+    <label>All Prescribers</label>
+    <sharedTo>
+        <group>AT_Field_Sales</group>
+        <group>AT_Inside_Sales</group>
+        <group>CH_Field_Sales</group>
+        <group>CH_Inside_Sales</group>
+        <group>DE_Inside_Sales</group>
+        <group>EU_Tech_Support</group>
+        <group>GB_Inside_Sales</group>
+        <group>IE_Inside_Sales</group>
+    </sharedTo>
+</ListView>

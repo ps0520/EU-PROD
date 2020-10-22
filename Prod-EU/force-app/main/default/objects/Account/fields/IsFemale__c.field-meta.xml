@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsFemale__c</fullName>
+    <externalId>false</externalId>
+    <formula>ISPICKVAL( Gender__c , &apos;Female&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>IsFemale</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

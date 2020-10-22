@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GB_IE_Accounts</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>PC_BIRTHDATE</columns>
+    <columns>ACCOUNT.ADDRESS2_STREET</columns>
+    <columns>ACCOUNT.ADDRESS2_COUNTRY_CODE</columns>
+    <columns>ACCOUNT.ADDRESS2_ZIP</columns>
+    <columns>ACCOUNT.ACCOUNT_NUMBER</columns>
+    <columns>Medical_Facility__c</columns>
+    <columns>Payor__c</columns>
+    <columns>Territory__c</columns>
+    <columns>Number_of_Active_SSIP_Rules__c</columns>
+    <columns>Subscription_Pending_Payments__c</columns>
+    <columns>ACCOUNT.RECORDTYPE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>PersonAccount.GB_Consumer,PersonAccount.IE_Consumer</value>
+    </filters>
+    <label>GB/IE Consumer Accounts</label>
+    <language>en_US</language>
+    <sharedTo>
+        <roleAndSubordinates>UK</roleAndSubordinates>
+    </sharedTo>
+</ListView>

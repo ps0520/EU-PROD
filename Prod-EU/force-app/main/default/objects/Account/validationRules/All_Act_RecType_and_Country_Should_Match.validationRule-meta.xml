@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Act_RecType_and_Country_Should_Match</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+NOT($Profile.Name = &quot;System Administrator&quot;),NOT($User.Alias = &quot;autoproc&quot;),
+NOT(BEGINS(RecordType.DeveloperName, &quot;INTL&quot;)),	
+NOT(BEGINS(RecordType.DeveloperName, &quot;Business&quot;)),
+NOT(BEGINS(RecordType.DeveloperName, &quot;International&quot;)),
+NOT(BEGINS(RecordType.DeveloperName, &quot;PersonAccount&quot;)),
+OR(NOT(BEGINS(RecordType.DeveloperName, TEXT(BillingCountryCode))),
+NOT( BEGINS(RecordType.DeveloperName, TEXT(ShippingCountryCode))))
+)</errorConditionFormula>
+    <errorMessage>Billing Country and Shipping Country should match with Account Record type country</errorMessage>
+</ValidationRule>

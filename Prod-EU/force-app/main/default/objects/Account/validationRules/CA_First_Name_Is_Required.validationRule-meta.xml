@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CA_First_Name_Is_Required</fullName>
+    <active>true</active>
+    <description>First Name is required for CA Consumer or CA Prescriber Record Types.</description>
+    <errorConditionFormula>AND(OR(RecordType.DeveloperName = &apos;CA_Consumer&apos;, RecordType.DeveloperName = &apos;CA_Prescriber&apos;),
+ ISBLANK(FirstName))</errorConditionFormula>
+    <errorDisplayField>FirstName</errorDisplayField>
+    <errorMessage>First Name is required.</errorMessage>
+</ValidationRule>

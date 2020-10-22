@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Account_Country_Selection_Chk</fullName>
+    <active>true</active>
+    <description>Chosen Billing and Shipping address should match the default Country selection on the Account record.</description>
+    <errorConditionFormula>AND(
+NOT($Profile.Name = &quot;System Administrator&quot;),NOT($User.Alias = &quot;autoproc&quot;),
+NOT(ISBLANK(TEXT(Country__c))),
+OR(
+AND(
+NOT(ISBLANK(BillingCountry)),
+TEXT(Country__c) != BillingCountry
+),
+AND(
+NOT(ISBLANK(ShippingCountry)),
+TEXT(Country__c) != ShippingCountry
+)
+)
+)</errorConditionFormula>
+    <errorMessage>Address country is not valid for this Account.</errorMessage>
+</ValidationRule>

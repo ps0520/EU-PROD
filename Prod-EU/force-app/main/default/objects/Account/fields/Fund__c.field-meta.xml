@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fund__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Fund the customer is associated to</description>
+    <externalId>false</externalId>
+    <label>Fund</label>
+    <lookupFilter>
+        <active>true</active>
+        <booleanFilter>(1 OR 3) AND 2</booleanFilter>
+        <filterItems>
+            <field>$Source.Payor__c</field>
+            <operation>equals</operation>
+            <valueField>Fund__c.Payor__c</valueField>
+        </filterItems>
+        <filterItems>
+            <field>Fund__c.Is_Fund_Active__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </filterItems>
+        <filterItems>
+            <field>$Source.Id</field>
+            <operation>equals</operation>
+            <valueField>Fund__c.Payor__c</valueField>
+        </filterItems>
+        <infoMessage>Fund is not active.</infoMessage>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>Fund__c</referenceTo>
+    <relationshipLabel>Consumers</relationshipLabel>
+    <relationshipName>Funds</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Lookup</type>
+</CustomField>

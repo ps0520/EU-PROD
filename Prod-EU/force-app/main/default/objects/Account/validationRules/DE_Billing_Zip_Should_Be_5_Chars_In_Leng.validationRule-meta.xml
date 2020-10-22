@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DE_Billing_Zip_Should_Be_5_Chars_In_Leng</fullName>
+    <active>true</active>
+    <description>Rule to check if the Billing postal code is more or less than 5 chars</description>
+    <errorConditionFormula>AND( BEGINS(RecordType.DeveloperName, &apos;DE&apos;),    
+	NOT(ISBLANK(BillingPostalCode)),
+	TEXT(Country__c) = &apos;Germany&apos;, 
+	OR (LEN(BillingPostalCode) &gt; 5, LEN(BillingPostalCode) &lt; 5)  
+)</errorConditionFormula>
+    <errorMessage>Billing postal code should be 5 chars in length.</errorMessage>
+</ValidationRule>

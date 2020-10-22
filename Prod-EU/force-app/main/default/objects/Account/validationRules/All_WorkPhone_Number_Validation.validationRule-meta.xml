@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_WorkPhone_Number_Validation</fullName>
+    <active>true</active>
+    <description>Generic Phone number validation - Not country specific.</description>
+    <errorConditionFormula>AND( 
+NOT($Profile.Name = &quot;System Administrator&quot;),NOT($User.Alias = &quot;autoproc&quot;), 
+!REGEX( Phone, &quot;^([\\(\\)\\+0-9\\s\\-\\# ]+)|\\s*$&quot;) 
+)</errorConditionFormula>
+    <errorMessage>Invalid Work Phone number.</errorMessage>
+</ValidationRule>

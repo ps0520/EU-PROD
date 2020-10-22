@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Badges__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( Latest_Transmitter_Shipped__c =&quot;G5&quot;, IMAGE(&quot;/servlet/servlet.FileDownload?file=0150Y000002Zvci&quot;,&quot;G5&quot;, 30,50),&quot;&quot;) 
+&amp; &quot; &quot; &amp; 
+IF( Latest_Transmitter_Shipped__c =&quot;G4&quot;, IMAGE(&quot;/servlet/servlet.FileDownload?file=0150Y000002Zvcd&quot;,&quot;G4&quot;, 30,50),&quot;&quot;)
+&amp; &quot; &quot; &amp; 
+IF( Latest_Transmitter_Shipped__c =&quot;G6&quot;, IMAGE(&quot;/servlet/servlet.FileDownload?file=0151n000002U7gV&quot;,&quot;G6&quot;, 30,50),&quot;&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Transmitter Generation</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

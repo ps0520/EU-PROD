@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UK_Chk_Admin_Priv_For_MedFac_Account_Mod</fullName>
+    <active>true</active>
+    <description>Validation rule will check the UK All Admin or UK MedFac Admin privilege if a Inside Sales User tries to modify GB or IE MedFac Accounts.</description>
+    <errorConditionFormula>AND(
+NOT($Profile.Name = &quot;System Administrator&quot;),NOT($User.Alias = &quot;autoproc&quot;),
+NOT(ISNEW()),
+CONTAINS($Profile.Name, &quot;Inside&quot;),
+OR(RecordType.DeveloperName =&quot;GB_Medical_Facility&quot;, RecordType.DeveloperName =&quot;IE_Medical_Facility&quot;),
+NOT($Permission.UK_All_Admin),
+NOT($Permission.UK_MedFac_Admin)
+)</errorConditionFormula>
+    <errorMessage>You dont have privilege to modify the account information, please contact your country Admin.</errorMessage>
+</ValidationRule>

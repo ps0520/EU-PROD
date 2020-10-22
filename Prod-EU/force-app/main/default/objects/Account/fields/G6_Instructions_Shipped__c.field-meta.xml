@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>G6_Instructions_Shipped__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>If G6 IFUs shipped</description>
+    <externalId>false</externalId>
+    <label>G6 Instructions Shipped</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

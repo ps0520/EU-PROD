@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OK_Qualifications_1__c</fullName>
+    <description>OneKey - Picklist Code = QLF</description>
+    <externalId>false</externalId>
+    <label>Qualifications 1</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Retirement home minder</fullName>
+                <default>false</default>
+                <label>Retirement home minder</label>
+            </value>
+            <value>
+                <fullName>Out Patient physician</fullName>
+                <default>false</default>
+                <label>Out Patient physician</label>
+            </value>
+            <value>
+                <fullName>Ambulant Surgery</fullName>
+                <default>false</default>
+                <label>Ambulant Surgery</label>
+            </value>
+            <value>
+                <fullName>Angiological activity</fullName>
+                <default>false</default>
+                <label>Angiological activity</label>
+            </value>
+            <value>
+                <fullName>Aesthetic Medicine</fullName>
+                <default>false</default>
+                <label>Aesthetic Medicine</label>
+            </value>
+            <value>
+                <fullName>Doctor / German Railway</fullName>
+                <default>false</default>
+                <label>Doctor / German Railway</label>
+            </value>
+            <value>
+                <fullName>Doctor / Authority</fullName>
+                <default>false</default>
+                <label>Doctor / Authority</label>
+            </value>
+            <value>
+                <fullName>Company medical officer</fullName>
+                <default>false</default>
+                <label>Company medical officer</label>
+            </value>
+            <value>
+                <fullName>Doctor / German border police / Customs duty</fullName>
+                <default>false</default>
+                <label>Doctor / German border police / Customs duty</label>
+            </value>
+            <value>
+                <fullName>Breast Nurse</fullName>
+                <default>false</default>
+                <label>Breast Nurse</label>
+            </value>
+            <value>
+                <fullName>Doc/Military</fullName>
+                <default>false</default>
+                <label>Doc/Military</label>
+            </value>
+            <value>
+                <fullName>Cardiological activity</fullName>
+                <default>false</default>
+                <label>Cardiological activity</label>
+            </value>
+            <value>
+                <fullName>Case management</fullName>
+                <default>false</default>
+                <label>Case management</label>
+            </value>
+            <value>
+                <fullName>Diabetes assistant</fullName>
+                <default>false</default>
+                <label>Diabetes assistant</label>
+            </value>
+            <value>
+                <fullName>Diabetes consultant</fullName>
+                <default>false</default>
+                <label>Diabetes consultant</label>
+            </value>
+            <value>
+                <fullName>Dialysis</fullName>
+                <default>false</default>
+                <label>Dialysis</label>
+            </value>
+            <value>
+                <fullName>Discharge Planner</fullName>
+                <default>false</default>
+                <label>Discharge Planner</label>
+            </value>
+            <value>
+                <fullName>Purchaser</fullName>
+                <default>false</default>
+                <label>Purchaser</label>
+            </value>
+            <value>
+                <fullName>Endodontics</fullName>
+                <default>false</default>
+                <label>Endodontics</label>
+            </value>
+            <value>
+                <fullName>Endocrinological activity</fullName>
+                <default>false</default>
+                <label>Endocrinological activity</label>
+            </value>
+            <value>
+                <fullName>Authorisation</fullName>
+                <default>false</default>
+                <label>Authorisation</label>
+            </value>
+            <value>
+                <fullName>Nutritionist</fullName>
+                <default>false</default>
+                <label>Nutritionist</label>
+            </value>
+            <value>
+                <fullName>Ethics Committee</fullName>
+                <default>false</default>
+                <label>Ethics Committee</label>
+            </value>
+            <value>
+                <fullName>Producer community</fullName>
+                <default>false</default>
+                <label>Producer community</label>
+            </value>
+            <value>
+                <fullName>In charge of advanced training</fullName>
+                <default>false</default>
+                <label>In charge of advanced training</label>
+            </value>
+            <value>
+                <fullName>Gastroenterological activity</fullName>
+                <default>false</default>
+                <label>Gastroenterological activity</label>
+            </value>
+            <value>
+                <fullName>Family Doctor</fullName>
+                <default>false</default>
+                <label>Family Doctor</label>
+            </value>
+            <value>
+                <fullName>Hepatology</fullName>
+                <default>false</default>
+                <label>Hepatology</label>
+            </value>
+            <value>
+                <fullName>HIV doctor</fullName>
+                <default>false</default>
+                <label>HIV doctor</label>
+            </value>
+            <value>
+                <fullName>Hygiene Commissioner</fullName>
+                <default>false</default>
+                <label>Hygiene Commissioner</label>
+            </value>
+            <value>
+                <fullName>Hypertension</fullName>
+                <default>false</default>
+                <label>Hypertension</label>
+            </value>
+            <value>
+                <fullName>Incontinence Commissioner</fullName>
+                <default>false</default>
+                <label>Incontinence Commissioner</label>
+            </value>
+            <value>
+                <fullName>Infusion personnel</fullName>
+                <default>false</default>
+                <label>Infusion personnel</label>
+            </value>
+            <value>
+                <fullName>Implantology</fullName>
+                <default>false</default>
+                <label>Implantology</label>
+            </value>
+            <value>
+                <fullName>Incontinence Consultant</fullName>
+                <default>false</default>
+                <label>Incontinence Consultant</label>
+            </value>
+            <value>
+                <fullName>Vaccinators</fullName>
+                <default>false</default>
+                <label>Vaccinators</label>
+            </value>
+            <value>
+                <fullName>Consultant</fullName>
+                <default>false</default>
+                <label>Consultant</label>
+            </value>
+            <value>
+                <fullName>Doctor/Cure</fullName>
+                <default>false</default>
+                <label>Doctor/Cure</label>
+            </value>
+            <value>
+                <fullName>Examiner</fullName>
+                <default>false</default>
+                <label>Examiner</label>
+            </value>
+            <value>
+                <fullName>Managing committee</fullName>
+                <default>false</default>
+                <label>Managing committee</label>
+            </value>
+            <value>
+                <fullName>Lipidology</fullName>
+                <default>false</default>
+                <label>Lipidology</label>
+            </value>
+            <value>
+                <fullName>Lymphology</fullName>
+                <default>false</default>
+                <label>Lymphology</label>
+            </value>
+            <value>
+                <fullName>Medical Controlling</fullName>
+                <default>false</default>
+                <label>Medical Controlling</label>
+            </value>
+            <value>
+                <fullName>Methadone therapy</fullName>
+                <default>false</default>
+                <label>Methadone therapy</label>
+            </value>
+            <value>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+                <label>Marketing</label>
+            </value>
+            <value>
+                <fullName>Nephrological activity</fullName>
+                <default>false</default>
+                <label>Nephrological activity</label>
+            </value>
+            <value>
+                <fullName>Neurogastroenterology</fullName>
+                <default>false</default>
+                <label>Neurogastroenterology</label>
+            </value>
+            <value>
+                <fullName>Medical Assistant GP Practice (NäPa)</fullName>
+                <default>false</default>
+                <label>Medical Assistant GP Practice (NäPa)</label>
+            </value>
+            <value>
+                <fullName>Oncological activity</fullName>
+                <default>false</default>
+                <label>Oncological activity</label>
+            </value>
+            <value>
+                <fullName>OP-Coordinator</fullName>
+                <default>false</default>
+                <label>OP-Coordinator</label>
+            </value>
+            <value>
+                <fullName>Osteology</fullName>
+                <default>false</default>
+                <label>Osteology</label>
+            </value>
+            <value>
+                <fullName>Phlebological activity</fullName>
+                <default>false</default>
+                <label>Phlebological activity</label>
+            </value>
+            <value>
+                <fullName>Paradontology</fullName>
+                <default>false</default>
+                <label>Paradontology</label>
+            </value>
+            <value>
+                <fullName>Pediatric Dentistry</fullName>
+                <default>false</default>
+                <label>Pediatric Dentistry</label>
+            </value>
+            <value>
+                <fullName>Psychologist diabetics</fullName>
+                <default>false</default>
+                <label>Psychologist diabetics</label>
+            </value>
+            <value>
+                <fullName>Certificate - Nursing  (Multiple sclerosis)</fullName>
+                <default>false</default>
+                <label>Certificate - Nursing  (Multiple sclerosis)</label>
+            </value>
+            <value>
+                <fullName>Pneumological activity</fullName>
+                <default>false</default>
+                <label>Pneumological activity</label>
+            </value>
+            <value>
+                <fullName>Pain Nurse</fullName>
+                <default>false</default>
+                <label>Pain Nurse</label>
+            </value>
+            <value>
+                <fullName>Doctor/Police</fullName>
+                <default>false</default>
+                <label>Doctor/Police</label>
+            </value>
+            <value>
+                <fullName>Doctor / German poste</fullName>
+                <default>false</default>
+                <label>Doctor / German poste</label>
+            </value>
+            <value>
+                <fullName>Press / Public relation</fullName>
+                <default>false</default>
+                <label>Press / Public relation</label>
+            </value>
+            <value>
+                <fullName>Pharmaceutical adviser</fullName>
+                <default>false</default>
+                <label>Pharmaceutical adviser</label>
+            </value>
+            <value>
+                <fullName>Quality Commissioner</fullName>
+                <default>false</default>
+                <label>Quality Commissioner</label>
+            </value>
+            <value>
+                <fullName>Quality managing network</fullName>
+                <default>false</default>
+                <label>Quality managing network</label>
+            </value>
+            <value>
+                <fullName>Travel Medicine</fullName>
+                <default>false</default>
+                <label>Travel Medicine</label>
+            </value>
+            <value>
+                <fullName>Rheuma. activity</fullName>
+                <default>false</default>
+                <label>Rheuma. activity</label>
+            </value>
+            <value>
+                <fullName>Sleep laboratory</fullName>
+                <default>false</default>
+                <label>Sleep laboratory</label>
+            </value>
+            <value>
+                <fullName>Study Nurse</fullName>
+                <default>false</default>
+                <label>Study Nurse</label>
+            </value>
+            <value>
+                <fullName>Traditional Chinese Medicine</fullName>
+                <default>false</default>
+                <label>Traditional Chinese Medicine</label>
+            </value>
+            <value>
+                <fullName>Accident Insurance Consultant</fullName>
+                <default>false</default>
+                <label>Accident Insurance Consultant</label>
+            </value>
+            <value>
+                <fullName>Medical Assistant GP Practice (VERAH)</fullName>
+                <default>false</default>
+                <label>Medical Assistant GP Practice (VERAH)</label>
+            </value>
+            <value>
+                <fullName>Vascular Assistant</fullName>
+                <default>false</default>
+                <label>Vascular Assistant</label>
+            </value>
+            <value>
+                <fullName>Medical examiner</fullName>
+                <default>false</default>
+                <label>Medical examiner</label>
+            </value>
+            <value>
+                <fullName>Virology</fullName>
+                <default>false</default>
+                <label>Virology</label>
+            </value>
+            <value>
+                <fullName>Wound care</fullName>
+                <default>false</default>
+                <label>Wound care</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

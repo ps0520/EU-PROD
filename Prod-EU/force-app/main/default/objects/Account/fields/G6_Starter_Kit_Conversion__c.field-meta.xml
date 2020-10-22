@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>G6_Starter_Kit_Conversion__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Tells if the customer made any purchase after buying a G6 Starter Kit. Should be used along with G6_Starter_Kit_Ship_Date__c.</description>
+    <externalId>false</externalId>
+    <label>G6 Starter Kit Conversion</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

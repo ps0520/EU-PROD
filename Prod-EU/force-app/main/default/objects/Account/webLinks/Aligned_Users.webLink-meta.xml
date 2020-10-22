@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Aligned_Users</fullName>
+    <availability>online</availability>
+    <description>Pulls the users who are aligned to a particular territory</description>
+    <displayType>link</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Aligned Users</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/one/one.app#/sObject/00O0Y000006l1ch/view?fv0={!Account.Territory__c}</url>
+</WebLink>

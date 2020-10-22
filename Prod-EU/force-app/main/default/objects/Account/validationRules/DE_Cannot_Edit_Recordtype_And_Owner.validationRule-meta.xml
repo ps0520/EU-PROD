@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DE_Cannot_Edit_Recordtype_And_Owner</fullName>
+    <active>true</active>
+    <description>Cannot edit Recordtype and Account owner- IQVIA requirement</description>
+    <errorConditionFormula>AND(
+$Profile.Name = &quot;DE Field Sales User&quot;,
+OR(ISCHANGED(RecordTypeId ),
+  ISCHANGED(OwnerId))
+)</errorConditionFormula>
+    <errorMessage>Cannot Edit Account Recordtype or Account Owner</errorMessage>
+</ValidationRule>

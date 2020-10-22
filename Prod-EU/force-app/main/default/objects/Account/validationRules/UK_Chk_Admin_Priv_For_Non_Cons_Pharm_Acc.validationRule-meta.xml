@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UK_Chk_Admin_Priv_For_Non_Cons_Pharm_Acc</fullName>
+    <active>true</active>
+    <description>Validation rule will check the UK All Admin Privileges if a Inside Sales User tries to modify Medical Facility, Prescriber or Payor Information.</description>
+    <errorConditionFormula>AND(
+	NOT($Profile.Name = &quot;System Administrator&quot;),NOT($User.Alias = &quot;autoproc&quot;),
+	NOT(ISNEW()),
+	CONTAINS($Profile.Name, &quot;Inside&quot;),
+	OR(RecordType.DeveloperName =&quot;GB_Payor&quot;, RecordType.DeveloperName =&quot;IE_Payor&quot;,
+			RecordType.DeveloperName =&quot;GB_Prescriber&quot;, RecordType.DeveloperName =&quot;IE_Prescriber&quot;),			
+	NOT($Permission.UK_All_Admin)
+)</errorConditionFormula>
+    <errorMessage>You dont have privilege to modify the account information, please contact your country Admin.</errorMessage>
+</ValidationRule>

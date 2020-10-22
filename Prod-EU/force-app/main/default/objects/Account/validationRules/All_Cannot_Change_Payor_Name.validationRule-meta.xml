@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Cannot_Change_Payor_Name</fullName>
+    <active>true</active>
+    <description>Rule will check to see if a Payor name is being changed.</description>
+    <errorConditionFormula>AND 
+( 
+CONTAINS(RecordType.DeveloperName, &apos;Payor&apos;), 
+NOT(OR( 
+$Profile.Name = &quot;System Administrator&quot;, 
+$Profile.Name = &quot;Data Integrator&quot;,
+$Permission.CH_Admin,
+$Permission.UK_All_Admin,
+CONTAINS($Profile.Name, &quot;Salesforce Admin&quot;))),
+ISCHANGED(Name)	
+)</errorConditionFormula>
+    <errorMessage>You cannot change the name of the Payor, please contact your admin to make the Payor name change.</errorMessage>
+</ValidationRule>

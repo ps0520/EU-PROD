@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CH_Chk_Admin_Privilage_For_Field_Sales</fullName>
+    <active>true</active>
+    <description>Validation rule will check the CH Admin Privileges if a Field Sales User tries to modify Consumer or Payor information.</description>
+    <errorConditionFormula>AND(
+NOT($Profile.Name = &quot;System Administrator&quot;),NOT($User.Alias = &quot;autoproc&quot;),
+NOT(ISNEW()),
+CONTAINS($Profile.Name, &quot;Field&quot;),
+OR(RecordType.DeveloperName =&quot;CH_Consumer&quot;, RecordType.DeveloperName =&quot;CH_Payor&quot;), 
+NOT($Permission.CH_Admin)
+)</errorConditionFormula>
+    <errorMessage>You dont have privilege to modify the account information, please contact your country Admin.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OK_Detail_Category__c</fullName>
+    <description>OneKey - Picklist Code = TET</description>
+    <externalId>false</externalId>
+    <label>Detail Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Department</fullName>
+                <default>false</default>
+                <label>Department</label>
+            </value>
+            <value>
+                <fullName>Pharmacy Service Provider</fullName>
+                <default>false</default>
+                <label>Pharmacy Service Provider</label>
+            </value>
+            <value>
+                <fullName>Medical Center</fullName>
+                <default>false</default>
+                <label>Medical Center</label>
+            </value>
+            <value>
+                <fullName>Medical Association</fullName>
+                <default>false</default>
+                <label>Medical Association</label>
+            </value>
+            <value>
+                <fullName>Doctor Network</fullName>
+                <default>false</default>
+                <label>Doctor Network</label>
+            </value>
+            <value>
+                <fullName>Agency</fullName>
+                <default>false</default>
+                <label>Agency</label>
+            </value>
+            <value>
+                <fullName>General Hospital</fullName>
+                <default>false</default>
+                <label>General Hospital</label>
+            </value>
+            <value>
+                <fullName>Outpatient Department</fullName>
+                <default>false</default>
+                <label>Outpatient Department</label>
+            </value>
+            <value>
+                <fullName>Mobile nursing</fullName>
+                <default>false</default>
+                <label>Mobile nursing</label>
+            </value>
+            <value>
+                <fullName>Pharmaceutical Association</fullName>
+                <default>false</default>
+                <label>Pharmaceutical Association</label>
+            </value>
+            <value>
+                <fullName>Pharmacy</fullName>
+                <default>false</default>
+                <label>Pharmacy</label>
+            </value>
+            <value>
+                <fullName>Medical Service</fullName>
+                <default>false</default>
+                <label>Medical Service</label>
+            </value>
+            <value>
+                <fullName>Administration</fullName>
+                <default>false</default>
+                <label>Administration</label>
+            </value>
+            <value>
+                <fullName>Working place of the handicapped</fullName>
+                <default>false</default>
+                <label>Working place of the handicapped</label>
+            </value>
+            <value>
+                <fullName>Hospital</fullName>
+                <default>false</default>
+                <label>Hospital</label>
+            </value>
+            <value>
+                <fullName>Blister center</fullName>
+                <default>false</default>
+                <label>Blister center</label>
+            </value>
+            <value>
+                <fullName>Information Center</fullName>
+                <default>false</default>
+                <label>Information Center</label>
+            </value>
+            <value>
+                <fullName>Military Hospital</fullName>
+                <default>false</default>
+                <label>Military Hospital</label>
+            </value>
+            <value>
+                <fullName>Laboratory</fullName>
+                <default>false</default>
+                <label>Laboratory</label>
+            </value>
+            <value>
+                <fullName>Dialysis Center</fullName>
+                <default>false</default>
+                <label>Dialysis Center</label>
+            </value>
+            <value>
+                <fullName>Buying Group</fullName>
+                <default>false</default>
+                <label>Buying Group</label>
+            </value>
+            <value>
+                <fullName>Trade organisation</fullName>
+                <default>false</default>
+                <label>Trade organisation</label>
+            </value>
+            <value>
+                <fullName>Specialized Hospital Center</fullName>
+                <default>false</default>
+                <label>Specialized Hospital Center</label>
+            </value>
+            <value>
+                <fullName>Franchise Company</fullName>
+                <default>false</default>
+                <label>Franchise Company</label>
+            </value>
+            <value>
+                <fullName>Public Health Department</fullName>
+                <default>false</default>
+                <label>Public Health Department</label>
+            </value>
+            <value>
+                <fullName>Health Insurance (legal)</fullName>
+                <default>false</default>
+                <label>Health Insurance (legal)</label>
+            </value>
+            <value>
+                <fullName>Group practice</fullName>
+                <default>false</default>
+                <label>Group practice</label>
+            </value>
+            <value>
+                <fullName>Wholesaler</fullName>
+                <default>false</default>
+                <label>Wholesaler</label>
+            </value>
+            <value>
+                <fullName>Veterninary practice</fullName>
+                <default>false</default>
+                <label>Veterninary practice</label>
+            </value>
+            <value>
+                <fullName>Health Care Center</fullName>
+                <default>false</default>
+                <label>Health Care Center</label>
+            </value>
+            <value>
+                <fullName>Home Care</fullName>
+                <default>false</default>
+                <label>Home Care</label>
+            </value>
+            <value>
+                <fullName>Hospice</fullName>
+                <default>false</default>
+                <label>Hospice</label>
+            </value>
+            <value>
+                <fullName>Information service</fullName>
+                <default>false</default>
+                <label>Information service</label>
+            </value>
+            <value>
+                <fullName>Trade association</fullName>
+                <default>false</default>
+                <label>Trade association</label>
+            </value>
+            <value>
+                <fullName>Internet- / Dispatch Pharmacy</fullName>
+                <default>false</default>
+                <label>Internet- / Dispatch Pharmacy</label>
+            </value>
+            <value>
+                <fullName>Hospital Pharmacy</fullName>
+                <default>false</default>
+                <label>Hospital Pharmacy</label>
+            </value>
+            <value>
+                <fullName>Cosmetics Center</fullName>
+                <default>false</default>
+                <label>Cosmetics Center</label>
+            </value>
+            <value>
+                <fullName>Veterinary practice</fullName>
+                <default>false</default>
+                <label>Veterinary practice</label>
+            </value>
+            <value>
+                <fullName>Sanatorium</fullName>
+                <default>false</default>
+                <label>Sanatorium</label>
+            </value>
+            <value>
+                <fullName>Association of panel doctors</fullName>
+                <default>false</default>
+                <label>Association of panel doctors</label>
+            </value>
+            <value>
+                <fullName>Medical Service of the health insurance fund</fullName>
+                <default>false</default>
+                <label>Medical Service of the health insurance fund</label>
+            </value>
+            <value>
+                <fullName>Medical Store</fullName>
+                <default>false</default>
+                <label>Medical Store</label>
+            </value>
+            <value>
+                <fullName>Medical Service (Military)</fullName>
+                <default>false</default>
+                <label>Medical Service (Military)</label>
+            </value>
+            <value>
+                <fullName>Ministry</fullName>
+                <default>false</default>
+                <label>Ministry</label>
+            </value>
+            <value>
+                <fullName>Medical Care Center</fullName>
+                <default>false</default>
+                <label>Medical Care Center</label>
+            </value>
+            <value>
+                <fullName>Nursing Home</fullName>
+                <default>false</default>
+                <label>Nursing Home</label>
+            </value>
+            <value>
+                <fullName>Practice Group</fullName>
+                <default>false</default>
+                <label>Practice Group</label>
+            </value>
+            <value>
+                <fullName>Practice clinic</fullName>
+                <default>false</default>
+                <label>Practice clinic</label>
+            </value>
+            <value>
+                <fullName>Health Insurance (private)</fullName>
+                <default>false</default>
+                <label>Health Insurance (private)</label>
+            </value>
+            <value>
+                <fullName>Pharmaceutical- / Life Science Company</fullName>
+                <default>false</default>
+                <label>Pharmaceutical- / Life Science Company</label>
+            </value>
+            <value>
+                <fullName>Private Practice</fullName>
+                <default>false</default>
+                <label>Private Practice</label>
+            </value>
+            <value>
+                <fullName>Practice</fullName>
+                <default>false</default>
+                <label>Practice</label>
+            </value>
+            <value>
+                <fullName>Private Address</fullName>
+                <default>false</default>
+                <label>Private Address</label>
+            </value>
+            <value>
+                <fullName>Patient Association</fullName>
+                <default>false</default>
+                <label>Patient Association</label>
+            </value>
+            <value>
+                <fullName>Quality circle</fullName>
+                <default>false</default>
+                <label>Quality circle</label>
+            </value>
+            <value>
+                <fullName>Rehabilitation Hospital</fullName>
+                <default>false</default>
+                <label>Rehabilitation Hospital</label>
+            </value>
+            <value>
+                <fullName>Other/Company</fullName>
+                <default>false</default>
+                <label>Other/Company</label>
+            </value>
+            <value>
+                <fullName>Service Center</fullName>
+                <default>false</default>
+                <label>Service Center</label>
+            </value>
+            <value>
+                <fullName>Other/with company doctor</fullName>
+                <default>false</default>
+                <label>Other/with company doctor</label>
+            </value>
+            <value>
+                <fullName>Health Center (Military)</fullName>
+                <default>false</default>
+                <label>Health Center (Military)</label>
+            </value>
+            <value>
+                <fullName>Softwarehouse</fullName>
+                <default>false</default>
+                <label>Softwarehouse</label>
+            </value>
+            <value>
+                <fullName>Day Hospital</fullName>
+                <default>false</default>
+                <label>Day Hospital</label>
+            </value>
+            <value>
+                <fullName>Management Company</fullName>
+                <default>false</default>
+                <label>Management Company</label>
+            </value>
+            <value>
+                <fullName>University Hospital Center</fullName>
+                <default>false</default>
+                <label>University Hospital Center</label>
+            </value>
+            <value>
+                <fullName>Supplying Pharmacy</fullName>
+                <default>false</default>
+                <label>Supplying Pharmacy</label>
+            </value>
+            <value>
+                <fullName>Registered association</fullName>
+                <default>false</default>
+                <label>Registered association</label>
+            </value>
+            <value>
+                <fullName>Dental Laboratory</fullName>
+                <default>false</default>
+                <label>Dental Laboratory</label>
+            </value>
+            <value>
+                <fullName>Self Aid Group</fullName>
+                <default>false</default>
+                <label>Self Aid Group</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

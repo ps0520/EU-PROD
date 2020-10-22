@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prescriber_Operations_Site_Number__c</fullName>
+    <description>Tracks the facility number of the primary medical facility tied to the prescriber</description>
+    <externalId>false</externalId>
+    <formula>Medical_Facility__r.Facility_Number__c</formula>
+    <label>Prescriber Operations Site Number</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

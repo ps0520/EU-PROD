@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DE_Prescriber_ID_Required_For_DE_Prescri</fullName>
+    <active>true</active>
+    <description>Prescriber ID is required for Prescriber.</description>
+    <errorConditionFormula>AND (   
+	 RecordType.DeveloperName = &apos;DE_Prescriber&apos;,
+ISBLANK( IQVIA_OneKeyId__c ),
+	 ISBLANK( Prescriber_Id__c)
+)</errorConditionFormula>
+    <errorMessage>Prescriber ID is required for Prescriber.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMEMA_CH_ALL_NURSES</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Prescriber_Id__c</columns>
+    <columns>Gender__c</columns>
+    <columns>ACCOUNT.ADDRESS2_STREET</columns>
+    <columns>ACCOUNT.ADDRESS2_CITY</columns>
+    <columns>ACCOUNT.ADDRESS2_STATE</columns>
+    <columns>ACCOUNT.CREATED_DATE</columns>
+    <columns>ACCOUNT.ADDRESS2_ZIP</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <columns>ACCOUNT.PHONE2</columns>
+    <columns>PC_EMAIL</columns>
+    <columns>Cert_Dexcom_Instructor__c</columns>
+    <columns>Territory__c</columns>
+    <columns>ACCOUNT.ACCOUNT_NUMBER</columns>
+    <columns>ACCOUNT.RECORDTYPE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>PersonAccount.CH_Prescriber</value>
+    </filters>
+    <filters>
+        <field>Sub_Type__c</field>
+        <operation>equals</operation>
+        <value>Nurse Practitioner</value>
+    </filters>
+    <label>EMEA_CH_ALL NURSES</label>
+</ListView>

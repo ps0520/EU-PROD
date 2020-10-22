@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OK_Academic_Title__c</fullName>
+    <description>OneKey - Picklist Code = TIU</description>
+    <externalId>false</externalId>
+    <label>Academic Title</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Leitender Chefarzt</fullName>
+                <default>false</default>
+                <label>Leitender Chefarzt</label>
+            </value>
+            <value>
+                <fullName>Leitender Stationsarzt</fullName>
+                <default>false</default>
+                <label>Leitender Stationsarzt</label>
+            </value>
+            <value>
+                <fullName>Obermedizinaldirektor</fullName>
+                <default>false</default>
+                <label>Obermedizinaldirektor</label>
+            </value>
+            <value>
+                <fullName>Oberpharmazierat</fullName>
+                <default>false</default>
+                <label>Oberpharmazierat</label>
+            </value>
+            <value>
+                <fullName>Pharmacist</fullName>
+                <default>false</default>
+                <label>Pharmacist</label>
+            </value>
+            <value>
+                <fullName>Medical council</fullName>
+                <default>false</default>
+                <label>Medical council</label>
+            </value>
+            <value>
+                <fullName>Sanitary council</fullName>
+                <default>false</default>
+                <label>Sanitary council</label>
+            </value>
+            <value>
+                <fullName>Managing Consultant</fullName>
+                <default>false</default>
+                <label>Managing Consultant</label>
+            </value>
+            <value>
+                <fullName>Leading pharmacist</fullName>
+                <default>false</default>
+                <label>Leading pharmacist</label>
+            </value>
+            <value>
+                <fullName>Leading consultant</fullName>
+                <default>false</default>
+                <label>Leading consultant</label>
+            </value>
+            <value>
+                <fullName>Medicinal Director</fullName>
+                <default>false</default>
+                <label>Medicinal Director</label>
+            </value>
+            <value>
+                <fullName>Leading medical council</fullName>
+                <default>false</default>
+                <label>Leading medical council</label>
+            </value>
+            <value>
+                <fullName>Leading Pharmacie Director</fullName>
+                <default>false</default>
+                <label>Leading Pharmacie Director</label>
+            </value>
+            <value>
+                <fullName>Pharmacy Director</fullName>
+                <default>false</default>
+                <label>Pharmacy Director</label>
+            </value>
+            <value>
+                <fullName>Pharmacy - Council</fullName>
+                <default>false</default>
+                <label>Pharmacy - Council</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

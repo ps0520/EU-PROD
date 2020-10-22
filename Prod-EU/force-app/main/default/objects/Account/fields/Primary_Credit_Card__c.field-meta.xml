@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_Credit_Card__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Tracks the Primary Credit Card on File. This will be populated via rollup helper.</description>
+    <externalId>false</externalId>
+    <label>Primary Credit Card</label>
+    <referenceTo>Finance_Detail__c</referenceTo>
+    <relationshipLabel>Accounts</relationshipLabel>
+    <relationshipName>Accounts</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>
