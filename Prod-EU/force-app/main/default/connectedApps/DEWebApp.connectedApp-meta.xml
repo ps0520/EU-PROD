@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>salesforce_website_alerts@Dexcom.com</contactEmail>
+    <description>UE Connected App for Drupal connection from www.dexcom.com</description>
+    <label>Drupal_Connect_www_EU</label>
+    <oauthConfig>
+        <callbackUrl>https://www.dexcom.com/salesforce/oauth_callback</callbackUrl>
+        <consumerKey>3MVG9ZPHiJTk7yFyo2kgZvLTvpi9EN2R8g40XUGNbfQoW5yOhiJTGSS4qSpOLsNIWytIlB_Q3Ns2PW6OUdPFe</consumerKey>
+        <isAdminApproved>false</isAdminApproved>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <scopes>Api</scopes>
+        <scopes>RefreshToken</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>ENFORCE</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+</ConnectedApp>

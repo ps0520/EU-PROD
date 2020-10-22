@@ -1,0 +1,38 @@
+<aura:component controller="CtrlContentMetadataInformation" implements="flexipage:availableForAllPageTypes,force:hasRecordId" access="global">
+    <!-- attributes -->
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="sortedBy" type="String"/>
+    <aura:attribute name="sortedDirection" type="String" default="asc"/>
+    
+    <!-- backing data -->
+    <aura:attribute name="data" type="Object"/>
+    
+    <!-- data table attributes -->
+    <aura:attribute name="columns" type="List"/>
+    <aura:attribute name="filteredData" type="List" />
+    
+    <!-- filter input -->
+    <aura:attribute name="filter" type="String" />
+    
+    <!-- handlers-->
+    <aura:handler name="init" value="{! this }" action="{! c.init }"/>
+    <!-- the container element determine the height of the datatable -->
+    <div class="slds-box slds-theme_shade slds-text-heading_small">
+        <lightning:icon iconName="standard:file" size="small"/>
+        <strong>&nbsp; &nbsp; Search and Preview Files </strong>    
+    </div>
+    <lightning:input type="text" onchange="{!c.filter}" value="{!v.filter}" label="" placeholder="Search by  Name or Document Type or Linked to..."/>
+    <br></br>
+    <div style="height: 500px">
+        <lightning:datatable keyField="Id" 
+                             maxColumnWidth="500" 
+                             minColumnWidth="200" 
+                             columns="{!v.columns}" 
+                             data="{!v.filteredData}" 
+                             hideCheckboxColumn = "true"
+                             sortedBy="{!v.sortedBy}"  
+                             onsort="{!c.updateColumnSorting}"
+                             sortedDirection="{!v.sortedDirection}"
+                             onrowaction="{! c.openSingleFile }"/>
+    </div>
+</aura:component>

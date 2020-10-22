@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Address_Country_Selection_Chk</fullName>
+    <active>true</active>
+    <description>Chosen address country should match the default Country selection on the Account record.</description>
+    <errorConditionFormula>AND( 
+ISCHANGED(Country__c),
+OR(
+ISBLANK(Text(Country__c)),
+Text(Account__r.Country__c) != Text(Country__c)
+)
+)</errorConditionFormula>
+    <errorMessage>Address country does not match with the Account country.</errorMessage>
+</ValidationRule>

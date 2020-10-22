@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Lead</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>AT Lead Path</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>On_30_Day_Trial__c</fieldNames>
+        <fieldNames>Trial_Start_Date__c</fieldNames>
+        <fieldNames>Trial_End_Date__c</fieldNames>
+        <info>&lt;p&gt;If the Lead is on equipment trial, please enter all the data for tracking.&lt;/p&gt;</info>
+        <picklistValueName>Nurturing</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>AT_Person_Lead</recordTypeName>
+</PathAssistant>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_Prescriber_To_Payor_Assoc</fullName>
+    <active>true</active>
+    <description>Prescriber cannot be associated to Payor directly</description>
+    <errorConditionFormula>AND 
+(Child_Relation_Type__c = &apos;Prescriber&apos;,
+ Parent_Relation_Type__c = &apos;Payor&apos;
+)</errorConditionFormula>
+    <errorMessage>Prescriber can be related to only Medical Facility or a Hospital.</errorMessage>
+</ValidationRule>

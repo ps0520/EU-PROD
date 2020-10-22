@@ -1,0 +1,17 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	
+    <lightning:notificationsLibrary aura:id="notifLib"/>
+		<aura:attribute name="picklistField" type="object"/>
+    
+	<force:recordData aura:id="record" layoutType="FULL" recordId="{!v.recordId}" targetFields="{!v.picklistField}" mode="EDIT" recordUpdated="{!c.recordUpdated}" />
+
+    
+    <lightning:picklistPath aura:id="picklistPath" recordId="{!v.recordId}"
+            variant="linear"
+            picklistFieldApiName="Invoice_Status__c"
+            onselect="{!c.handleSelect}">
+        
+        
+    </lightning:picklistPath>
+        
+</aura:component>

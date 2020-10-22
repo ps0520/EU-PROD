@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Opportunity</entityName>
+    <fieldName>StageName</fieldName>
+    <masterLabel>IE Opportunity Path</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>CA_Cancelled_Reason__c</fieldNames>
+        <picklistValueName>Cancelled</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Associated_Order__c</fieldNames>
+        <fieldNames>Close_Reason__c</fieldNames>
+        <picklistValueName>Closed - Complete</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>CA_Customer_Docs_Collection_Status__c</fieldNames>
+        <fieldNames>Missing_HI_Information__c</fieldNames>
+        <fieldNames>Customer_Docs_Sent_Date__c</fieldNames>
+        <fieldNames>Customer_Docs_Received_Date__c</fieldNames>
+        <picklistValueName>Customer Doc Collection</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Associated_Order__c</fieldNames>
+        <picklistValueName>Order Fulfillment</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>IE_Opportunity</recordTypeName>
+</PathAssistant>

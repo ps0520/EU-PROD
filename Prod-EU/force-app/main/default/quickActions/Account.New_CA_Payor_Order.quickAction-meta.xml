@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldOverrides>
+        <field>EffectiveDate</field>
+        <formula>TODAY()</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Order_Sub_Type__c</field>
+        <literalValue>Funded - Single</literalValue>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Payment_Terms__c</field>
+        <literalValue>net45</literalValue>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Pricebook2Id</field>
+        <formula>Account.Price_Book__c</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Status</field>
+        <literalValue>Draft</literalValue>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Type</field>
+        <literalValue>CA STANDARD</literalValue>
+    </fieldOverrides>
+    <label>New Payor Order</label>
+    <optionsCreateFeedItem>true</optionsCreateFeedItem>
+    <quickActionLayout>
+        <layoutSectionStyle>TwoColumnsLeftToRight</layoutSectionStyle>
+        <quickActionLayoutColumns>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>AccountId</field>
+                <uiBehavior>Required</uiBehavior>
+            </quickActionLayoutItems>
+        </quickActionLayoutColumns>
+        <quickActionLayoutColumns/>
+    </quickActionLayout>
+    <targetObject>Order</targetObject>
+    <targetParentField>Account</targetParentField>
+    <targetRecordType>Order.CA_Sales_Order</targetRecordType>
+    <type>Create</type>
+</QuickAction>

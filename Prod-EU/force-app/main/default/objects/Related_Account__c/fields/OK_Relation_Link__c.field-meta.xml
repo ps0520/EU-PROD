@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OK_Relation_Link__c</fullName>
+    <description>OneKey - Relation Link</description>
+    <externalId>false</externalId>
+    <label>Relation Link</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Belongs to Practice house</fullName>
+                <default>false</default>
+                <label>Belongs to Practice house</label>
+            </value>
+            <value>
+                <fullName>Belongs to Medical equipment group</fullName>
+                <default>false</default>
+                <label>Belongs to Medical equipment group</label>
+            </value>
+            <value>
+                <fullName>Belongs to Practice / MVZ</fullName>
+                <default>false</default>
+                <label>Belongs to Practice / MVZ</label>
+            </value>
+            <value>
+                <fullName>Is duplicate of</fullName>
+                <default>false</default>
+                <label>Is duplicate of</label>
+            </value>
+            <value>
+                <fullName>Supplied by - DRK -</fullName>
+                <default>false</default>
+                <label>Supplied by - DRK -</label>
+            </value>
+            <value>
+                <fullName>Belongs to Buying Group - medical</fullName>
+                <default>false</default>
+                <label>Belongs to Buying Group - medical</label>
+            </value>
+            <value>
+                <fullName>Belongs to Buying Group - pharma</fullName>
+                <default>false</default>
+                <label>Belongs to Buying Group - pharma</label>
+            </value>
+            <value>
+                <fullName>Belongs to Buying Group - sanitary</fullName>
+                <default>false</default>
+                <label>Belongs to Buying Group - sanitary</label>
+            </value>
+            <value>
+                <fullName>Is affiliate of</fullName>
+                <default>false</default>
+                <label>Is affiliate of</label>
+            </value>
+            <value>
+                <fullName>Belongs to Franchise company</fullName>
+                <default>false</default>
+                <label>Belongs to Franchise company</label>
+            </value>
+            <value>
+                <fullName>Belongs to Hospital Group - GRP -</fullName>
+                <default>false</default>
+                <label>Belongs to Hospital Group - GRP -</label>
+            </value>
+            <value>
+                <fullName>Is managed by</fullName>
+                <default>false</default>
+                <label>Is managed by</label>
+            </value>
+            <value>
+                <fullName>Belongs to Hospitals - KLI -</fullName>
+                <default>false</default>
+                <label>Belongs to Hospitals - KLI -</label>
+            </value>
+            <value>
+                <fullName>Is affiliated to hospitals</fullName>
+                <default>false</default>
+                <label>Is affiliated to hospitals</label>
+            </value>
+            <value>
+                <fullName>Has for main workplace</fullName>
+                <default>false</default>
+                <label>Has for main workplace</label>
+            </value>
+            <value>
+                <fullName>Belongs to Group of practices</fullName>
+                <default>false</default>
+                <label>Belongs to Group of practices</label>
+            </value>
+            <value>
+                <fullName>Is relocated to</fullName>
+                <default>false</default>
+                <label>Is relocated to</label>
+            </value>
+            <value>
+                <fullName>Belongs to Service center</fullName>
+                <default>false</default>
+                <label>Belongs to Service center</label>
+            </value>
+            <value>
+                <fullName>Belongs to Management company</fullName>
+                <default>false</default>
+                <label>Belongs to Management company</label>
+            </value>
+            <value>
+                <fullName>Belongs to Interlocational union</fullName>
+                <default>false</default>
+                <label>Belongs to Interlocational union</label>
+            </value>
+            <value>
+                <fullName>Supplied by - VAB -</fullName>
+                <default>false</default>
+                <label>Supplied by - VAB -</label>
+            </value>
+            <value>
+                <fullName>Supplied by - VAS -</fullName>
+                <default>false</default>
+                <label>Supplied by - VAS -</label>
+            </value>
+            <value>
+                <fullName>Supplied by - VER -</fullName>
+                <default>false</default>
+                <label>Supplied by - VER -</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

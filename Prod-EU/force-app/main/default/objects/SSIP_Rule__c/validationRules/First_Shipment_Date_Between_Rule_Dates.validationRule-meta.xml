@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>First_Shipment_Date_Between_Rule_Dates</fullName>
+    <active>false</active>
+    <description>First Shipment Date must fall between rule start date and rule end date</description>
+    <errorConditionFormula>AND(
+NOT($Profile.Name = &quot;System Administrator&quot;),NOT($User.Alias = &quot;autoproc&quot;), 
+OR(
+First_Shipment_Date__c &lt; Rule_Start_Date__c ,
+AND(
+NOT( ISBLANK( Rule_End_Date__c ) ) ,
+First_Shipment_Date__c &gt; Rule_End_Date__c
+))
+)</errorConditionFormula>
+    <errorMessage>&apos;First Shipment Date&apos; must fall between &apos;Rule Start Date&apos; and &apos;Rule End Date&apos;</errorMessage>
+</ValidationRule>

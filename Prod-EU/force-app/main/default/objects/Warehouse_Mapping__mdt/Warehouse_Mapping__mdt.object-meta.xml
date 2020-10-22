@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Mapping between Recordtype and Warehouse</description>
+    <label>Warehouse Mapping</label>
+    <pluralLabel>Warehouse_Mapping</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

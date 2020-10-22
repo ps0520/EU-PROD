@@ -1,0 +1,22 @@
+<apex:page standardcontroller="Order" standardStylesheets="false" showHeader="false" sidebar="false">
+   
+    <!-- Include a JavaScript file in your Visualforce page -->
+    <apex:includeScript value="/lightning/lightning.out.js" />
+
+    <div id="lightning" />
+
+    <script>
+    //Tell your Visualforce page to use ExposeVF Lightning app
+        $Lightning.use("c:LtngAppReturnCreditOrder", function() {
+            // Write a function that creates the component on the page
+          $Lightning.createComponent("c:LtngCompReturnCreditOrder",
+          {recordId:'8010Q000001jGbnQAE'},
+          "lightning",
+          function(cmp) {
+            console.log("Component created!");
+            console.log(cmp);
+          });
+        });
+    </script>
+    <!-- Order Id:  -->
+</apex:page>

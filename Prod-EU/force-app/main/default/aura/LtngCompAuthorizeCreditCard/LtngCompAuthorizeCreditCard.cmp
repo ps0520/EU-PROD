@@ -1,0 +1,20 @@
+<aura:component implements ="flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickActionWithoutHeader" 
+                access="global" controller="ClsOrderEntryHandler">
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="isComplete" type="Boolean" default = "false"/>
+    <aura:attribute name="message" type="String"/>
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <div class="slds-page-header" role="banner">
+        <p class="slds-text-heading_label"></p>
+        <h1 class="slds-page-header__title slds-m-right_small
+            slds-truncate slds-align-left">Authorizing Credit Card</h1>
+    </div>
+    
+    <aura:if isTrue="{! v.isComplete }" >
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <span>{! v.message }</span>
+        <p>&nbsp;</p>
+     	<lightning:button label="Close" onclick="{!c.handleClose}" class="slds-m-top_medium" variant="brand" />   
+    </aura:if>
+</aura:component>

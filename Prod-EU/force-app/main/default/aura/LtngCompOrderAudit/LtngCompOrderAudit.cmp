@@ -1,0 +1,185 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" 
+                access="global" controller="CtrlOrderAudit">
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="taskRecordId" type = "Id"/>
+    <aura:attribute name="tasksubject" type="String"/>
+    <aura:attribute name="taskObject" type="object"/>
+    <aura:attribute name="taskType" type="String"/>
+    <aura:attribute name="IssueType" type="String"/>
+    <aura:attribute name="userRecId" type="String"/>
+    
+    <aura:attribute name="type" type="String" />
+    <aura:attribute name="comments" type="String" />
+    <aura:attribute name="today" type="Date" default=""/>
+    <aura:attribute name="users" type="User" default="{'sobjectType':'User'}"/>
+    <aura:attribute name="auditlist" type="List"/>
+    <aura:attribute name="isComplete" type="boolean"/>
+    <aura:attribute name="wrapperList" type="object"/>
+    
+    <aura:attribute name="isOpen" type="boolean" default="false"/>
+    <aura:registerEvent name="CloseModal" type="c:LtngEvtCloseModal"/>
+    <aura:handler name="CloseModal" event="c:LtngEvtCloseModal" action="{!c.handleCloseModal}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler event="force:refreshView" action="{!c.doInit}" />
+    <ltng:require styles="{!$Resource.rh2__SFStyleSheets +
+                          '/assets/styles/salesforce-lightning-design-system-ltng.css'}"/>
+    <aura:html tag="style">
+        .slds-modal__container {
+        width : 25% !important;
+        max-width : 25% !important;
+        }
+    </aura:html> 
+    
+    <aura:if isTrue="{!v.wrapperList.hasAccess}">
+        
+        <!-- Entire Component Block -->   
+        <div aura:id="maindiv">
+            <aura:if isTrue="{!v.isOpen}">
+                
+                <!--###### MODAL BOX Start######--> 
+                <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" 
+                         aria-modal="true" aria-describedby="modal-content-id-1" 
+                         class="slds-modal slds-fade-in-open">
+                    <div class="slds-modal__container">
+                        <!-- ###### MODAL BOX HEADER Start ######-->
+                        <header class="slds-modal__header">
+                            <lightning:buttonIcon iconName="utility:close"
+                                                  onclick="{! c.closeModel }"
+                                                  alternativeText="close"
+                                                  variant="bare-inverse"
+                                                  class="slds-modal__close"/>
+                            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Task Details</h2>
+                        </header>
+                        <!--###### MODAL BOX BODY Part Start######-->
+                        <div class="slds-modal__content slds-p-around_small" id="modal-content-id-1">
+                           
+                            <div class="slds-grid slds-grid_vertical">
+                                
+                                <div class="slds-col">
+                                    <span>
+                                        <lightning:select aura:id="tsk_subject" value="{!v.type}"  
+                                                            name="typePicklist" 
+                                                            label="Select a Subject"                                                                        
+                                                            required="true"
+                                            				messageWhenValueMissing="Please Select Subject Type">
+                                        <option value="">--None--</option>
+                                        <aura:iteration items="{!v.tasksubject}" var="val" indexvar="key">
+                                            <option value="{!val.key}" selected="{!val.key==v.type}">{!val.key}</option>
+                                        </aura:iteration>                                        
+                                        </lightning:select>
+                                    </span>                                   
+                                </div>
+                                <div class="slds-col">
+                                    <span>
+                                        <lightning:card>
+                                            <c:LtngCompLookup label="Assign to" value="{!v.users.id}" sObjectType="User" userOwnId="{!v.userRecId}" />
+                                        </lightning:card>
+                                    </span>
+                                </div>
+                               <!-- <div class="slds-col">
+                                    <span>
+                                        <lightning:input   type="text"
+                                                         label = "Type"
+                                                         disabled="true"
+                                                         aura:id="tsk_type"
+                                                         value="{!v.taskType}"
+                                                         />
+                                    </span>
+                                </div> -->
+                                <div class="slds-p-bottom_medium"></div>
+                                <div class="slds-col">
+                                    
+                                    <span>
+                                        <ui:inputDate aura:id="tsk_duedate" label="Due Date" 
+                                                      class="field" value="{!v.today}" 
+                                                      displayDatePicker="true" />
+                                        
+                                    </span>
+                                </div>
+                                <div class="slds-p-bottom_medium"></div>
+                                <div class="slds-col">
+                                    
+                                    <span>
+                                        <lightning:textarea aura:id="tsk_comment" class="field" value="{!v.comments}"
+                                                            label="Comment" maxlength="300" />
+                                        
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!--###### MODAL BOX FOOTER Part Start ######-->
+                        <footer class="slds-modal__footer">
+                            <lightning:button variant="brand" 
+                                              label="Save"
+                                              title="Submit and close form"
+                                              onclick="{!c.updateTaskDetails }"/>
+                            
+                            <lightning:button variant="neutral" 
+                                              label="Close"
+                                              title="Cancel/Close"
+                                              onclick="{! c.closeModel }"/>
+                            
+                            
+                        </footer>
+                    </div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open"></div>
+                <!--###### MODAL BOX Part END Here ######-->
+                
+            </aura:if>
+            
+            <!-- QC Hold Status Block -->       
+            <div aura:id="statusbannerid" class="slds-grid slds-wrap statusbanner">
+                <div class="slds-col slds-size_2-of-12">
+                    <span></span>
+                </div> 
+                <div class=" slds-col slds-size_8-of-12 statustext"> 
+                    <span>QC Check - {!v.wrapperList.Shipholdstatus}</span>
+                </div>   
+            </div>
+            <!-- Audit Records Block -->       
+            <div class="slds-m-top--small">
+                
+                <div class="slds-grid slds-wrap slds-p-bottom_medium">     
+                    <aura:iteration items="{!v.auditlist}" var="a">
+                        
+                        <div class="" style="width:48%;">
+                            <div class="slds-form-element slds-m-left--small slds-m-top--small">
+                                <label class="slds-checkbox_toggle slds-grid">
+                                    <span class="slds-form-element__label slds-m-bottom_none" style="width:70%">
+                                        {!a.Audit_Field_Name__c}  </span>
+                                    <ui:inputCheckbox disabled="{!!v.wrapperList.isEditable}" value="{!a.Field_Verified__c}" change="{!c.selectchange}" />
+                                    <span id="toggle-desc" class="slds-checkbox_faux_container"
+                                          aria-live="assertive">
+                                        <span class="slds-checkbox_faux"></span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </aura:iteration> 
+                    
+                </div> 
+                <!-- Save and Submit Buttons Block -->   
+                <aura:if isTrue="{!and(not(v.wrapperList.iscomplete),v.wrapperList.isEditable)}">
+                    <div aura:id="DivID" class="slds-m-bottom_small slds-m-top_large  slds-p-bottom_medium">
+                        <div class="slds-clearfix">
+                            <div class="slds-clearfix">
+                                <div class=" slds-float_right" role="">
+                                    <button class="slds-m-right_medium slds-button slds-button_brand" onclick="{!c.submitauditbtn}">
+                                        <lightning:icon iconName="utility:check" size="x-small" class="checkmark" 
+                                                        alternativeText="Check Mark"/>  Submit
+                                    </button>
+                                    <button class="slds-button slds-button_outline-brand slds-m-right_small" onclick="{!c.saveauditbtn}">Save</button>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                </aura:if>     
+            </div>  
+        </div>      
+    </aura:if> 
+    
+    
+    
+    
+</aura:component>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>jagan.periyakaruppan@dexcom.com</contactEmail>
+    <iconUrl>https://login.salesforce.com/logos/Salesforce/Salesforce/logo.png</iconUrl>
+    <label>CAOCEConnectedApp</label>
+    <logoUrl>https://test.salesforce.com/logos/Salesforce/Salesforce/logo.png</logoUrl>
+    <oauthConfig>
+        <callbackUrl>https://dexcom-canada-oce--dexccaf1.my.salesforce.com/services/authcallback/DexcomSampleOrderIntegration</callbackUrl>
+        <consumerKey>3MVG9ZPHiJTk7yFysVBDUjMNK4c4OiaqyqspEWrHLiXewkFmH6Ffl_KVyVKkTtdaROxTLoTGZCw.fsFFFSpbx</consumerKey>
+        <isAdminApproved>true</isAdminApproved>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <scopes>Api</scopes>
+        <scopes>RefreshToken</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>BYPASS</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+    <profileName>Data Integrator</profileName>
+</ConnectedApp>

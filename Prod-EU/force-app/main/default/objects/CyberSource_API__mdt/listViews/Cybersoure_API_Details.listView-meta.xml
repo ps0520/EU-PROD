@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cybersoure_API_Details</fullName>
+    <columns>MasterLabel</columns>
+    <columns>CurrencyIsoCode__c</columns>
+    <columns>DeveloperName</columns>
+    <columns>Enviornment__c</columns>
+    <columns>endPoint__c</columns>
+    <columns>keyid__c</columns>
+    <columns>secretKey__c</columns>
+    <columns>profile_id__c</columns>
+    <columns>merchant_id__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Cybersoure API Details</label>
+    <language>en_US</language>
+</ListView>

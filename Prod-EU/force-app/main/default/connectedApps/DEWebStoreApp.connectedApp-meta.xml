@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>salesforce_website_alerts@dexcom.com</contactEmail>
+    <label>DEWebStoreApp</label>
+    <oauthConfig>
+        <callbackUrl>https://de.store.dexcom.com/salesforce/oauth_callback</callbackUrl>
+        <consumerKey>3MVG9ZPHiJTk7yFyo2kgZvLTvpi9EN2R8g40XQfEIckUKNqIrBNhQHGRwVALvNw39vJjaaVuwGXWf.fp6eyJt</consumerKey>
+        <isAdminApproved>false</isAdminApproved>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <scopes>Api</scopes>
+        <scopes>Full</scopes>
+        <scopes>RefreshToken</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>ENFORCE</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+</ConnectedApp>

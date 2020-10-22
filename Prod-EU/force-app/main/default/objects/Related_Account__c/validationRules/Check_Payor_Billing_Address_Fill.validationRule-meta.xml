@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_Payor_Billing_Address_Fill</fullName>
+    <active>true</active>
+    <description>Payor Billing address can be selected only when there is a payor association</description>
+    <errorConditionFormula>AND(
+NOT(ISBLANK( Payor_Billing_Address__c )),
+Parent_Relation_Type__c != &apos;Payor&apos;,
+Parent_Relation_Type__c != &apos;Pharmacy&apos;
+)</errorConditionFormula>
+    <errorMessage>Payor Billing Address can only be selected when there is a Payor association.</errorMessage>
+</ValidationRule>

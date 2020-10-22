@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DE_Benefit_Compact_Layout</fullName>
+    <fields>Name</fields>
+    <fields>Member_Id__c</fields>
+    <fields>Benefit_Hierarchy__c</fields>
+    <fields>Auth_Start_Date__c</fields>
+    <fields>Auth_End_Date__c</fields>
+    <fields>Authorization_Number__c</fields>
+    <fields>Insurant_Status__c</fields>
+    <label>DE Benefit Compact Layout</label>
+</CompactLayout>

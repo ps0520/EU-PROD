@@ -1,0 +1,175 @@
+<aura:component controller="CtrlCanadianPayorMatrix">
+	<aura:attribute name="accountId" type="String"  />
+	<aura:attribute name="PIAF" type="Boolean"  default="false" />
+	<aura:attribute name="CMN" type="Boolean" default="false" />
+	<aura:attribute name="T1D" type="Boolean" default="false" />
+	<aura:attribute name="Claim" type="Boolean"  default="false" />
+	<aura:attribute name="Prior" type="Boolean" default="false" />
+	<aura:attribute name="A1C" type="Boolean" default="false" />
+	<aura:attribute name="BG" type="Boolean" default="false" />
+	<aura:attribute name="CGM" type="Boolean" default="false" />
+	<aura:attribute name="LIC" type="Boolean" default="false" />
+	<aura:attribute name="PRX" type="Boolean" default="false" />
+	<aura:attribute name="NL" type="Boolean" default="false" />
+	<aura:attribute name="OIF" type="Boolean" default="false" />
+	<aura:attribute name="NCF" type="Boolean" default="false" />
+	<aura:attribute name="NEST" type="Boolean" default="false" />
+    <aura:attribute name="finishedQuery" type="Boolean" default="false" />
+    <aura:attribute name="coverage" type="String"  />
+    <aura:attribute name="respTo" type="String"  />
+    <aura:attribute name="respBy" type="String"  />
+    <aura:attribute name="payor" type="String" />
+    <aura:handler name="init" value="{!this}"  action="{!c.doInit}"/>
+
+    <aura:if isTrue="{! v.finishedQuery }" >
+
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-12">
+                 &nbsp;
+            </div>
+             <div class="slds-col slds-size_2-of-12">
+                 <b>Payor:</b>
+            </div>
+             <div class="slds-col slds-size_6-of-12">
+                 {!v.payor}
+            </div>
+             <div class="slds-col slds-size_3-of-12">
+                 &nbsp;
+            </div>
+            <div class="slds-col slds-size_12-of-12">
+                &nbsp;
+            </div>
+            <div class="slds-col slds-size_1-of-12">
+                &nbsp;
+            </div>
+            <div class="slds-col slds-size_11-of-12">
+                <b>Required Documents:</b>
+            </div>
+            <div class="slds-col slds-size_12-of-12">
+                &nbsp;
+            </div>
+            <div class="slds-col slds-size_1-of-12">
+            </div> 
+            <div class="slds-col slds-size_2-of-3">
+                PIAF:
+            </div>
+            <div class="slds-col slds-size_1-of-4">
+                <ui:outputCheckbox aura:id="output" value="{!v.PIAF}"/>
+            </div>
+            <div class="slds-col slds-size_1-of-12">
+            </div>
+            <div class="slds-col slds-size_2-of-3">
+                CMN:
+            </div>
+            <div class="slds-col slds-size_1-of-4">
+                <ui:outputCheckbox aura:id="output" value="{!v.CMN}"/>
+            </div>
+            <div class="slds-col slds-size_1-of-12">
+            </div>
+            <div class="slds-col slds-size_2-of-3">
+                T1D Note:
+            </div>
+            <div class="slds-col slds-size_1-of-4">
+                <ui:outputCheckbox aura:id="output" value="{!v.T1D}"/>
+            </div>
+           <div class="slds-col slds-size_1-of-12">
+            </div>
+            <div class="slds-col slds-size_2-of-3">
+                Claim Form:
+            </div>
+            <div class="slds-col slds-size_1-of-4">
+                <ui:outputCheckbox aura:id="output" value="{!v.Claim}"/>
+            </div>
+            <div class="slds-col slds-size_1-of-12">
+            </div>
+            <div class="slds-col slds-size_2-of-3">
+                Prior-Auth Form:
+            </div>
+            <div class="slds-col slds-size_1-of-4">
+                <ui:outputCheckbox aura:id="output" value="{!v.Prior}"/>
+            </div>
+            <div class="slds-col slds-size_1-of-12">
+            </div>
+            <div class="slds-col slds-size_2-of-3">
+                A1C:
+            </div>
+            <div class="slds-col slds-size_1-of-4">
+                <ui:outputCheckbox aura:id="output" value="{!v.A1C}"/>
+            </div>
+            <div class="slds-col slds-size_1-of-12">
+            </div>
+            <div class="slds-col slds-size_2-of-3">
+                BG Logs:
+            </div>
+            <div class="slds-col slds-size_1-of-4">
+                <ui:outputCheckbox aura:id="output" value="{!v.BG}"/>
+            </div>
+            <div class="slds-col slds-size_1-of-12">
+            </div>
+            <div class="slds-col slds-size_2-of-3">
+                CGM Quest:
+            </div>
+            <div class="slds-col slds-size_1-of-4">
+                <ui:outputCheckbox aura:id="output" value="{!v.CGM}"/>
+            </div>
+			<div class="slds-col slds-size_1-of-12">
+            </div>
+            <div class="slds-col slds-size_2-of-3">
+                LIC:
+            </div>
+            <div class="slds-col slds-size_1-of-4">
+                <ui:outputCheckbox aura:id="output" value="{!v.LIC}"/>
+            </div><div class="slds-col slds-size_1-of-12">
+            </div>
+            <div class="slds-col slds-size_2-of-3">
+                Pregnancy RX:
+            </div>
+            <div class="slds-col slds-size_1-of-4">
+                <ui:outputCheckbox aura:id="output" value="{!v.PRX}"/>
+            </div><div class="slds-col slds-size_1-of-12">
+            </div>
+            <div class="slds-col slds-size_2-of-3">
+                Narrative Letter:
+            </div>
+            <div class="slds-col slds-size_1-of-4">
+                <ui:outputCheckbox aura:id="output" value="{!v.NL}"/>
+            </div>        
+			<div class="slds-col slds-size_1-of-12">
+            </div> 
+            <div class="slds-col slds-size_2-of-3">
+                ODSP Info FORM:
+            </div>
+            <div class="slds-col slds-size_1-of-4">
+                <ui:outputCheckbox aura:id="output" value="{!v.OIF}"/>
+            </div>
+			<div class="slds-col slds-size_1-of-12">
+            </div> 
+            <div class="slds-col slds-size_2-of-3">
+                NIHB Claim FORM:
+            </div>
+            <div class="slds-col slds-size_1-of-4">
+                <ui:outputCheckbox aura:id="output" value="{!v.NCF}"/>
+            </div>
+			<div class="slds-col slds-size_1-of-12">
+            </div> 
+            <div class="slds-col slds-size_2-of-3">
+                NIHB Estimate:
+            </div>
+            <div class="slds-col slds-size_1-of-4">
+                <ui:outputCheckbox aura:id="output" value="{!v.NEST}"/>
+            </div>
+
+        </div>
+        <p>&nbsp;</p>
+        <div class="slds-box slds-box_xx-small">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Coverage:</b> &nbsp;&nbsp; &nbsp; &nbsp;  {!v.coverage} </p>
+        </div>
+        <div class="slds-box slds-box_xx-small">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Responds to: </b> &nbsp;  {!v.respTo} </p>
+        </div>
+        <div class="slds-box slds-box_xx-small">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Responds by: </b> &nbsp;  {!v.respBy}</p>
+        </div>
+    </aura:if>
+    
+</aura:component>

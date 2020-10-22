@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_Parent_Child_Country</fullName>
+    <active>true</active>
+    <description>Parent and Child account country should be the same.</description>
+    <errorConditionFormula>TEXT(Child_Account__r.Country__c) !=  TEXT(Parent_Account__r.Country__c)</errorConditionFormula>
+    <errorMessage>Parent and Child accounts should belong to the same country.</errorMessage>
+</ValidationRule>

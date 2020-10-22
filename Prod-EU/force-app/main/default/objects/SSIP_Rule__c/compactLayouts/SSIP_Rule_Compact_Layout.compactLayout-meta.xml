@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SSIP_Rule_Compact_Layout</fullName>
+    <fields>Product__c</fields>
+    <fields>Quantity__c</fields>
+    <fields>Frequency_In_Days__c</fields>
+    <fields>First_Repeat_Order_Lead_Days__c</fields>
+    <fields>First_Order__c</fields>
+    <fields>First_Shipment_Date__c</fields>
+    <label>SSIP Rule Compact Layout</label>
+</CompactLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Code 400 Data Entry</fullName>
+                <default>true</default>
+                <label>Code 400 Data Entry</label>
+            </value>
+            <value>
+                <fullName>Code 401 Billing Error</fullName>
+                <default>false</default>
+                <label>Code 401 Billing Error</label>
+            </value>
+            <value>
+                <fullName>Code 402 Shipping Error</fullName>
+                <default>false</default>
+                <label>Code 402 Shipping Error</label>
+            </value>
+            <value>
+                <fullName>Code 403 Fulfillment Error</fullName>
+                <default>false</default>
+                <label>Code 403 Fulfillment Error</label>
+            </value>
+            <value>
+                <fullName>Code 404 Order Entry</fullName>
+                <default>false</default>
+                <label>Code 404 Order Entry</label>
+            </value>
+            <value>
+                <fullName>Code 405 Lack of Follow Up</fullName>
+                <default>false</default>
+                <label>Code 405 Lack of Follow Up</label>
+            </value>
+            <value>
+                <fullName>Code 406 Distributor</fullName>
+                <default>false</default>
+                <label>Code 406 Distributor</label>
+            </value>
+            <value>
+                <fullName>Code 407 Phone</fullName>
+                <default>false</default>
+                <label>Code 407 Phone</label>
+            </value>
+            <value>
+                <fullName>Code 408 Clarity of Process</fullName>
+                <default>false</default>
+                <label>Code 408 Clarity of Process</label>
+            </value>
+            <value>
+                <fullName>Code 409 Quoting Error</fullName>
+                <default>false</default>
+                <label>Code 409 Quoting Error</label>
+            </value>
+            <value>
+                <fullName>Code 410 Insurance</fullName>
+                <default>false</default>
+                <label>Code 410 Insurance</label>
+            </value>
+            <value>
+                <fullName>Code 411 Online Store</fullName>
+                <default>false</default>
+                <label>Code 411 Online Store</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

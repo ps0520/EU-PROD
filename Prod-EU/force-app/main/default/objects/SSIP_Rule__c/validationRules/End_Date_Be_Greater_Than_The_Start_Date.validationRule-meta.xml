@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>End_Date_Be_Greater_Than_The_Start_Date</fullName>
+    <active>true</active>
+    <description>SSIP Rule End Date or Renewal date should be greater than the Rule Start Date</description>
+    <errorConditionFormula>OR(Rule_End_Date__c &lt; Rule_Start_Date__c,
+ Renewal_Date__c &lt; Rule_Start_Date__c)</errorConditionFormula>
+    <errorMessage>&apos;Rule End Date&apos; or &apos;Renewal Date&apos; must be greater than the &apos;Rule Start Date&apos;</errorMessage>
+</ValidationRule>

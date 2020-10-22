@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OK_Role_2__c</fullName>
+    <description>OneKey - Records Role 2</description>
+    <externalId>false</externalId>
+    <label>Role 2</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Consulting Physician</fullName>
+                <default>false</default>
+                <label>Consulting Physician</label>
+            </value>
+            <value>
+                <fullName>Head of Public Health Department</fullName>
+                <default>false</default>
+                <label>Head of Public Health Department</label>
+            </value>
+            <value>
+                <fullName>Head of office (deputy)</fullName>
+                <default>false</default>
+                <label>Head of office (deputy)</label>
+            </value>
+            <value>
+                <fullName>Nursing Director (deputy)</fullName>
+                <default>false</default>
+                <label>Nursing Director (deputy)</label>
+            </value>
+            <value>
+                <fullName>Kitchen Manager</fullName>
+                <default>false</default>
+                <label>Kitchen Manager</label>
+            </value>
+            <value>
+                <fullName>Head of housing</fullName>
+                <default>false</default>
+                <label>Head of housing</label>
+            </value>
+            <value>
+                <fullName>Freelancer</fullName>
+                <default>false</default>
+                <label>Freelancer</label>
+            </value>
+            <value>
+                <fullName>Pharmacie Staff</fullName>
+                <default>false</default>
+                <label>Pharmacie Staff</label>
+            </value>
+            <value>
+                <fullName>Admiral Doctor</fullName>
+                <default>false</default>
+                <label>Admiral Doctor</label>
+            </value>
+            <value>
+                <fullName>Admiral Colonel medical officer</fullName>
+                <default>false</default>
+                <label>Admiral Colonel medical officer</label>
+            </value>
+            <value>
+                <fullName>Admiral Medical officer</fullName>
+                <default>false</default>
+                <label>Admiral Medical officer</label>
+            </value>
+            <value>
+                <fullName>Medical head</fullName>
+                <default>false</default>
+                <label>Medical head</label>
+            </value>
+            <value>
+                <fullName>Fleet doctor</fullName>
+                <default>false</default>
+                <label>Fleet doctor</label>
+            </value>
+            <value>
+                <fullName>Flotila doctor</fullName>
+                <default>false</default>
+                <label>Flotila doctor</label>
+            </value>
+            <value>
+                <fullName>Doctor General</fullName>
+                <default>false</default>
+                <label>Doctor General</label>
+            </value>
+            <value>
+                <fullName>Field-grade pharmacist (Military)</fullName>
+                <default>false</default>
+                <label>Field-grade pharmacist (Military)</label>
+            </value>
+            <value>
+                <fullName>Field-grade physician (Military)</fullName>
+                <default>false</default>
+                <label>Field-grade physician (Military)</label>
+            </value>
+            <value>
+                <fullName>Colonel  Pharmacist</fullName>
+                <default>false</default>
+                <label>Colonel  Pharmacist</label>
+            </value>
+            <value>
+                <fullName>Training Doctor</fullName>
+                <default>false</default>
+                <label>Training Doctor</label>
+            </value>
+            <value>
+                <fullName>Pharmacist (Military)</fullName>
+                <default>false</default>
+                <label>Pharmacist (Military)</label>
+            </value>
+            <value>
+                <fullName>Medical Director (deputy)</fullName>
+                <default>false</default>
+                <label>Medical Director (deputy)</label>
+            </value>
+            <value>
+                <fullName>Medical head (deputy)</fullName>
+                <default>false</default>
+                <label>Medical head (deputy)</label>
+            </value>
+            <value>
+                <fullName>Director of administration</fullName>
+                <default>false</default>
+                <label>Director of administration</label>
+            </value>
+            <value>
+                <fullName>Fee-based physician</fullName>
+                <default>false</default>
+                <label>Fee-based physician</label>
+            </value>
+            <value>
+                <fullName>Dean</fullName>
+                <default>false</default>
+                <label>Dean</label>
+            </value>
+            <value>
+                <fullName>Professor</fullName>
+                <default>false</default>
+                <label>Professor</label>
+            </value>
+            <value>
+                <fullName>Secretary general</fullName>
+                <default>false</default>
+                <label>Secretary general</label>
+            </value>
+            <value>
+                <fullName>Chairmann (deputy)</fullName>
+                <default>false</default>
+                <label>Chairmann (deputy)</label>
+            </value>
+            <value>
+                <fullName>Manager (deputy)</fullName>
+                <default>false</default>
+                <label>Manager (deputy)</label>
+            </value>
+            <value>
+                <fullName>Operations Head (deputy)</fullName>
+                <default>false</default>
+                <label>Operations Head (deputy)</label>
+            </value>
+            <value>
+                <fullName>Chief hospital pharmacist</fullName>
+                <default>false</default>
+                <label>Chief hospital pharmacist</label>
+            </value>
+            <value>
+                <fullName>Head Physician</fullName>
+                <default>false</default>
+                <label>Head Physician</label>
+            </value>
+            <value>
+                <fullName>Head physician (deputy)</fullName>
+                <default>false</default>
+                <label>Head physician (deputy)</label>
+            </value>
+            <value>
+                <fullName>Leading physician</fullName>
+                <default>false</default>
+                <label>Leading physician</label>
+            </value>
+            <value>
+                <fullName>Senior physician</fullName>
+                <default>false</default>
+                <label>Senior physician</label>
+            </value>
+            <value>
+                <fullName>Assistant doctor</fullName>
+                <default>false</default>
+                <label>Assistant doctor</label>
+            </value>
+            <value>
+                <fullName>Lead Assistant</fullName>
+                <default>false</default>
+                <label>Lead Assistant</label>
+            </value>
+            <value>
+                <fullName>Director</fullName>
+                <default>false</default>
+                <label>Director</label>
+            </value>
+            <value>
+                <fullName>Vice Director</fullName>
+                <default>false</default>
+                <label>Vice Director</label>
+            </value>
+            <value>
+                <fullName>Public Health Officer</fullName>
+                <default>false</default>
+                <label>Public Health Officer</label>
+            </value>
+            <value>
+                <fullName>Lead Consultant</fullName>
+                <default>false</default>
+                <label>Lead Consultant</label>
+            </value>
+            <value>
+                <fullName>Medicine Director</fullName>
+                <default>false</default>
+                <label>Medicine Director</label>
+            </value>
+            <value>
+                <fullName>Medical Director</fullName>
+                <default>false</default>
+                <label>Medical Director</label>
+            </value>
+            <value>
+                <fullName>Company Doctor</fullName>
+                <default>false</default>
+                <label>Company Doctor</label>
+            </value>
+            <value>
+                <fullName>Medical officer (Military)</fullName>
+                <default>false</default>
+                <label>Medical officer (Military)</label>
+            </value>
+            <value>
+                <fullName>Ward physician</fullName>
+                <default>false</default>
+                <label>Ward physician</label>
+            </value>
+            <value>
+                <fullName>Medical Council</fullName>
+                <default>false</default>
+                <label>Medical Council</label>
+            </value>
+            <value>
+                <fullName>Colonel medical officer</fullName>
+                <default>false</default>
+                <label>Colonel medical officer</label>
+            </value>
+            <value>
+                <fullName>Sanitary Council</fullName>
+                <default>false</default>
+                <label>Sanitary Council</label>
+            </value>
+            <value>
+                <fullName>Pharmacy Owner</fullName>
+                <default>false</default>
+                <label>Pharmacy Owner</label>
+            </value>
+            <value>
+                <fullName>Manager</fullName>
+                <default>false</default>
+                <label>Manager</label>
+            </value>
+            <value>
+                <fullName>Leader</fullName>
+                <default>false</default>
+                <label>Leader</label>
+            </value>
+            <value>
+                <fullName>Purchaser Department Pharmacy</fullName>
+                <default>false</default>
+                <label>Purchaser Department Pharmacy</label>
+            </value>
+            <value>
+                <fullName>Purchaser Department Clinic</fullName>
+                <default>false</default>
+                <label>Purchaser Department Clinic</label>
+            </value>
+            <value>
+                <fullName>Purchaser Department VVA</fullName>
+                <default>false</default>
+                <label>Purchaser Department VVA</label>
+            </value>
+            <value>
+                <fullName>Leaseholder</fullName>
+                <default>false</default>
+                <label>Leaseholder</label>
+            </value>
+            <value>
+                <fullName>Head of Nursing</fullName>
+                <default>false</default>
+                <label>Head of Nursing</label>
+            </value>
+            <value>
+                <fullName>Nursing staff</fullName>
+                <default>false</default>
+                <label>Nursing staff</label>
+            </value>
+            <value>
+                <fullName>Employed Doctor</fullName>
+                <default>false</default>
+                <label>Employed Doctor</label>
+            </value>
+            <value>
+                <fullName>Practice Owner</fullName>
+                <default>false</default>
+                <label>Practice Owner</label>
+            </value>
+            <value>
+                <fullName>Practice owner (deputy)</fullName>
+                <default>false</default>
+                <label>Practice owner (deputy)</label>
+            </value>
+            <value>
+                <fullName>Other Staff Member/Official</fullName>
+                <default>false</default>
+                <label>Other Staff Member/Official</label>
+            </value>
+            <value>
+                <fullName>Other Position</fullName>
+                <default>false</default>
+                <label>Other Position</label>
+            </value>
+            <value>
+                <fullName>Other Hospital staff</fullName>
+                <default>false</default>
+                <label>Other Hospital staff</label>
+            </value>
+            <value>
+                <fullName>Administrator</fullName>
+                <default>false</default>
+                <label>Administrator</label>
+            </value>
+            <value>
+                <fullName>Head of administration</fullName>
+                <default>false</default>
+                <label>Head of administration</label>
+            </value>
+            <value>
+                <fullName>Administrative Staff</fullName>
+                <default>false</default>
+                <label>Administrative Staff</label>
+            </value>
+            <value>
+                <fullName>Guest doctor</fullName>
+                <default>false</default>
+                <label>Guest doctor</label>
+            </value>
+            <value>
+                <fullName>Head Homebound</fullName>
+                <default>false</default>
+                <label>Head Homebound</label>
+            </value>
+            <value>
+                <fullName>Head of ward</fullName>
+                <default>false</default>
+                <label>Head of ward</label>
+            </value>
+            <value>
+                <fullName>Head OP</fullName>
+                <default>false</default>
+                <label>Head OP</label>
+            </value>
+            <value>
+                <fullName>Head of Repository</fullName>
+                <default>false</default>
+                <label>Head of Repository</label>
+            </value>
+            <value>
+                <fullName>Head of the home economics department</fullName>
+                <default>false</default>
+                <label>Head of the home economics department</label>
+            </value>
+            <value>
+                <fullName>Major Pharmacist</fullName>
+                <default>false</default>
+                <label>Major Pharmacist</label>
+            </value>
+            <value>
+                <fullName>Colonel doctor</fullName>
+                <default>false</default>
+                <label>Colonel doctor</label>
+            </value>
+            <value>
+                <fullName>Director of Nursing</fullName>
+                <default>false</default>
+                <label>Director of Nursing</label>
+            </value>
+            <value>
+                <fullName>Head of administrative staff (practice)</fullName>
+                <default>false</default>
+                <label>Head of administrative staff (practice)</label>
+            </value>
+            <value>
+                <fullName>Pharmacy Council</fullName>
+                <default>false</default>
+                <label>Pharmacy Council</label>
+            </value>
+            <value>
+                <fullName>President</fullName>
+                <default>false</default>
+                <label>President</label>
+            </value>
+            <value>
+                <fullName>Management</fullName>
+                <default>false</default>
+                <label>Management</label>
+            </value>
+            <value>
+                <fullName>Head of Nursing (deputy)</fullName>
+                <default>false</default>
+                <label>Head of Nursing (deputy)</label>
+            </value>
+            <value>
+                <fullName>Technical Manager</fullName>
+                <default>false</default>
+                <label>Technical Manager</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

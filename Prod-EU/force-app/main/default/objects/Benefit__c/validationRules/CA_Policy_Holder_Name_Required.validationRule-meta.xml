@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CA_Policy_Holder_Name_Required</fullName>
+    <active>true</active>
+    <description>Policy Holder Name is required if the relationship with the Policy Holder is not &apos;Self&apos;.</description>
+    <errorConditionFormula>AND ( 
+NOT($Profile.Name = &quot;System Administrator&quot;), 
+NOT($Profile.Name = &quot;Data Integrator&quot;), 
+BEGINS(RecordType.DeveloperName, &apos;CA_&apos;), 
+NOT(ISPICKVAL( Insurance_Holder_s_Relationship__c, &apos;Self&apos;)),
+ISBLANK( Policy_Holder_Name__c ))</errorConditionFormula>
+    <errorMessage>Policy Holder Name is required if the relationship with the Policy Holder is not &apos;Self&apos;.</errorMessage>
+</ValidationRule>

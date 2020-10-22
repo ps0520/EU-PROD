@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>For Cash Pay Opportunity Clear out the Opportunity Products.</description>
+    <interviewLabel>Clear Opportunity Product For Cash Pay {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Clear Opportunity Product For Cash Pay</label>
+    <processType>AutoLaunchedFlow</processType>
+    <recordDeletes>
+        <name>Delete_Oppty_Products</name>
+        <label>Delete Oppty Products</label>
+        <locationX>486</locationX>
+        <locationY>188</locationY>
+        <inputReference>collOpptyProducts</inputReference>
+    </recordDeletes>
+    <recordLookups>
+        <name>Lookup_Opportunity_Products</name>
+        <label>Lookup Opportunity Products</label>
+        <locationX>303</locationX>
+        <locationY>186</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Delete_Oppty_Products</targetReference>
+        </connector>
+        <filters>
+            <field>OpportunityId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>varOpptyId</elementReference>
+            </value>
+        </filters>
+        <object>OpportunityLineItem</object>
+        <outputReference>collOpptyProducts</outputReference>
+        <queriedFields>Id</queriedFields>
+    </recordLookups>
+    <startElementReference>Lookup_Opportunity_Products</startElementReference>
+    <status>Active</status>
+    <variables>
+        <name>collOpptyProducts</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>OpportunityLineItem</objectType>
+    </variables>
+    <variables>
+        <name>opptyLineItem</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>OpportunityLineItem</objectType>
+    </variables>
+    <variables>
+        <description>Opportunity Id passed from the Process Builder</description>
+        <name>varOpptyId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DE_Benefits</fullName>
+    <columns>NAME</columns>
+    <columns>Member_Id__c</columns>
+    <columns>Benefit_Hierarchy__c</columns>
+    <columns>Payor__c</columns>
+    <columns>Authorization_Number__c</columns>
+    <columns>Auth_Start_Date__c</columns>
+    <columns>Effective_Date__c</columns>
+    <columns>Insurant_Status__c</columns>
+    <columns>Co_Pay__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Benefit__c.DE_Benefit</value>
+    </filters>
+    <label>DE Benefits</label>
+    <language>en_US</language>
+</ListView>

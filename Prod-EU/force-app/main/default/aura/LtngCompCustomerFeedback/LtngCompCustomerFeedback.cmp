@@ -1,0 +1,109 @@
+<aura:component controller="ClsCustomerFeedbackCon" implements="force:appHostable,force:hasRecordId,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:lightningQuickAction" access="global" >
+	<aura:handler name="init" value="{!this}" action="{!c.doinit}"/>
+    
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="accountId" type="String"/>
+    <aura:attribute name="custfeedback" type="Object"/>
+    <aura:attribute name="isEditMode" type="boolean" default="false"/>
+    <aura:attribute name="custfeedbackId" type="string" default=""/>
+    <aura:attribute name="selType" type="String" />
+    <aura:attribute name="accName" type="String" />
+    <aura:attribute name="type" type="String" />
+    <aura:attribute name="highLevelFB" type="String" />
+    <aura:attribute name="note" type="String" />
+    <aura:attribute name="resolution" type="String" />
+    <aura:attribute name="CFTypes" type="Map"/>
+    <aura:attribute name="maptype" type="Map"/>
+    
+    <aura:method name="submitCCFormData" action="{!c.submitCCFormData}"></aura:method>
+    <aura:registerEvent name="myRefreshTable" type="c:LtngEvtRefreshTable"/> 
+    <aura:registerEvent name="CloseModal" type="c:LtngEvtCloseModal"/>
+   <!--<aura:handler name="loadcustFeedbackEvt" event="c:ltngEvtPassCustomerFeedbackData" action="{!c.setCustomerFeedbackData}" /> --> 
+    
+<aura:attribute name="recCF" type="Customer_Feedback__c" default="{'sobjectType':'Customer_Feedback__c'}"/>
+    
+     <aura:html tag="style">
+        .slds-modal__container {
+             width : 25% !important;
+             max-width : 25% !important;
+         }
+    </aura:html> 
+    
+    <lightning:recordEditForm objectApiName="Customer_Feedback__c" >
+        <lightning:messages />
+        <div class="slds-grid slds-grid_vertical">
+              <div class="slds-col">
+                  <span><lightning:input   type="text" 
+                                         disabled="true"
+                                         aura:id="CF_CustName"
+                                         value="{!v.accName}"
+                                        />
+                      
+                  
+                  
+                  </span>
+              </div>
+              <div class="slds-col">
+                  <span>
+                      <div class="slds-grid slds-gutters">
+                          <div class="slds-col">
+                              <span><lightning:select aura:id="cf_Type" value="{!v.type}"  
+                                                      name="typePicklist" 
+                                                      label="Select a Type"
+                                                      messageWhenValueMissing="Please Select Type"
+                                                      required="true">
+                                  <option value="">--None--</option>
+                                  <aura:iteration items="{!v.CFTypes}" var="val" indexvar="key">
+                                      <option value="{!val.key}" selected="{!val.key==v.type}">{!val.key}</option>
+                                  </aura:iteration>
+                                  
+                                  </lightning:select>
+                              </span>
+                          </div>
+                      </div> 
+                  </span>
+                  
+              </div>
+            
+              <div class="slds-col">
+                  <span> 
+                      <lightning:input fieldName="High_Level_Feedback_Box__c" 
+                                       aura:id="cf_hlfb" 
+                                       required="false"
+                                       value="{!v.highLevelFB}"
+                                       label="High Level Feedback" 
+                                       placeholder="Please Enter Feedback" 
+                                       />
+                  </span>
+              </div>              
+             
+              
+            <div class="slds-col">
+                <span>
+                <lightning:input fieldName="Note_Box__c" 
+                                 aura:id="cf_Nb"
+                                 required="false"  
+                                 label="Note Box"
+                                 value="{!v.note}"
+                                 placeholder="Please Enter Note" 
+                                       />
+                </span>
+           </div>
+          <div class="slds-col">
+          	<span>
+                <lightning:textarea fieldName="Resolution_Box__c" 
+                                    aura:id="cf_Rb" 
+                                    required="false"  
+                                    label="Resolution Box"
+                                    value="{!v.resolution}"
+                                    placeholder="Please Enter Resolution" 
+                                       />
+              	
+              </span>
+          </div> 
+		</div>
+    </lightning:recordEditForm>
+    
+    
+    
+</aura:component>

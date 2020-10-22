@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Review_Reason__c</fullName>
+    <description>Field used to track when the EGEKO status is changed</description>
+    <externalId>false</externalId>
+    <label>Review Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Approval to Rejection</fullName>
+                <default>false</default>
+                <label>Approval to Rejection</label>
+            </value>
+            <value>
+                <fullName>Rejection to Approval</fullName>
+                <default>false</default>
+                <label>Rejection to Approval</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

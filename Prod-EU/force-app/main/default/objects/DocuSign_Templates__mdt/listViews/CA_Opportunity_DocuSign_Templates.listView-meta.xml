@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CA_Opportunity_DocuSign_Templates</fullName>
+    <columns>Template_Name__c</columns>
+    <columns>DeveloperName</columns>
+    <columns>Email_Message__c</columns>
+    <columns>Email_Subject__c</columns>
+    <columns>Template_Id__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Record_Type__c</field>
+        <operation>equals</operation>
+        <value>CA_Opportunity</value>
+    </filters>
+    <label>CA Opportunity DocuSign Templates</label>
+    <language>en_US</language>
+    <sharedTo>
+        <group>CA_Inside_Sales</group>
+    </sharedTo>
+</ListView>

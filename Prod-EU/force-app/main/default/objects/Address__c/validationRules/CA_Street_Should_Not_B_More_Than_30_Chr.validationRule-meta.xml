@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CA_Street_Should_Not_B_More_Than_30_Chr</fullName>
+    <active>false</active>
+    <description>Address lines should not be more than 30 characters in length</description>
+    <errorConditionFormula>OR
+(
+	AND(  
+		NOT(ISBLANK(Address_Line_1__c)),
+		TEXT(Country__c) = &apos;Canada&apos;, 
+		LEN(Address_Line_1__c) &gt; 30
+	),
+	AND(
+		NOT(ISBLANK(Address_Line_2__c)),
+		TEXT(Country__c) = &apos;Canada&apos;, 
+		LEN(Address_Line_2__c) &gt; 30
+	),
+	AND(
+		NOT(ISBLANK(Address_Line_3__c)),
+		TEXT(Country__c) = &apos;Canada&apos;, 
+		LEN(Address_Line_3__c) &gt; 30
+	)
+)</errorConditionFormula>
+    <errorMessage>Address lines should not be more than 30 characters in length.</errorMessage>
+</ValidationRule>

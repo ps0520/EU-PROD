@@ -293,7 +293,11 @@
     <relatedLists>
         <fields>NAME</fields>
         <fields>Child_Account__c</fields>
+        <fields>Child_Relation_Type__c</fields>
         <fields>Primary_Flag__c</fields>
+        <fields>OK_Relation_Link__c</fields>
+        <fields>OK_Relationship_Type__c</fields>
+        <fields>OK_Status__c</fields>
         <relatedList>Related_Account__c.Parent_Account__c</relatedList>
     </relatedLists>
     <relatedLists>
@@ -303,7 +307,6 @@
         <fields>CONTACT.PHONE4</fields>
         <fields>CONTACT.PHONE2</fields>
         <fields>CONTACT.EMAIL</fields>
-        <fields>Primary__c</fields>
         <relatedList>RelatedAccountContactRelationList</relatedList>
     </relatedLists>
     <relatedLists>

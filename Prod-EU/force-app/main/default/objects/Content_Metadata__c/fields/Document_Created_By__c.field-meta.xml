@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Document_Created_By__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Person who created the document</description>
+    <externalId>false</externalId>
+    <label>Document Created By</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Content_Metadata</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

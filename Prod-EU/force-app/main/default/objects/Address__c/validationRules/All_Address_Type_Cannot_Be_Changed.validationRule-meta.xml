@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Address_Type_Cannot_Be_Changed</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISCHANGED( Type__c )</errorConditionFormula>
+    <errorMessage>Address Type cannot be changed.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,12 @@
+.THIS .output-weightCSS {
+    font-weight: 800;
+}
+.THIS .showPanel{
+   visibility: visible; 
+}
+.THIS .hidePanel{
+    visibility: hidden;
+}
+.THIS .search-css{
+  line-height: 1.5rem;  
+}

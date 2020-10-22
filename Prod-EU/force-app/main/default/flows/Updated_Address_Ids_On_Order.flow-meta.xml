@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <decisions>
+        <name>Check_If_Address_Exist</name>
+        <label>Check If Address Exist</label>
+        <locationX>374</locationX>
+        <locationY>270</locationY>
+        <defaultConnectorLabel>[Default Outcome]</defaultConnectorLabel>
+        <rules>
+            <name>Address_Exist</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>addressRecord.Id</leftValueReference>
+                <operator>NotEqualTo</operator>
+            </conditions>
+            <connector>
+                <targetReference>Check_If_Bill_To_or_Ship_To</targetReference>
+            </connector>
+            <label>Address Exist</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_If_Bill_To_or_Ship_To</name>
+        <label>Check If Bill To or Ship To</label>
+        <locationX>667</locationX>
+        <locationY>275</locationY>
+        <defaultConnectorLabel>[Default Outcome]</defaultConnectorLabel>
+        <rules>
+            <name>Is_Bill_To</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>addressType</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Bill To</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Updated_Customer_Bill_To_Address_Id_On_Order</targetReference>
+            </connector>
+            <label>Is Bill To</label>
+        </rules>
+        <rules>
+            <name>Is_Ship_To</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>addressType</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Ship To</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Updated_Customer_Ship_To_Address_Id_On_Order</targetReference>
+            </connector>
+            <label>Is Ship To</label>
+        </rules>
+    </decisions>
+    <description>Jagan 06/25/2017 - Flow will update Customer Bill To Address Id or Ship To Address Id on Order.</description>
+    <interviewLabel>Updated Address Ids On Order {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Updated Address Ids On Order</label>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Lookup_Address</name>
+        <label>Lookup Address</label>
+        <locationX>166</locationX>
+        <locationY>267</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_If_Address_Exist</targetReference>
+        </connector>
+        <filters>
+            <field>Account__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>orderRecord.AccountId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Primary_Flag__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>addressType</elementReference>
+            </value>
+        </filters>
+        <object>Address__c</object>
+        <outputReference>addressRecord</outputReference>
+        <queriedFields>Id</queriedFields>
+    </recordLookups>
+    <recordLookups>
+        <name>Lookup_Order</name>
+        <label>Lookup Order</label>
+        <locationX>165</locationX>
+        <locationY>141</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Lookup_Address</targetReference>
+        </connector>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <object>Order</object>
+        <outputReference>orderRecord</outputReference>
+        <queriedFields>AccountId</queriedFields>
+    </recordLookups>
+    <recordUpdates>
+        <name>Updated_Customer_Bill_To_Address_Id_On_Order</name>
+        <label>Updated Customer Bill To Address Id On Order</label>
+        <locationX>891</locationX>
+        <locationY>274</locationY>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Customer_Bill_To_Address__c</field>
+            <value>
+                <elementReference>addressRecord.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Order</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Updated_Customer_Ship_To_Address_Id_On_Order</name>
+        <label>Updated Customer Ship To Address Id On Order</label>
+        <locationX>885</locationX>
+        <locationY>378</locationY>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Customer_Ship_To_Address__c</field>
+            <value>
+                <elementReference>addressRecord.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Order</object>
+    </recordUpdates>
+    <startElementReference>Lookup_Order</startElementReference>
+    <status>Active</status>
+    <variables>
+        <name>addressRecord</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Address__c</objectType>
+    </variables>
+    <variables>
+        <name>addressType</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>orderRecord</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Order</objectType>
+    </variables>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

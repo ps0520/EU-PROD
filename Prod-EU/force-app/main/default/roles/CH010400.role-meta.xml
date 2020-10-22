@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>Edit</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <description>CH010400</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>CH010400</name>
+    <opportunityAccessLevel>Edit</opportunityAccessLevel>
+    <parentRole>CH01000</parentRole>
+</Role>

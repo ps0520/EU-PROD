@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Opportunity</entityName>
+    <fieldName>StageName</fieldName>
+    <masterLabel>DE Opportunity Path</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Cancel_Reason__c</fieldNames>
+        <picklistValueName>Cancelled</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Doc_Collection_Status__c</fieldNames>
+        <picklistValueName>Closed - Complete</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>EGEKO_Out__c</fieldNames>
+        <fieldNames>EGEKO_In__c</fieldNames>
+        <fieldNames>Hard_Copy_Out__c</fieldNames>
+        <fieldNames>Hard_Copy_In__c</fieldNames>
+        <fieldNames>Benefit_EGEKO_Confirmation__c</fieldNames>
+        <info>&lt;ul&gt;&lt;li&gt;Erstellen von Kostenvoranschlägen (gesetzlich und privat versicherte Kunden) und Angeboten (Selbstzahlern)&lt;/li&gt;&lt;li&gt;Erhalt der Genhemigung (gesetzlich versicherte Kunden)&lt;/li&gt;&lt;li&gt;Füge Kostenvoranschlag oder Angebot dem Vorgang hinzu &lt;/li&gt;&lt;li&gt;Füge dem Benefit ein Start- und Enddatum des Versorgungszeitraumes zu und/oder aktualisiere und prüfe diesen (gesetzlich versicherte Kunden) &lt;/li&gt;&lt;li&gt;Füge dem Kundenaccount ein Rezeptdatum hinzu und/oder aktualisere und prüfe dieses (gesetzlich versicherte Kunden) &lt;/li&gt;&lt;li&gt;Es kann nur &amp;quot;Egeko out&amp;quot; ODER &amp;quot;Hardcopy&amp;quot; out angewählt werden  &lt;/li&gt;&lt;li&gt;&amp;quot;Egeko in&amp;quot; oder &amp;quot;Hardcopy in&amp;quot; kann nur angewählt sein wenn &amp;quot;Egeko out&amp;quot; oder &amp;quot;Hardcopy out&amp;quot; bereits gewählt ist &amp;gt;Füge dem Benefit die aktuelle Genehmigungsnummer zu (gesetzlich versicherte Kunden)&lt;/li&gt;&lt;li&gt;Der Stage kann passiert werden, sobald je eine Checkbox &amp;quot;in&amp;quot; und eine Checkbox &amp;quot;out&amp;quot; gewählt wurde&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Cost Estimate</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Contact_Doc_Received__c</fieldNames>
+        <fieldNames>Insurance_Doc_Received__c</fieldNames>
+        <info>&lt;ul&gt;&lt;li&gt;Füge dem Vorgang Artikel zu&lt;/li&gt;&lt;li&gt;Der Stage kann direkt passiert werden, nachdem Artikel zugefügt wurden                   &lt;/li&gt;&lt;li&gt;Abschluss des Vorgangs erst möglich, sobald &amp;quot;Einwilligungserklärung Daten erhalten&amp;quot; (alle Privatkunden) und &amp;quot;Genehmigung KK erhalten&amp;quot; (gesetzlich versicherte Kunden) bestätigt wurde   &lt;/li&gt;&lt;li&gt;&amp;quot;Einwilligungserklärung Daten&amp;quot; als Scan dem Vorgang anfügen&lt;/li&gt;&lt;li&gt;&amp;quot;Genehmigung KK&amp;quot; als Scan dem Vorgang anfügen (gesetzlich versicherte Kunden)&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Customer Doc Collection</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Contact_Letter_Sent__c</fieldNames>
+        <info>&lt;ul&gt;&lt;li&gt;NEUBESTELLUNG: &amp;quot;Einverständniserklärung Daten&amp;quot; per Post mit Freiumschlag an Kunden senden                                                                                          &lt;/li&gt;&lt;li&gt;Wird für alle Privatpersonen benötigt (gesetzlich Versicherte, privat Versicherte, Selbstzahler)&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>New Opportunity</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Doc_Collection_Status__c</fieldNames>
+        <picklistValueName>On Hold</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Doc_Collection_Status__c</fieldNames>
+        <info>&lt;ul&gt;&lt;li&gt;Übergabe des Auftrags zum Versand an HL&lt;/li&gt;&lt;li&gt;Nur eine der vier Auswahlmöglichkeiten im Dropdown Menü kann ausgewählt sein&lt;/li&gt;&lt;li&gt;Der Stage kann passiert werden sobald eine Auswahlmöglichkeit im Dropdownmenü angewählt ist&lt;/li&gt;&lt;li&gt;Der Vorgang kann nur geschlossen werden sofern die Auswahlmöglichkeit &amp;quot;alle Dokumente erhalten&amp;quot; gewählt ist&lt;/li&gt;&lt;li&gt;CHECKLISTE ALLE DOKUMENTE (gesetzlich versicherte Kunden): Rezept im Original, Einwilligungserklärung Daten, Kostenvoranschlag, Genehmigung, Nachweis zur technischen Einweisung&lt;/li&gt;&lt;li&gt;CHECKLISTE ALLE DOKUMENTE (privat versicherte Kunden und Selbstzahler): Einwilligungserklärung Daten, (Angebot/Kostenvoranschlag optional), Nachweis zur technischen Einweisung&lt;/li&gt;&lt;li&gt;Ohne Vorlage dieser Dokumente darf der Vorgang nicht geschlossen werden&lt;/li&gt;&lt;li&gt;Alle Dokumente müssen als Scan vorliegen&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Order Fulfillment</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Training_Letter_Sent__c</fieldNames>
+        <fieldNames>Training_Letter_Sent_Date__c</fieldNames>
+        <fieldNames>Training_Confirmation_Received__c</fieldNames>
+        <fieldNames>Training_Confirmation_Channel__c</fieldNames>
+        <fieldNames>Training_Date__c</fieldNames>
+        <info>&lt;ul&gt;&lt;li&gt;Versand des Nachweis zur technischen Einweisung als Brief inkl. Freiumschlag nach Erhalt der Genehmigung (gesetzlich versicherte Kunden) oder nach Auftragsbestätigung (privat versicherte Kunden und Selbstzahler)&lt;/li&gt;&lt;li&gt;Der Stage kann passiert werden sobald der Versand des Nachweis zur technischen Einweisung, sowie der Erhalt der Einwilligungserklärung Daten und die Genehmigung der KK (gesetzlich versicherte Kunden) bestätigt wurde&lt;/li&gt;&lt;li&gt;Abschluss des Vorgangs erst möglich, sobald &amp;quot;Nachweis zur technischen Einweisung erhalten&amp;quot; bestätigt wurde&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</info>
+        <picklistValueName>Training Letter</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>DE_Opportunity</recordTypeName>
+</PathAssistant>

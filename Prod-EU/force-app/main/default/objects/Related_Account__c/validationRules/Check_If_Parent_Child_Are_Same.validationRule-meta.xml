@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_If_Parent_Child_Are_Same</fullName>
+    <active>true</active>
+    <description>Both child and parent accounts cannot be one and the same</description>
+    <errorConditionFormula>Child_Account__c =  Parent_Account__c</errorConditionFormula>
+    <errorMessage>Both Parent and Child accounts cannot be one and the same.</errorMessage>
+</ValidationRule>

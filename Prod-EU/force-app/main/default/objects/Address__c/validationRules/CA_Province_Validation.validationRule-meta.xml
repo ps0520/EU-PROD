@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CA_Province_Validation</fullName>
+    <active>true</active>
+    <description>Province is required.</description>
+    <errorConditionFormula>AND(
+    NOT($Profile.Name = &quot;System Administrator&quot;),NOT($User.Alias = &quot;autoproc&quot;),
+    BEGINS(RecordType.DeveloperName, &apos;CA&apos;),
+    ISBLANK(Text(State__c))
+)</errorConditionFormula>
+    <errorMessage>Province is a required.</errorMessage>
+</ValidationRule>

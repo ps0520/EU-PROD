@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Lead</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>CA Lead Path</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Cancelled_Reasons__c</fieldNames>
+        <picklistValueName>Cancelled</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;No answer? &amp;gt; keep in ‘Nurturing’ Stage until 5x phone contacts made&lt;/p&gt;&lt;p&gt;Cash payor? &amp;gt; convert to account, cash pay opportunity&lt;/p&gt;&lt;p&gt;Insurance help? &amp;gt; convert to account, insurance opportunity&lt;/p&gt;&lt;p&gt;Cancel lead? &amp;gt; select appropriate Close Reason when prompted&lt;/p&gt;</info>
+        <picklistValueName>Nurturing</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Cancelled_Reasons__c</fieldNames>
+        <picklistValueName>Qualified</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>CA_Person_Lead</recordTypeName>
+</PathAssistant>

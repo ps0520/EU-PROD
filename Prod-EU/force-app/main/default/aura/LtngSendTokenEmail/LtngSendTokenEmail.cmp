@@ -1,0 +1,16 @@
+<aura:component implements="force:lightningQuickAction,force:hasRecordId" controller="ClsDEWebStoreServiceHelper">
+    <aura:attribute name="personEmail" type="String" access="global"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <div align="center" class="slds-modal__container">
+        <div aura:id="warningPanel" class="hidePanel" align="center"><ui:outputText value="Email address is mandatory to proceed.."/></div>
+        <div aura:id="confirmationPanel" align="center" class="body-search search-css hidePanel">
+            Token email will be send to below email address 
+            <!-- <ui:inputEmail aura:id="personEmailId" class="slds-input input-widthCSS" value="{!v.personEmail}" placeholder="abc@email.com"/>   -->
+            <ui:outputText class="output-weightCSS" value="{!v.personEmail}"/>
+            <div class="footerCSS" style="margin-top:1rem;">
+                <lightning:button variant="brand" disabled="false" label="Confirm" onclick="{!c.handleSave}"/>
+            </div>   
+        </div>
+    </div>    
+</aura:component>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Change_Is_Not_Allowed</fullName>
+    <active>true</active>
+    <description>Product is not changeable. You should cancel SSIP Rule and create new one for new Product.</description>
+    <errorConditionFormula>ISCHANGED(Product__c)</errorConditionFormula>
+    <errorMessage>Product is not changeable. You should cancel SSIP Rule and create new one for new Product.</errorMessage>
+</ValidationRule>

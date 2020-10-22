@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AuthProvider xmlns="http://soap.sforce.com/2006/04/metadata">
+    <authorizeUrl>https://test.salesforce.com/services/oauth2/authorize</authorizeUrl>
+    <consumerKey>3MVG9GnaLrwG9TQQ98hy4GwpSZrklKoEbGku2z_U.fJk9OWNtuR_Y95bFh3z4YcUhaH0HZ6zph4JMPF66axw8</consumerKey>
+    <consumerSecret>23aL/9Rz+rIVeTedcmgk8qcCOskViArPYREbiSgk361jtVjD3Q+4MxDUtmiyQ/CIuVYbhtS/RGT6EDy6NsgJNXBBGPdiC2rX</consumerSecret>
+    <defaultScopes>refresh_token api</defaultScopes>
+    <friendlyName>CAOCE</friendlyName>
+    <includeOrgIdInIdentifier>true</includeOrgIdInIdentifier>
+    <providerType>Salesforce</providerType>
+    <sendAccessTokenInHeader>false</sendAccessTokenInHeader>
+    <sendClientCredentialsInHeader>false</sendClientCredentialsInHeader>
+    <sendSecretInApis>true</sendSecretInApis>
+    <tokenUrl>https://test.salesforce.com/services/oauth2/token</tokenUrl>
+</AuthProvider>

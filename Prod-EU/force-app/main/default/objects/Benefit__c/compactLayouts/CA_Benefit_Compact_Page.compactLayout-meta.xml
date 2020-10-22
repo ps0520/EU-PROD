@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CA_Benefit_Compact_Page</fullName>
+    <fields>Account__c</fields>
+    <fields>Birth_Date__c</fields>
+    <fields>Insurance_Holder_s_Relationship__c</fields>
+    <fields>Payor__c</fields>
+    <fields>Member_Id__c</fields>
+    <fields>Policy_Number__c</fields>
+    <fields>Prior_Auth_Denied_or_Approved__c</fields>
+    <label>CA Benefit Compact Page</label>
+</CompactLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_If_Both_Med_Fac_Prescriber_Exist</fullName>
+    <active>true</active>
+    <description>Rule checks if both Medical Facility and Prescriber information are filled in before saving the record.</description>
+    <errorConditionFormula>OR(
+ISBLANK( Parent_Account__c ),
+ISBLANK( Child_Account__c )
+)</errorConditionFormula>
+    <errorMessage>Medical Facility and Prescriber Information are Required.</errorMessage>
+</ValidationRule>
