@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>CA_Inside_Sales_Can_See_All_CA_benefits</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>CA Inside Sales Can See All CA benefits</description>
+        <label>CA Inside Sales Can See All CA benefits</label>
+        <sharedTo>
+            <group>CA_Inside_Sales</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CA Benefit</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>DE_Inside_Sales_Can_See_All_DE_benefits</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>DE Inside Sales Can See All DE benefits</description>
+        <label>DE Inside Sales Can See All DE benefits</label>
+        <sharedTo>
+            <roleAndSubordinates>DE</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>DE Benefit</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

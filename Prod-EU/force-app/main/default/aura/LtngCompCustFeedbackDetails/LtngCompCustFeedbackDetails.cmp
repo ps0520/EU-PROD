@@ -1,0 +1,85 @@
+<aura:component controller="ClsCustomerFeedbackCon" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+	
+    <aura:attribute name="data" type="Object"/>
+    <aura:attribute name="columns" type="List"/>
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="custfeedback" type="Object"/>
+    <aura:attribute name="isEditmode1" type="boolean" default="false"/>
+    
+    <aura:attribute name="sortBy" type="String" default="LastModifiedDate" />
+    <aura:attribute name="sortDirection" type="String" default="desc" />
+    <aura:attribute name="updatedRecord" type="Object[]" />
+    <aura:attribute name="isOpen" type="boolean" default="false"/>
+    <aura:attribute name="ModalOrgType" type="String" default="Regulatory"/>
+    <aura:handler name="myRefreshTable" event="c:LtngEvtRefreshTable" action="{!c.doInit}"/>   
+    <aura:handler name="CloseModal" event="c:LtngEvtCloseModal" action="{!c.handleCloseModal}"/>
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}" />
+    <aura:attribute name="recCFDetail" type="Customer_Feedback__c" default="{'sobjectType':'Customer_Feedback__c'}"/>
+    <div class="slds-p-top_x-large">
+    <lightning:card title="Customer Feedback" iconName="standard:feedback" class="slds-text-body_small">
+    	<aura:set attribute="title">
+        	<a>Customer Feedback</a>
+    	</aura:set>
+        <aura:set attribute="actions">
+            <lightning:button label="New" onclick="{!c.openModel}" />
+        </aura:set>
+        <table style="table-layout: fixed; width: 100%;">
+        <tr><td>
+        	 <lightning:datatable
+                             aura:id="dtCustomerFeedbackDetails"
+                             columns="{! v.columns }"
+                             data="{! v.data }"
+                             keyField="Id"
+                                  onrowaction="{! c.handleRowAction }"
+                             hideCheckboxColumn="true" /> 
+            
+        </td></tr>
+        </table>
+    </lightning:card>        
+    </div>
+    
+     <aura:if isTrue="{!v.isOpen}">
+            
+            <!--###### MODAL BOX Start######--> 
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" 
+                     aria-modal="true" aria-describedby="modal-content-id-1" 
+                     class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <!-- ###### MODAL BOX HEADER Start ######-->
+                    <header class="slds-modal__header">
+                        <lightning:buttonIcon iconName="utility:close"
+                                              onclick="{! c.closeModel }"
+                                              alternativeText="close"
+                                              variant="bare-inverse"
+                                              class="slds-modal__close"/>
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Add new feedback</h2>
+                    </header>
+                    <!--###### MODAL BOX BODY Part Start######-->
+                    <div class="slds-modal__content slds-p-around_small" id="modal-content-id-1">
+						<c:LtngCompCustomerFeedback aura:id="CMP_CustomerFeedback" recordId="{!v.recordId}" 
+                                         custfeedback="{!v.custfeedback}"   />
+                    </div>
+                    <!--###### MODAL BOX FOOTER Part Start ######-->
+                    <footer class="slds-modal__footer">
+                        <lightning:button variant="brand" 
+                                          label="Save"
+                                          title="Submit and close form"
+                                          onclick="{! c.SubmitFormData }"/>
+                        
+                        <lightning:button variant="neutral" 
+                                          label="Close"
+                                          title="Cancel/Close"
+                                          onclick="{! c.closeModel }"/>
+                         
+                         
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+            <!--###### MODAL BOX Part END Here ######-->
+            
+        </aura:if>
+    
+    
+    
+</aura:component>

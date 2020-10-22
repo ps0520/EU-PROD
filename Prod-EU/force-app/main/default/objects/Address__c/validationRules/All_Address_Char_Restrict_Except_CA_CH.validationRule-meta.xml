@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Address_Char_Restrict_Except_CA_CH</fullName>
+    <active>true</active>
+    <description>Locked Addresses certain fields (restricted by a different rule) are allowed to be changed.</description>
+    <errorConditionFormula>AND(
+NOT( $Profile.Name = &quot;System Administrator&quot;),
+NOT( $User.Alias = &quot;autoproc&quot;),
+NOT(OR( BEGINS(RecordType.DeveloperName, &apos;CA_&apos;) ,BEGINS(RecordType.DeveloperName, &apos;CH_&apos;) )),
+ISPICKVAL( Type__c, &quot;SHIP TO&quot;),
+OR(
+LEN(Address_Line_1__c) &gt; 35,
+LEN(Address_Line_2__c ) &gt; 35
+),
+NOT(IsLocked__c)
+)</errorConditionFormula>
+    <errorDisplayField>Account__c</errorDisplayField>
+    <errorMessage>Address lines  1 &amp; 2 should not be more than 35 characters in length.</errorMessage>
+</ValidationRule>

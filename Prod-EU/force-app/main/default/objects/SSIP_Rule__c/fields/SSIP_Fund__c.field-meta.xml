@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SSIP_Fund__c</fullName>
+    <externalId>false</externalId>
+    <formula>If(ISPICKVAL(Is_Funded__c, &apos;True&apos;) || (NOT(ISBLANK( First_Order__c )) &amp;&amp; (NOT(ISBLANK( First_Order__r.Fund__c )))),
+HYPERLINK(&quot;/&quot;+Account__r.Fund__c, Account__r.Fund__r.Name, &quot;_blank&quot;), &apos;&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Fund associated to the Account to which the Order will be created.</inlineHelpText>
+    <label>Fund</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

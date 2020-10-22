@@ -1,0 +1,21 @@
+.THIS .greyOut{    
+   pointer-events: none; 
+   background: #CCC; 
+   color: #333; 
+   border: 1px solid #666 
+}
+
+.THIS .errorQTY {
+   border: 2px solid #c23934;
+}
+.THIS .Yes {
+   border: 2px solid #c23934;
+}
+
+.THIS .slds-card__header{
+        background-color: #f3f2f2;
+}
+
+/*.THIS .No {
+   border: 1px solid #4bca81;
+}*/

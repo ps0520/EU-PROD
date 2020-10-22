@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_Account_Fund_For_Funded_Rule</fullName>
+    <active>true</active>
+    <description>If Fund is selected for the Rule, check if the account has Fund associated.</description>
+    <errorConditionFormula>AND(ISPICKVAL( Is_Funded__c, &apos;True&apos; ), ISBLANK( Account__r.Fund__c ))</errorConditionFormula>
+    <errorMessage>Account does not have Fund association, please associate a Fund before enabling the Rule.</errorMessage>
+</ValidationRule>

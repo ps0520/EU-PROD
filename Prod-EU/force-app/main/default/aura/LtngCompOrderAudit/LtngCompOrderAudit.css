@@ -1,0 +1,30 @@
+.THIS .readonlydiv{
+    pointer-events: none !important;
+}
+.THIS .statusbanner{
+    text-align:center;
+    height:3rem;
+    font-family : 'Salesforce Sans',Arial,'sans-serif';
+    color:white;
+    font-size: 150%;
+    font-weight: bold;
+}
+.THIS .statustext{
+    padding:1rem;
+}
+.THIS {
+   background:white;
+   border-radius:3px; 
+}
+.THIS .color1{
+     background-color:#b0adab;   
+}
+.THIS .color2{
+	background: rgb(0, 95, 178);
+}
+.THIS .color3{
+        background-color: #62CB7F; 
+}
+.THIS .slds-icon-text-default {
+    fill: white;
+}

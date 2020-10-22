@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This flow will be invoked for DE Inside Sales and Field Sales user creation where a permission set to avoid switching to Classic will be assigned.</description>
+    <interviewLabel>Assign Hide Salesforce Classic Switch Option Permission {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Assign Hide Salesforce Classic Switch Option Permission</label>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Associate_PermissionSet_To_User</name>
+        <label>Associate PermissionSet To User</label>
+        <locationX>365</locationX>
+        <locationY>202</locationY>
+        <inputAssignments>
+            <field>AssigneeId</field>
+            <value>
+                <elementReference>varUserId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PermissionSetId</field>
+            <value>
+                <elementReference>varPermissionSet.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>PermissionSetAssignment</object>
+    </recordCreates>
+    <recordLookups>
+        <name>Lookup_Permission_Set</name>
+        <label>Lookup Permission Set</label>
+        <locationX>157</locationX>
+        <locationY>199</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Associate_PermissionSet_To_User</targetReference>
+        </connector>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Hide_Salesforce_Classic_Switch_Option</stringValue>
+            </value>
+        </filters>
+        <object>PermissionSet</object>
+        <outputReference>varPermissionSet</outputReference>
+        <queriedFields>Id</queriedFields>
+    </recordLookups>
+    <startElementReference>Lookup_Permission_Set</startElementReference>
+    <status>Active</status>
+    <variables>
+        <name>varPermissionSet</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>PermissionSet</objectType>
+    </variables>
+    <variables>
+        <name>varUserId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

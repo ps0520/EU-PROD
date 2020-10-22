@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>View_Document__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF($Organization.Id = &apos;00D0Q0000008avs&apos;, HYPERLINK($CustomMetadata.Salesforce_Environment_Setting__mdt.Production.Papyrus_URL__c + &apos;?id=&apos; + Document_Link__c , &quot;View Document&quot;, &quot;_blank&quot;), HYPERLINK($CustomMetadata.Salesforce_Environment_Setting__mdt.Sandbox.Papyrus_URL__c + &apos;?id=&apos; + Document_Link__c , &quot;View Document&quot;, &quot;_blank&quot;))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>View Document</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

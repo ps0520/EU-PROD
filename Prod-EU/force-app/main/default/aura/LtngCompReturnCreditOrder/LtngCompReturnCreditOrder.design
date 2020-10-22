@@ -1,0 +1,4 @@
+<design:component>
+	<design:attribute name="CountryCode" label="Country Code" description="Enter country code" datasource="CA,CH,GB" default="GB" />
+    <design:attribute name="OrderId" label="Order Id" description="Order Id" />
+</design:component>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GB_SSIP_Rule</fullName>
+    <active>true</active>
+    <description>SSIP Rule for GB</description>
+    <label>GB SSIP Rule</label>
+    <picklistValues>
+        <picklist>Country__c</picklist>
+        <values>
+            <fullName>Luxembourg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United Kingdom</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Is_Funded__c</picklist>
+        <values>
+            <fullName>False</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>True</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Payment_Term__c</picklist>
+        <values>
+            <fullName>net0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>net30</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Payor_Exist__c</picklist>
+        <values>
+            <fullName>False</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>True</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Shipping_Method__c</picklist>
+        <values>
+            <fullName>DPD Local%7CGround%7C0%7CBS1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DPD Local%7CGround%7C0%7CBSA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DPD Local%7CGround%7C0%7CBSN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DPD Local%7CGround%7C0%7CSTN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DPD Local%7CGround%7C1138%7CBSN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DPD Local%7CGround%7C1838%7CBSA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DPD Local%7CGround%7C1838%7CSTN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DPD Local%7CGround%7C814%7CBS1</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inactive</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

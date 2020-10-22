@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Inactive_Addresses_Cant_Be_Activated</fullName>
+    <active>true</active>
+    <description>Regular users should not be permitted make Addresses Active once they are made Inactive.</description>
+    <errorConditionFormula>AND(
+NOT($Profile.Name = &quot;System Administrator&quot;),
+ISCHANGED(Inactive__c),
+PRIORVALUE( Inactive__c ) = TRUE
+)</errorConditionFormula>
+    <errorMessage>Inactive Address can not be made Active.</errorMessage>
+</ValidationRule>

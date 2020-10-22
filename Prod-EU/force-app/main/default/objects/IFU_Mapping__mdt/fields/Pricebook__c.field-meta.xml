@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pricebook__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Pricebook</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Novalab Iberic S.A.L, Madrid, Spain - STANDARD</fullName>
+                <default>true</default>
+                <label>Novalab Iberic S.A.L, Madrid, Spain - STANDARD</label>
+            </value>
+            <value>
+                <fullName>Perrigo Israel Agencies LTD - STANDARD</fullName>
+                <default>false</default>
+                <label>Perrigo Israel Agencies LTD - STANDARD</label>
+            </value>
+            <value>
+                <fullName>Zkope Health Care (Belgium) - Standard</fullName>
+                <default>false</default>
+                <label>Zkope Health Care (Belgium) - Standard</label>
+            </value>
+            <value>
+                <fullName>A.IMPORT.CZ, Czech Republic - STANDARD</fullName>
+                <default>false</default>
+                <label>A.IMPORT.CZ, Czech Republic - STANDARD</label>
+            </value>
+            <value>
+                <fullName>NORDICINFU CARE AB (Finland) - Standard</fullName>
+                <default>false</default>
+                <label>NORDICINFU CARE AB (Finland) - Standard</label>
+            </value>
+            <value>
+                <fullName>GULF PHARMACEUTICAL INDUSTRIES (Kuwait) - Standard</fullName>
+                <default>false</default>
+                <label>GULF PHARMACEUTICAL INDUSTRIES (Kuwait) - Standard</label>
+            </value>
+            <value>
+                <fullName>Ethitech Pty Ltd - STANDARD</fullName>
+                <default>false</default>
+                <label>Ethitech Pty Ltd - STANDARD</label>
+            </value>
+            <value>
+                <fullName>NORDICINFU CARE AB (Norway) - Standard</fullName>
+                <default>false</default>
+                <label>NORDICINFU CARE AB (Norway) - Standard</label>
+            </value>
+            <value>
+                <fullName>GULF PHARMACEUTICAL INDUSTRIES (Bahrain) - Standard</fullName>
+                <default>false</default>
+                <label>GULF PHARMACEUTICAL INDUSTRIES (Bahrain) - Standard</label>
+            </value>
+            <value>
+                <fullName>DINNO SANTE - STANDARD</fullName>
+                <default>false</default>
+                <label>DINNO SANTE - STANDARD</label>
+            </value>
+            <value>
+                <fullName>GULF PHARMACEUTICAL INDUSTRIES (Jordan) - Standard</fullName>
+                <default>false</default>
+                <label>GULF PHARMACEUTICAL INDUSTRIES (Jordan) - Standard</label>
+            </value>
+            <value>
+                <fullName>GULF PHARMACEUTICAL INDUSTRIES (Qatar) - Standard</fullName>
+                <default>false</default>
+                <label>GULF PHARMACEUTICAL INDUSTRIES (Qatar) - Standard</label>
+            </value>
+            <value>
+                <fullName>Celki Medical Company - STANDARD</fullName>
+                <default>false</default>
+                <label>Celki Medical Company - STANDARD</label>
+            </value>
+            <value>
+                <fullName>Proglikemia Sp. Z o.o. - STANDARD</fullName>
+                <default>false</default>
+                <label>Proglikemia Sp. Z o.o. - STANDARD</label>
+            </value>
+            <value>
+                <fullName>GULF PHARMACEUTICAL INDUSTRIES (Oman) - Standard</fullName>
+                <default>false</default>
+                <label>GULF PHARMACEUTICAL INDUSTRIES (Oman) - Standard</label>
+            </value>
+            <value>
+                <fullName>NORDICINFU CARE AB (Sweden) - Standard</fullName>
+                <default>false</default>
+                <label>NORDICINFU CARE AB (Sweden) - Standard</label>
+            </value>
+            <value>
+                <fullName>Zkope Health Care - Standard</fullName>
+                <default>false</default>
+                <label>Zkope Health Care - Standard</label>
+            </value>
+            <value>
+                <fullName>THERAS LIFETECH S.R.L - Standard</fullName>
+                <default>false</default>
+                <label>THERAS LIFETECH S.R.L - Standard</label>
+            </value>
+            <value>
+                <fullName>NORDICINFU CARE AB (Denmark) - Standard</fullName>
+                <default>false</default>
+                <label>NORDICINFU CARE AB (Denmark) - Standard</label>
+            </value>
+            <value>
+                <fullName>GULF PHARMACEUTICAL INDUSTRIES (UAE) - Standard</fullName>
+                <default>false</default>
+                <label>GULF PHARMACEUTICAL INDUSTRIES (UAE) - Standard</label>
+            </value>
+            <value>
+                <fullName>AMSL (AUSTRALASIAN MEDICAL &amp; SCIENTIFIC LTD) - STANDARD</fullName>
+                <default>false</default>
+                <label>AMSL (AUSTRALASIAN MEDICAL &amp; SCIENTIFIC LTD) - STANDARD</label>
+            </value>
+            <value>
+                <fullName>GULF PHARMACEUTICAL INDUSTRIES (Lebanon) - Standard</fullName>
+                <default>false</default>
+                <label>GULF PHARMACEUTICAL INDUSTRIES (Lebanon) - Standard</label>
+            </value>
+            <value>
+                <fullName>NEW ZEALAND MEDICAL &amp; SCIENTIFIC LTD - STANDARD</fullName>
+                <default>false</default>
+                <label>NEW ZEALAND MEDICAL &amp; SCIENTIFIC LTD - STANDARD</label>
+            </value>
+            <value>
+                <fullName>GULF PHARMACEUTICAL INDUSTRIES (KSA) - Standard</fullName>
+                <default>false</default>
+                <label>GULF PHARMACEUTICAL INDUSTRIES (KSA) - Standard</label>
+            </value>
+            <value>
+                <fullName>MEDSALUS Saglik Hiz Tic Ltd Sti - STANDARD</fullName>
+                <default>false</default>
+                <label>MEDSALUS Saglik Hiz Tic Ltd Sti - STANDARD</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

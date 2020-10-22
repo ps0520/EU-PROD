@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SSIP_Payor__c</fullName>
+    <description>Payor associated to the Account to which the Order will be created.</description>
+    <externalId>false</externalId>
+    <formula>If(ISPICKVAL(Is_Funded__c, &apos;True&apos;) || ISPICKVAL(Payor_Exist__c, &apos;True&apos;) || (NOT(ISBLANK( First_Order__c )) &amp;&amp; (NOT(ISBLANK( First_Order__r.Fund__c )) || NOT(ISBLANK( First_Order__r.Payor__c )))),
+HYPERLINK(&quot;/&quot;+Account__r.Payor__c, Account__r.Payor__r.Name, &quot;_blank&quot;), &apos;&apos;)</formula>
+    <inlineHelpText>Payor associated to the Account to which the Order will be created.</inlineHelpText>
+    <label>Payor</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

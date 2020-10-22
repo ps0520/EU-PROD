@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Country_And_Act_RecordType_Should_Match</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+AND(
+ISPICKVAL(Country__c,&quot;United Kingdom&quot;),
+NOT(BEGINS( Account__r.RecordType.DeveloperName , &quot;GB&quot;))),
+AND(
+ISPICKVAL(Country__c,&quot;Ireland&quot;),
+NOT(BEGINS(Account__r.RecordType.DeveloperName , &quot;IE&quot;)))
+
+)</errorConditionFormula>
+    <errorMessage>SSIP Rule Record Type does not match the Account&apos;s Country.</errorMessage>
+</ValidationRule>

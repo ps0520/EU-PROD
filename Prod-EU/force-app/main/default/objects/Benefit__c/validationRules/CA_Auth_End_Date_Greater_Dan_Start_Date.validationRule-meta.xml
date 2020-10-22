@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CA_Auth_End_Date_Greater_Dan_Start_Date</fullName>
+    <active>true</active>
+    <description>Rule to check if the auth end date should be greater than auth start date</description>
+    <errorConditionFormula>AND( 
+   BEGINS(RecordType.DeveloperName, &apos;CA_&apos;), 
+NOT(ISBLANK(Auth_Start_Date__c )),
+NOT(ISBLANK(Auth_End_Date__c)),
+Auth_Start_Date__c &gt;  Auth_End_Date__c
+)</errorConditionFormula>
+    <errorMessage>Auth End Date should be greater than Auth Start Date.</errorMessage>
+</ValidationRule>

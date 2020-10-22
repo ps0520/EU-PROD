@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CA_PostalCode_Validation</fullName>
+    <active>true</active>
+    <description>Postal Code should follow the pattern.</description>
+    <errorConditionFormula>AND(NOT($Profile.Name = &quot;System Administrator&quot;),NOT($User.Alias = &quot;autoproc&quot;),
+BEGINS(RecordType.DeveloperName, &apos;CA&apos;),
+NOT(ISBLANK(  Postal_Code__c)),
+NOT(REGEX(Postal_Code__c, &apos;[A-Z][0-9][A-Z] [0-9][A-Z][0-9]&apos;)))</errorConditionFormula>
+    <errorDisplayField>Postal_Code__c</errorDisplayField>
+    <errorMessage>Invalid Postal Code</errorMessage>
+</ValidationRule>

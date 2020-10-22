@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Document_Type__c</fullName>
+    <description>This field tracks the document type to classify the documents.</description>
+    <externalId>false</externalId>
+    <label>Document Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Empf</fullName>
+                <default>false</default>
+                <label>Empf</label>
+            </value>
+            <value>
+                <fullName>VO</fullName>
+                <default>false</default>
+                <label>VO</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

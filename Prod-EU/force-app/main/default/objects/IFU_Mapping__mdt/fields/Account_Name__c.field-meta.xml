@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Name__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Account Name</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>NOVALAB IBERICA SAL (SPAIN)</fullName>
+                <default>true</default>
+                <label>NOVALAB IBERICA SAL (SPAIN)</label>
+            </value>
+            <value>
+                <fullName>PERRIGO ISRAEL AGENCIES LTD</fullName>
+                <default>false</default>
+                <label>PERRIGO ISRAEL AGENCIES LTD</label>
+            </value>
+            <value>
+                <fullName>Zkope Health Care (Belgium)</fullName>
+                <default>false</default>
+                <label>Zkope Health Care (Belgium)</label>
+            </value>
+            <value>
+                <fullName>A.IMPORT.CZ SPOL.S R.O.</fullName>
+                <default>false</default>
+                <label>A.IMPORT.CZ SPOL.S R.O.</label>
+            </value>
+            <value>
+                <fullName>NORDICINFU CARE AB (Finland)</fullName>
+                <default>false</default>
+                <label>NORDICINFU CARE AB (Finland)</label>
+            </value>
+            <value>
+                <fullName>HAMAD SALEH AL HOMAIZI</fullName>
+                <default>false</default>
+                <label>HAMAD SALEH AL HOMAIZI</label>
+            </value>
+            <value>
+                <fullName>ETHITECH PTY LTD</fullName>
+                <default>false</default>
+                <label>ETHITECH PTY LTD</label>
+            </value>
+            <value>
+                <fullName>NORDICINFU CARE AB (Norway)</fullName>
+                <default>false</default>
+                <label>NORDICINFU CARE AB (Norway)</label>
+            </value>
+            <value>
+                <fullName>JAFFAR PHARMACY</fullName>
+                <default>false</default>
+                <label>JAFFAR PHARMACY</label>
+            </value>
+            <value>
+                <fullName>Dinno Sante</fullName>
+                <default>false</default>
+                <label>Dinno Sante</label>
+            </value>
+            <value>
+                <fullName>AL AMAD DRUGSTORE</fullName>
+                <default>false</default>
+                <label>AL AMAD DRUGSTORE</label>
+            </value>
+            <value>
+                <fullName>EBN SINA MEDICAL</fullName>
+                <default>false</default>
+                <label>EBN SINA MEDICAL</label>
+            </value>
+            <value>
+                <fullName>CELKI MEDICAL COMPANY</fullName>
+                <default>false</default>
+                <label>CELKI MEDICAL COMPANY</label>
+            </value>
+            <value>
+                <fullName>Proglikemia Sp. Z o.o.</fullName>
+                <default>false</default>
+                <label>Proglikemia Sp. Z o.o.</label>
+            </value>
+            <value>
+                <fullName>SCIENTIFIC PHARMACY</fullName>
+                <default>false</default>
+                <label>SCIENTIFIC PHARMACY</label>
+            </value>
+            <value>
+                <fullName>NORDICINFU CARE AB (Sweden)</fullName>
+                <default>false</default>
+                <label>NORDICINFU CARE AB (Sweden)</label>
+            </value>
+            <value>
+                <fullName>ZKOPE HEALTH CARE</fullName>
+                <default>false</default>
+                <label>ZKOPE HEALTH CARE</label>
+            </value>
+            <value>
+                <fullName>THERAS LIFETECH S.R.L</fullName>
+                <default>false</default>
+                <label>THERAS LIFETECH S.R.L</label>
+            </value>
+            <value>
+                <fullName>NORDICINFU CARE AB (Denmark)</fullName>
+                <default>false</default>
+                <label>NORDICINFU CARE AB (Denmark)</label>
+            </value>
+            <value>
+                <fullName>GULF PHARMACEUTICAL INDUSTRIES (JULPHAR)</fullName>
+                <default>false</default>
+                <label>GULF PHARMACEUTICAL INDUSTRIES (JULPHAR)</label>
+            </value>
+            <value>
+                <fullName>AUSTRALASIAN MEDICAL &amp; SCIENTIFIC LTD</fullName>
+                <default>false</default>
+                <label>AUSTRALASIAN MEDICAL &amp; SCIENTIFIC LTD</label>
+            </value>
+            <value>
+                <fullName>PHARMANET DRUGSTORE</fullName>
+                <default>false</default>
+                <label>PHARMANET DRUGSTORE</label>
+            </value>
+            <value>
+                <fullName>NEW ZEALAND MEDICAL &amp; SCIENTIFIC</fullName>
+                <default>false</default>
+                <label>NEW ZEALAND MEDICAL &amp; SCIENTIFIC</label>
+            </value>
+            <value>
+                <fullName>CIGALAH GROUP WAREHOUSE</fullName>
+                <default>false</default>
+                <label>CIGALAH GROUP WAREHOUSE</label>
+            </value>
+            <value>
+                <fullName>MEDSALUS SAGLIK HIZMETLERI</fullName>
+                <default>false</default>
+                <label>MEDSALUS SAGLIK HIZMETLERI</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

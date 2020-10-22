@@ -1,0 +1,79 @@
+<aura:component implements="force:appHostable,force:hasRecordId,flexipage:availableForAllPageTypes" access="global" controller="ClsFinanceDetailsCon" >
+    <aura:attribute name="accept" type="List" />    
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="srcvalue" type="string" default="/CCImages/blank.png"/>
+	
+    <aura:attribute name="selectedValue" type="String" access="PRIVATE"/>
+    <aura:attribute name="selAddr" type="String" />
+    <aura:attribute name="mapAddr" type="Map"/>
+    <aura:attribute name="accName" type="String" />
+    <aura:attribute name="accountId" type="String" />
+    <aura:attribute name="cardType" type="String" />
+    <aura:attribute name="currISOCode" type="String" />
+    
+    
+    <aura:attribute name="recFD" type="Finance_Detail__c" default="{'sobjectType':'Finance_Detail__c'}"/>
+    
+   <aura:registerEvent name="myRefreshTable" type="c:LtngEvtRefreshTable"/> 
+   <aura:registerEvent name="CloseModal" type="c:LtngEvtCloseModal"/>
+    
+   <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>  
+   <aura:method name="submitCCFormData" action="{!c.submitCCFormData}">
+               
+   </aura:method>  
+   
+    
+    <aura:html tag="style">
+        .slds-modal__container {
+             width : 25% !important;
+             max-width : 25% !important;
+         }
+    </aura:html>    
+    <lightning:notificationsLibrary aura:id="notificationsLibrary"/>
+    <div class="slds-p-around_medium"> 
+    <lightning:recordEditForm objectApiName="Finance_Detail__c" >
+        <lightning:messages />
+        <div class="slds-grid slds-grid_vertical">
+              <div class="slds-col">
+                    <span><lightning:inputField fieldName="Name_on_Account__c"  type="text" aura:id="fd_CustName" required="true" value="{!v.accName}" messageWhenValueMissing="Enter Account Name" /></span>
+              </div>
+              <div class="slds-col">
+                <span>
+                 <div class="slds-grid slds-gutters">
+                      <div class="slds-col slds-size_10-of-12">
+                        <span><lightning:input fieldName="Expiry_Date__c" label="Card Number" class="field"  aura:id="fd_CardNum" required="true"                  
+                 onblur='{!c.checkCardType}' placeholder="Enter credit card number"  messageWhenPatternMismatch="Enter a valid credit card number" 
+                 pattern="^(\d{4}[- ]){3}\d{4}|\d{15-16}$" /></span>
+                      </div>
+                     
+                      <div class="slds-col slds-size_2-of-12" style="padding-top: 22px;">                          
+                        <img src="{!$Resource.CCImages + v.srcvalue}" aura:id="fd_CCImg" />
+                      </div>
+				</div> 
+                </span>
+                  
+              </div>
+            
+              <div class="slds-col">
+                <span> 
+                  <lightning:input fieldName="Expiry_Date__c" aura:id="fd_ExpDate" required="true" pattern="^(0[1-9]|1[0-2])\/([0-9]{4}|[0-9]{2})$" 
+                                   messageWhenPatternMismatch="Expiry date is not valid" label="Expiry MM/YY or MM/YYYY" placeholder="MM/YY or MM/YYYY" 
+                                   onblur='{!c.checkValidityOfExpDate}'   /> </span>
+              </div>              
+             
+              
+            <div class="slds-col">
+                <span><lightning:select aura:id="fd_CCAddress" value="{!v.selAddr}" onchange="{!c.handleAddrOnChange}" name="industryPicklist" label="Select a Billing address" required="true">
+                    <option value="">--None--</option>
+                    <aura:iteration items="{!v.mapAddr}" var="ind" indexVar="key">
+                        <option text="{!ind.value}" value="{!ind.key}" selected="{!ind.key==v.selAddr}" />
+                    </aura:iteration>
+                </lightning:select></span>
+           </div>
+          <div class="slds-col">
+          	<span><lightning:inputField fieldName="Primary__c" aura:id="fd_Primary" value="true"  /></span>
+          </div> 
+		</div>
+    </lightning:recordEditForm>
+    </div>
+</aura:component>

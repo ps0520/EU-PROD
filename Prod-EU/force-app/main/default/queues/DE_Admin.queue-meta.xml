@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>DE Admin</name>
+    <queueMembers>
+        <users>
+            <user>alen.sulejmanagic@dexcom.com.eu</user>
+            <user>andrea.seelig@dexcom.com.eu</user>
+            <user>cigdem.dumlupinar@dexcom.com.eu</user>
+            <user>dennis.schaefer@dexcom.com.eu</user>
+            <user>antonio.nhampule@dexcom.com.eu</user>
+            <user>kim.guentzel@dexcom.com.eu</user>
+            <user>nora.kuchler@dexcom.com.eu</user>
+            <user>norbert.klein@dexcom.com.eu</user>
+            <user>philipp.uhlenbrock@dexcom.com.eu</user>
+            <user>sjohnson@dexcom.com.eu</user>
+            <user>simeon.frank@dexcom.com.eu</user>
+            <user>wondwossen.tadesse@dexcom.com.eu</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

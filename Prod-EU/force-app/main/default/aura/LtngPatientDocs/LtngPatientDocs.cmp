@@ -1,0 +1,118 @@
+<aura:component controller="ClsDocumentTrackerCtrl" implements="force:hasRecordId,force:lightningQuickAction,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome" access="global" >
+	
+    <!-- Attributes -->
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="PDocId" type="String"/>
+    <aura:attribute name="accountId" type="String"/>
+    <aura:attribute name="acctRecId" type="String"/>
+    <aura:attribute name="PdocRecordId" type="String"/>
+    <aura:attribute name="oppId" type="String"/>
+    <aura:attribute name="docType" type="String" />
+    <aura:attribute name="docst" type="String" />
+    <aura:attribute name="docColtfrm" type="String" />
+    <aura:attribute name="eixstingDocs" type="String[]" />
+    
+    <aura:attribute name="docCF" type="Map"/>
+    <aura:attribute name="docStatus" type="Map"/>
+    <aura:attribute name="docTypes" type="Map"/>
+    
+    <aura:attribute name="doc_SD" type="date" />
+    <aura:attribute name="doc_RD" type="date" />
+    <aura:attribute name="today" type="Date" />
+	
+    
+    
+    <aura:attribute name="isEditMode" type="Boolean" default="false" />
+    <aura:attribute name="isSent" type="Boolean" default="false" />
+    <aura:attribute name="isSent2" type="Boolean" default="false" />
+    
+    <aura:attribute name="recCF" type="Patient_Document__c" default="{'sobjectType':'Patient_Document__c'}"/>
+
+   <!-- Attributes End-->
+    
+    <!-- Handlers & method -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler event="force:refreshView" action="{!c.doInit}" />
+    <aura:method name="submitCCFormData" action="{!c.submitCCFormData}"></aura:method>
+    <!--  Handlers End -->
+    
+    <!--  EventRegister -->
+    <aura:registerEvent name="myRefreshTable" type="c:LtngEvtRefreshTable"/> 
+    <aura:registerEvent name="CloseModal" type="c:LtngEvtCloseModal"/>
+    <!--  EventRegister End -->
+    
+        
+            <aura:html tag="style">
+                .slds-modal__container {
+                width : 25% !important;
+                max-width : 65% !important;
+                }
+            </aura:html> 
+            <div class="slds-grid slds-grid_vertical">
+            <div class="slds-col">
+                              <span><lightning:select aura:id="dc_Type" value="{!v.docType}"  
+                                                      name="typePicklist" 
+                                                      label="Select a Doc Type"
+                                                      messageWhenValueMissing="Select Doc Type"
+                                                      required="true">
+                                  <option value="">--None--</option>
+                                  <aura:iteration items="{!v.docTypes}" var="val" indexvar="key">
+                                      <option value="{!val.key}" selected="{!val.key==v.docType}">{!val.key}</option>
+                                  </aura:iteration>
+                                  
+                                  </lightning:select>
+                              </span>
+              </div>
+            <div class="slds-col">
+                 
+                              <span><lightning:select aura:id="dc_status" value="{!v.docst}"  
+                                                      name="typePicklist2" 
+                                                      label="Select a Status"
+                                                      messageWhenValueMissing="Select Doc Status"
+                                                      onchange="{!c.disableDates}"
+                                                      ><!-- required="true"  -->
+                                  <option value="">--None--</option>
+                                  <aura:iteration items="{!v.docStatus}" var="val" indexvar="key">
+                                      <option value="{!val.key}" selected="{!val.key==v.docst}">{!val.key}</option>
+                                  </aura:iteration>
+                                  
+                                  </lightning:select>
+                              </span>
+                          
+              </div>
+            <div class="slds-col">
+                 
+                              <span><lightning:select aura:id="dc_cf" value="{!v.docColtfrm}"  
+                                                      name="typePicklist3" 
+                                                      label="Collect From"
+                                                      messageWhenValueMissing="Select Collect From"
+                                                     ><!-- required="true" -->
+                                  <option value="">--None--</option>
+                                  <aura:iteration items="{!v.docCF}" var="val" indexvar="key">
+                                      <option value="{!val.key}" selected="{!val.key==v.docColtfrm}">{!val.key}</option>
+                                  </aura:iteration>
+                                  
+                                  </lightning:select>
+                              </span>
+                          
+              </div>
+            <div class="slds-col">
+                  
+                              <span>
+                                  <lightning:input aura:id="dc_Sndt" name="input1" label="Sent date" type="date"
+                                                   value="{!v.doc_SD}" dateStyle="short"
+                                                   disabled="{!v.isSent}"/>
+                              </span>
+                          
+              </div>
+            <div class="slds-col">
+                 
+                              <span>
+                                  <lightning:input aura:id="dc_rdt" name="input2" label="Received date" type="date"
+                                                   value="{!v.doc_RD}" dateStyle="short"
+                                                   disabled="{!v.isSent2}"/>
+                              </span>
+                         
+              </div>
+        </div>
+</aura:component>

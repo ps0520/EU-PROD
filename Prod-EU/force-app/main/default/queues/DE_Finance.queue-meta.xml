@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>DE Finance</name>
+    <queueMembers>
+        <users>
+            <user>andreas.reimche@dexcom.com.eu</user>
+            <user>bozhidar.nedyalkov@dexcom.com.eu</user>
+            <user>caroline.stoess@dexcom.com.eu</user>
+            <user>carsten.latz@dexcom.com.eu</user>
+            <user>dominik.schmid@dexcom.com.eu</user>
+            <user>franziska.bobsin@dexcom.com.eu</user>
+            <user>gemma.gowrie@dexcom.com.eu</user>
+            <user>jessica.israng@dexcom.com.eu</user>
+            <user>jilly.mckie@dexcom.com.eu</user>
+            <user>mariam.fahmi@dexcom.com.eu</user>
+            <user>robert.godfrey@dexcom.com.eu</user>
+            <user>sabine.schuh@dexcom.com.eu</user>
+            <user>sabrina.dauster@dexcom.com.eu</user>
+            <user>sabrina.leutheuser@dexcom.com.eu</user>
+            <user>susanne.kolb-schirmer@dexcom.com.eu</user>
+            <user>tobias.low@dexcom.com.eu</user>
+            <user>yasemin.kalsen@dexcom.com.eu</user>
+            <user>yeliz.selvili@dexcom.com.eu</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

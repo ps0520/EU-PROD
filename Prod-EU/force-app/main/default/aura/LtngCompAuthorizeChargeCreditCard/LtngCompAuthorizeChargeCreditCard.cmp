@@ -1,0 +1,27 @@
+<aura:component implements ="flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickActionWithoutHeader" 
+                access="global" controller="ClsOrderEntryHandler">
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="isLoading" type="Boolean" default="true"/>
+    <aura:attribute name="className" type="String"/>
+    <aura:attribute name="message" type="String"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <lightning:card>
+        <div class="slds-page-header" role="banner" style="margin-top: -7% !important; width: 112%!important; margin-left: -6%!important;">
+            <h1 class="slds-page-header__title slds-m-right_small slds-truncate slds-align-left">CC Charge and Activate</h1>
+        </div>
+        <p class="slds-p-horizontal_small" style="min-height:90px;">
+            <aura:if isTrue="{!v.isLoading}" >
+                <lightning:spinner alternativeText="Loading" size="small" variant="brand"/>
+            </aura:if>
+            <aura:if isTrue="{!v.message}"><br/><br/>
+                <div class="{!'slds-notify slds-notify_alert slds-theme_alert-texture '+v.className}" role="alert">
+                	{!v.message}
+                </div>
+            </aura:if>
+        </p>
+        <aura:set attribute="footer">
+            <div style="text-align: right;width: 106%;"><lightning:button label="Close" onclick="{!c.handleClose}" class="slds-m-top_medium" variant="brand" /> </div>
+        </aura:set>
+    </lightning:card>
+</aura:component>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_Primary_CC_Exist_For_CC_Pay_Term</fullName>
+    <active>true</active>
+    <description>If Payment Term is CC then the Primary CC should be associated to the customer</description>
+    <errorConditionFormula>AND(
+    NOT($Profile.Name = &quot;System Administrator&quot;),NOT($User.Alias = &quot;autoproc&quot;),
+    ISPICKVAL(Payment_Term__c, &apos;net0&apos;),  
+    ISBLANK(Account__r.Primary_Credit_Card__c) 
+)</errorConditionFormula>
+    <errorMessage>Account does not have any Primary Credit Card associated.</errorMessage>
+</ValidationRule>

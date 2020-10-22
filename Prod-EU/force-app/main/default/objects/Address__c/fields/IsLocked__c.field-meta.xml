@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsLocked__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Address needs to be locked when an Order is activated so that it is not updated.</description>
+    <externalId>false</externalId>
+    <label>Locked?</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

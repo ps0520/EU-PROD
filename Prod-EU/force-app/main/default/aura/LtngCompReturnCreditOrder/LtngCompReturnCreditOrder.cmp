@@ -1,0 +1,82 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" 
+                access="global" controller="ClsReturnCreditOrderCon" >
+    <lightning:notificationsLibrary aura:id="notifLib"/>
+    <aura:attribute name="CountryCode" type="String" default="GB" />
+    <aura:attribute name="OrderId" type="String" />
+    <aura:attribute name="data" type="Object"/>
+    <aura:attribute name="columns" type="List"/>
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="isError" type="boolean" />
+    <aura:attribute name="isErrorRR" type="boolean" />    
+    <aura:attribute name="errors" type="Object" default="[]"/>    
+    <aura:attribute name="draftValues" type="Object" default="[]"/>
+    <aura:attribute name="isSave" type="Boolean" default="false"/>
+    <aura:attribute name="autoSaveEnabled" type="Boolean" default="false"/>
+    <aura:attribute name="returnReasons" type="List" />
+    <aura:attribute name="changeIndex" type="Integer" />
+    <aura:attribute name="editedRecs" type="List" default="[]" />   
+    <aura:attribute name="errorMessage" type="String" default="" />
+    <aura:attribute name="notifMessage" type="String" default="" />
+    <aura:attribute name="RRCheck" type="Boolean" default="false"/>
+    <ltng:require styles="{!$Resource.multilineToastCSS}" />
+    
+	<aura:handler name="init" action="{!c.doInit}" value="{!this}" />
+    
+    <div class="slds-p-top_x-small">    
+    <!-- You must define keyField as 'Id' to save the record back in Salesforce 'onsave' attribute will executed when user clicks on save button -->
+    <lightning:card title="Return Products" iconName="standard:orders" class="slds-text-body_small slds-card_boundary slds-card__header">
+       <!--  <aura:set attribute="title">
+        	Return Products	&nbsp; <aura:if isTrue="{!v.isError}"><div class="slds-text-color_error">{!v.errorMessage}</div></aura:if>
+            <aura:if isTrue="{!!v.isError}"><div class="slds-text-color_success">{!v.notifMessage}</div></aura:if>
+    	</aura:set> -->
+        
+        <table style="table-layout: fixed; width: 100%;">
+        <tr><td>
+            <!-- 
+            <aura:if isTrue="{!v.isError}">
+               <section aria-label="Dialog title" aria-describedby="popover-body-id" class="slds-popover slds-nubbin_bottom-right" role="dialog">
+				<button class="slds-button slds-button_icon slds-button_icon slds-button_icon-small slds-float_right slds-popover__close" title="Close dialog">
+					<span class="slds-assistive-text">Close dialog</span>
+                </button>
+                <div id="popover-body-id" class="slds-popover__body">
+                	<p>Return quantity cannot be greater that available quantity. Data was not saved.</p>
+                </div>
+            </section>
+         	</aura:if> -->
+            
+            <!-- Error tag when return code is left blank 
+            <aura:if isTrue="{!v.isErrorRR}">
+                <div class="slds-p-left_xx-large">
+                    <div class="slds-p-left_xx-large">
+               <section aria-label="Dialog title" aria-describedby="popover-body-id" class="slds-popover slds-nubbin_bottom-right" role="dialog">				
+                <div id="popover-body-id" class="slds-popover__body">
+                	<p>When return quantity is specified, return reason cannot be blank. Data was not saved.</p>
+                </div>
+            	</section>
+                    </div>
+                </div>
+         	</aura:if> -->
+            
+        </td></tr>
+        <tr><td >
+        <lightning:datatable
+        	aura:id="dtRCO"
+            columns="{! v.columns }"
+            data="{! v.data }"
+            errors="{! v.errors }"                 
+            keyField="Id"            
+            hideCheckboxColumn="true"
+			draftValues="{! v.draftValues }"
+            onrowaction="{! c.handleRowAction }"
+            oncellchange="{! c.handleEditCellChange}"
+            onsave="{! c.handleSaveEdit}"
+            oncancel="{! c.handleCancelEdit}"
+            showRowNumberColumn='true'                
+                             
+             />
+        </td></tr>
+        </table>
+    </lightning:card>
+    </div>
+    
+</aura:component>

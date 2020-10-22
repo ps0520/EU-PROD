@@ -1,0 +1,142 @@
+<aura:component controller="ClsDocumentTrackerCtrl" implements="force:hasRecordId,force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId,force:lightningQuickAction" access="global" >
+	
+   <!-- Attributes -->
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="lstOfRequiredDoc" type="PDoc_To_Opportunity__c[]"/>
+    <aura:attribute name="PdocId" type="String"/>
+    <aura:attribute name="accountRecId" type="String"/>
+    <aura:attribute name="oppRecId" type="String"/>
+    
+    <aura:attribute name="recCFDetail" type="Patient_Document__c" default="{'sobjectType':'Patient_Document__c'}"/>
+	<aura:attribute name="isOpen" type="boolean" default="false"/>
+    <aura:attribute name="isStagePass" type="boolean" default="false"/>
+   <!-- Attributes End-->
+    
+   <!-- Handlers -->
+        
+   <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+     <aura:handler event="force:refreshView" action="{!c.doInit}" />
+   <!-- Handlers End-->
+   
+    <aura:registerEvent name="myRefreshTable" type="c:LtngEvtRefreshTable"/> 
+    <aura:handler name="myRefreshTable" event="c:LtngEvtRefreshTable" action="{!c.doInit}"/>  
+    <aura:handler name="CloseModal" event="c:LtngEvtCloseModal" action="{!c.handleCloseModal}"/>
+    
+    
+    <!-- Component 
+     <div class="slds-grid slds-wrap"> --> 
+	<lightning:card title="Patient Document Tracker" iconName="standard:document"> <!-- title="Patient Document Tracker" iconName="standard:document" -->
+		
+        <div class="slds-scrollable--y" style="height:150px;">
+		<table class="slds-table slds-table_cell-buffer slds-table_bordered">
+			<thead>
+				 <tr class="slds-line-height_reset">
+					<th class="slds-text-title_caps" scope="col">
+						<div class="slds-truncate" title="Account Name">Doc Type</div>
+					</th>
+					<th class="slds-text-title_caps" scope="col">
+						<div class="slds-truncate" title="Account Type">Status</div>
+					</th>
+					<th class="slds-text-title_caps" scope="col">
+						<div class="slds-truncate" title="Industry">Collect From</div>
+					</th>
+					<th class="slds-text-title_caps" scope="col">
+						<div class="slds-truncate" title="Rating">Sent Date</div>
+					</th>
+                    <th class="slds-text-title_caps" scope="col">
+						<div class="slds-truncate" title="Rating">Received Date</div>
+					</th>
+                    <th class="slds-text-title_caps" scope="col">
+						<div class="slds-truncate" title="Rating">Edit</div>
+					</th>
+                     <th class="slds-text-title_caps" scope="col">
+						<div class="slds-truncate" title="Rating">Delete</div>
+					</th>
+				</tr> 
+			</thead>
+			<tbody>
+                <aura:iteration items="{!v.lstOfRequiredDoc}" var="dc" indexVar="index"> 
+                     <tr>
+                         <!-- <c:LtngPatientDocs PdocRecordId="{!dc.Id}"></c:LtngPatientDocs>-->
+                       <td>
+                          
+                            <!--<span class="required">*</span> -->
+                            <ui:outputText value="{!dc.Patient_Document__r.Doc_Type__c}" />
+                        </td>
+                        <td>
+                            <ui:outputText value="{!dc.Patient_Document__r.Status__c}" />
+                        </td>
+                        <td>
+                            <ui:outputText value="{!dc.Patient_Document__r.Collect_From__c}" />
+                        </td>
+                        <td>
+                            <ui:outputText value="{!dc.Patient_Document__r.Sent_Date__c}" />
+                        </td>
+                        <td>
+                            <ui:outputText value="{!dc.Patient_Document__r.Received_Date__c}" />
+                         </td>
+                         <td>
+                             <lightning:buttonIcon  iconName="utility:edit" value="{!dc.Patient_Document__r.Id}" variant="bare" onclick="{!c.handleEdit }" alternativeText="Edit" />
+                         </td>
+                         <td>
+                             <lightning:buttonIcon  iconName="utility:delete" value="{!dc.Patient_Document__r.Id}" variant="bare" onclick="{!c.handleDelete }" alternativeText="Delete" />
+                         </td>
+                    </tr>
+                    
+                </aura:iteration>
+               
+			</tbody>
+		</table>
+            <div class="slds-p-bottom_x-small"></div> 
+            <aura:if isTrue="{!v.isStagePass}">
+                <div align="Center">
+                    <lightning:button variant="brand" label="Add Docs" title="Add Docs" onclick="{!c.addDocuments }" />
+                </div>
+            </aura:if>
+        </div>
+	</lightning:card>
+     <!-- </div> --> 
+   <aura:if isTrue="{!v.isOpen}">
+            
+            <!--###### MODAL BOX Start######--> 
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" 
+                     aria-modal="true" aria-describedby="modal-content-id-1" 
+                     class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <!-- ###### MODAL BOX HEADER Start ######-->
+                    <header class="slds-modal__header">
+                        <lightning:buttonIcon iconName="utility:close"
+                                              onclick="{! c.closeModel }"
+                                              alternativeText="close"
+                                              variant="bare-inverse" 
+                                              class="slds-modal__close"/>
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Add new Dococument</h2>
+                    </header>
+                    <!--###### MODAL BOX BODY Part Start######-->
+                    <div class="slds-modal__content slds-p-around_small" id="modal-content-id-1">
+                        <c:LtngPatientDocs aura:id="CMP_PatientDoc" PdocRecordId="{!v.PdocId}" oppId="{!v.oppRecId}" accountId="{!v.accountRecId}" ></c:LtngPatientDocs>
+                    </div>
+                    <!--###### MODAL BOX FOOTER Part Start ###### -->
+                    <footer class="slds-modal__footer">
+                        <lightning:button variant="brand" 
+                                          label="Save"
+                                          title="Submit and close form"
+                                          onclick="{!c.SubmitFormData }"/>
+                        
+                        <lightning:button variant="neutral" 
+                                          label="Close"
+                                          title="Cancel/Close"
+                                          onclick="{! c.closeModel }"/>
+                         
+                         
+                    </footer> 
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+            <!--###### MODAL BOX Part END Here ######-->
+            
+        </aura:if>
+    
+    
+	<!-- Component End-->
+</aura:component>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fund_Compact_Layout</fullName>
+    <fields>Name</fields>
+    <fields>Amount_Remaining__c</fields>
+    <fields>Sensor_Qty_Remaining__c</fields>
+    <fields>Transmitter_Qty_Remaining__c</fields>
+    <fields>Auth_End_Date__c</fields>
+    <fields>PO_Reference_Number__c</fields>
+    <fields>Auth_Start_Date__c</fields>
+    <fields>Transmitter_Qty_Limit__c</fields>
+    <fields>Receiver_Qty_Limit__c</fields>
+    <fields>Amount_Limit__c</fields>
+    <label>Fund Compact Layout</label>
+</CompactLayout>

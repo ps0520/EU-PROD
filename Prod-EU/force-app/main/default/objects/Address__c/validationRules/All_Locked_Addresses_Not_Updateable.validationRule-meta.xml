@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Locked_Addresses_Not_Updateable</fullName>
+    <active>true</active>
+    <description>If an Address is Locked, it should not be updated.</description>
+    <errorConditionFormula>AND( IsLocked__c,
+NOT(OR(
+$Profile.Name = &quot;IT System Support&quot;,
+$Profile.Name = &quot;System Administrator&quot;,
+AND($Profile.Name = &quot;Data Integrator&quot;, $User.Alias &lt;&gt; &quot;EADMI&quot;)
+)),
+OR(
+ISCHANGED(Account__c), ISCHANGED(Address_Line_1__c), ISCHANGED(Address_Line_2__c), ISCHANGED(Address_Line_3__c) , ISCHANGED(Business_Name__c), ISCHANGED(City__c), ISCHANGED(Country__c), ISCHANGED(First_Name__c), ISCHANGED(Last_Name__c), ISCHANGED(Postal_Code__c), ISCHANGED(Primary_Phone__c), ISCHANGED(RecordTypeId), ISCHANGED(State__c), ISCHANGED(Type__c)))</errorConditionFormula>
+    <errorMessage>Locked Address can&apos;t be changed.</errorMessage>
+</ValidationRule>

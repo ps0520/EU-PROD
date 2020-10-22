@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>DE CSR</name>
+    <queueMembers>
+        <users>
+            <user>alex.mignogna@dexcom.com.eu</user>
+            <user>alica.longolius@dexcom.com.eu</user>
+            <user>benjamin.bucher@dexcom.com.eu</user>
+            <user>christoph.baierl@dexcom.com.eu</user>
+            <user>enrica.geminiani@dexcom.com.eu</user>
+            <user>halime.ilhan@dexcom.com.eu</user>
+            <user>julia.hauffe@dexcom.com.eu</user>
+            <user>maximillian.teurich@dexcom.com.eu</user>
+            <user>michael.menzel@dexcom.com.eu</user>
+            <user>millaray.rivera@dexcom.com.eu</user>
+            <user>patrick.gruber@dexcom.com.eu</user>
+            <user>rene.kubler@dexcom.com.eu</user>
+            <user>sandra.winkelmann@dexcom.com.eu</user>
+            <user>sebastian.dll@dexcom.com.eu</user>
+            <user>sylvie.frey@dexcom.com.eu</user>
+            <user>verena.ppperl@dexcom.com.eu</user>
+            <user>veronika.vonkriegsheim@dexcom.com.eu</user>
+            <user>yvonne.stempel@dexcom.com.eu</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

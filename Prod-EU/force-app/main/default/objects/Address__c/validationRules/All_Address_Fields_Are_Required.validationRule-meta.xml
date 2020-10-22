@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Address_Fields_Are_Required</fullName>
+    <active>true</active>
+    <description>Rule to verify if all address fields are filled in when saving address record</description>
+    <errorConditionFormula>OR( ISBLANK(Address_Line_1__c ) 
+, ISBLANK( City__c ),ISBLANK( Postal_Code__c ),ISBLANK( TEXT(Country__c) ))</errorConditionFormula>
+    <errorMessage>Address Line 1, City,  Postal Code and Country are required.</errorMessage>
+</ValidationRule>

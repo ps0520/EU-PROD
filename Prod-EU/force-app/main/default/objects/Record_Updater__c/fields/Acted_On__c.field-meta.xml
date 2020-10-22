@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Acted_On__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>If the Record&apos;s action was completed. This is to be used to find out which actions already took place.</description>
+    <externalId>false</externalId>
+    <label>Acted On</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

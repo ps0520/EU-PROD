@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>AT_Inside_Sales_Can_See_All_AT_Leads</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>AT Inside Sales Can See All AT Leads</label>
+        <sharedTo>
+            <group>AT_Inside_Sales</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>AT Person Lead</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CA_Inside_Sales_Can_See_All_CA_Leads</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CA Inside Sales Can See All CA Leads</label>
+        <sharedTo>
+            <group>CA_Inside_Sales</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CA Person Lead</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CH_Inside_Sales_Can_See_All_CH_Leads</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CH Inside Sales Can See All CH Leads</label>
+        <sharedTo>
+            <group>CH_Inside_Sales</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CH Person Lead</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>DE_Inside_Sales_Can_See_All_DE_Leads</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>DE Inside Sales Can See All DE Leads</description>
+        <label>DE Inside Sales Can See All DE Leads</label>
+        <sharedTo>
+            <roleAndSubordinates>DE</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>DE Person Lead</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>GB_Inside_Sales_Can_See_All_UK_Leads</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>GB Inside Sales Can See All UK Leads</label>
+        <sharedTo>
+            <group>GB_Inside_Sales</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>GB Person Lead</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>IE_Inside_Sales_Can_See_All_IE_Leads</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>IE Inside Sales Can See All IE Leads</label>
+        <sharedTo>
+            <group>IE_Inside_Sales</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>IE Person Lead</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>SI_Inside_Sales_Can_See_All_SI_Leads</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Slovenia</description>
+        <label>SI Inside Sales Can See All SI Leads</label>
+        <sharedTo>
+            <roleAndSubordinates>SI</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>SI Person Lead</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

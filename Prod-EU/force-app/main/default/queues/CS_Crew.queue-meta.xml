@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>CS Crew</name>
+    <queueMembers>
+        <users>
+            <user>azd0219@dexcom.com.eu</user>
+            <user>francisco.ruedaskinsella@dexcom.com.eu</user>
+            <user>ignace.ankomah@dexcom.com.eu</user>
+            <user>ip0218@dexcom.com.eu</user>
+            <user>mxm0717@dexcom.com.eu</user>
+            <user>mxj0719@dexcom.com.eu</user>
+            <user>rxn0418@dexcom.com.eu</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Task</sobjectType>
+    </queueSobject>
+</Queue>

@@ -1,0 +1,6 @@
+<apex:page standardController="Opportunity">
+  <script language="javascript">
+       alert('{!$Label.New_Opportunity_Override}');
+       window.location.assign("/001/o");
+  </script>
+</apex:page>

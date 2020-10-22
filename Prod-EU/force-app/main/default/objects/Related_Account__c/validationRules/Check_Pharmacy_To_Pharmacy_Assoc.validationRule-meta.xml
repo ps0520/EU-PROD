@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_Pharmacy_To_Pharmacy_Assoc</fullName>
+    <active>true</active>
+    <description>Pharmacy can be associated to only Pharmacy</description>
+    <errorConditionFormula>OR(
+AND 
+(Child_Relation_Type__c = &apos;Pharmacy&apos;,
+ NOT(Parent_Relation_Type__c = &apos;Pharmacy&apos;)),
+AND 
+(NOT(Child_Relation_Type__c = &apos;Pharmacy&apos;),
+ Parent_Relation_Type__c = &apos;Pharmacy&apos;)
+)</errorConditionFormula>
+    <errorMessage>Pharmacy can be associated to only Pharmacy accounts.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,30 @@
+<aura:component controller="CtrlCanadianPayorMatrix" description="Canadian Payor Matrix"
+                implements="force:hasRecordId,lightning:utilityItem,flexipage:availableForAllPageTypes,force:lightningQuickAction" 
+                access="global">
+	<aura:attribute name="recordId" type="String"  />
+    <aura:attribute name="accountId" type="String"  />
+    <aura:attribute name="isAccRecKnown" type="Boolean" default="false" />
+    <aura:attribute name="isOppRec" type="Boolean" default="false" />
+    <!-- Handlers -->
+    <aura:handler name="init" value="{!this}" action="{! c.doInit}" />
+    <aura:handler name="change" value="{!v.recordId}"  action="{!c.doInit}"/>
+    <!-- aura:handler name="change" value="{!v.accountId}"  action="{!c.doInit}"/ -->
+    
+   
+    <!-- Body of the Component -->
+    <aura:if isTrue="{! v.isAccRecKnown &amp;&amp; v.isOppRec}">
+    	<c:LtngCompCanadianPayorMatrix aura:id="eligibilityid" accountId="{!v.accountId}"/>
+      <aura:set attribute="else">
+            <aura:if isTrue="{! !(v.isOppRec) }" >
+                  <p class="errormsg ">
+                      This Utility is valid for Opportunity Record Pages Only
+                  </p>
+			   <aura:set attribute="else">
+                   <p class="errormsg ">
+                      Payor Account is not known. Can't display Payor Matrix.
+                  </p>
+               </aura:set>
+            </aura:if>
+      </aura:set> 
+    </aura:if>    	
+</aura:component>

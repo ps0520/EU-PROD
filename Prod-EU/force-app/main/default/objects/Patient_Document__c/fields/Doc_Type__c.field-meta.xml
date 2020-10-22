@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Doc_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Doc Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>PIAF</fullName>
+                <default>false</default>
+                <label>PIAF</label>
+            </value>
+            <value>
+                <fullName>CMN</fullName>
+                <default>false</default>
+                <label>CMN</label>
+            </value>
+            <value>
+                <fullName>T1D Note</fullName>
+                <default>false</default>
+                <label>T1D Note</label>
+            </value>
+            <value>
+                <fullName>Claim Form</fullName>
+                <default>false</default>
+                <label>Claim Form</label>
+            </value>
+            <value>
+                <fullName>A1c</fullName>
+                <default>false</default>
+                <label>A1c</label>
+            </value>
+            <value>
+                <fullName>BG Logs</fullName>
+                <default>false</default>
+                <label>BG Logs</label>
+            </value>
+            <value>
+                <fullName>CGM Quest</fullName>
+                <default>false</default>
+                <label>CGM Quest</label>
+            </value>
+            <value>
+                <fullName>LIC</fullName>
+                <default>false</default>
+                <label>LIC</label>
+            </value>
+            <value>
+                <fullName>Pregnancy Rx</fullName>
+                <default>false</default>
+                <label>Pregnancy Rx</label>
+            </value>
+            <value>
+                <fullName>Narrative Letter</fullName>
+                <default>false</default>
+                <label>Narrative Letter</label>
+            </value>
+            <value>
+                <fullName>ODSP Info Form</fullName>
+                <default>false</default>
+                <label>ODSP Info Form</label>
+            </value>
+            <value>
+                <fullName>NIHB Claim Form</fullName>
+                <default>false</default>
+                <label>NIHB Claim Form</label>
+            </value>
+            <value>
+                <fullName>NIHB Estimate</fullName>
+                <default>false</default>
+                <label>NIHB Estimate</label>
+            </value>
+            <value>
+                <fullName>Prior-Auth Form</fullName>
+                <default>false</default>
+                <label>Prior-Auth Form</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

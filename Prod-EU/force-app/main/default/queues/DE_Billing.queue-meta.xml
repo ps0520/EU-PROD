@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>DE Billing</name>
+    <queueMembers>
+        <users>
+            <user>anja.fuhrmann@dexcom.com.eu</user>
+            <user>aurelia.moldovan@dexcom.com.eu</user>
+            <user>dominik.schmid@dexcom.com.eu</user>
+            <user>evi.miriam@dexcom.com.eu</user>
+            <user>gemma.gowrie@dexcom.com.eu</user>
+            <user>jan.rupprecht@dexcom.com.eu</user>
+            <user>jasmina.skaramuca@dexcom.com.eu</user>
+            <user>jeannaine.springer@dexcom.com.eu</user>
+            <user>jilly.mckie@dexcom.com.eu</user>
+            <user>lisa.meyer@dexcom.com.eu</user>
+            <user>michael.oberhaeusser@dexcom.com.eu</user>
+            <user>rabil.karbo@dexcom.com.eu</user>
+            <user>robert.godfrey@dexcom.com.eu</user>
+            <user>sabine.schuh@dexcom.com.eu</user>
+            <user>sascha.wiedersich@dexcom.com.eu</user>
+            <user>susanne.kolb-schirmer@dexcom.com.eu</user>
+            <user>tamara.hoffmann@dexcom.com.eu</user>
+            <user>tk0917@dexcom.com.eu</user>
+            <user>yeliz.selvili@dexcom.com.eu</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

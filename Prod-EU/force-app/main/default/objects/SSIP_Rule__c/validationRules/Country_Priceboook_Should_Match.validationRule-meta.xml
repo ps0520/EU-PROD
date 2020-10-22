@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Country_Priceboook_Should_Match</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+AND(
+ISPICKVAL(Country__c,&quot;United Kingdom&quot;),
+NOT(BEGINS( Price_Book__r.Name , &quot;UK&quot;))),
+AND(
+ISPICKVAL(Country__c,&quot;Ireland&quot;),
+NOT(BEGINS( Price_Book__r.Name , &quot;IE&quot;)))
+
+)</errorConditionFormula>
+    <errorDisplayField>Price_Book__c</errorDisplayField>
+    <errorMessage>Please select the country related pricebook</errorMessage>
+</ValidationRule>

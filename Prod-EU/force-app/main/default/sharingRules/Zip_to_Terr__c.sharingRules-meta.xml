@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>AT_Inside_Sales_Can_See_All_AT_Zip_to_Terrs</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>AT Inside Sales Can See All AT Zip to Terrs</description>
+        <label>AT Inside Sales Can See All AT Zip to Terrs</label>
+        <sharedTo>
+            <roleAndSubordinates>AT</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>Country__c</field>
+            <operation>equals</operation>
+            <value>Austria</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CA_Inside_Sales_Can_See_All_CA_Zip_to_Terr</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>CA Inside Sales Can See All CA Zip to Terr</label>
+        <sharedTo>
+            <roleAndSubordinates>CA</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>Country__c</field>
+            <operation>equals</operation>
+            <value>Canada</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CH_Inside_Sales_Can_See_All_CH_Zip_to_Terrs</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>CH Inside Sales Can See All CH Zip to Terrs</description>
+        <label>CH Inside Sales Can See All CH Zip to Terrs</label>
+        <sharedTo>
+            <roleAndSubordinates>CH</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>Country__c</field>
+            <operation>equals</operation>
+            <value>Liechtenstein,Switzerland</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>DE_Inside_Sales_Can_See_All_DE_Zip_to_Terrs</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>DE Inside Sales Can See All DE Zip to Terrs</description>
+        <label>DE Inside Sales Can See All DE Zip to Terrs</label>
+        <sharedTo>
+            <roleAndSubordinates>DE</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>Country__c</field>
+            <operation>equals</operation>
+            <value>Germany</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>UK_Inside_Sales_Can_See_All_GB_Zip_to_Terrs</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Users who are assigned to UK Role can see all accounts under United Kingdom and Ireland</description>
+        <label>UK Inside Sales Can See All GB Zip to Terrs</label>
+        <sharedTo>
+            <roleAndSubordinates>UK</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>Country__c</field>
+            <operation>equals</operation>
+            <value>United Kingdom,Ireland</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

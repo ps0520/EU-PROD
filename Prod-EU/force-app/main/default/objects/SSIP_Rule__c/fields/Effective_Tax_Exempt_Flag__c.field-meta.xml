@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Effective_Tax_Exempt_Flag__c</fullName>
+    <description>If Rule has Fund associated then take tax exempt flag from Fund&apos;s Payor else
+If Rule has Payor associated then take Payor&apos;s tax exempt flag else
+If Rule has first order, which has Payor association then take Payor&apos;s tax exempt flag else
+Take current account&apos;s exempt flag</description>
+    <externalId>false</externalId>
+    <formula>IF((ISPICKVAL(Is_Funded__c, &apos;True&apos;) &amp;&amp; NOT(ISBLANK(Account__r.Fund__c))), Account__r.Fund__r.Payor__r.Tax_Exempt__c,
+IF((ISPICKVAL(Payor_Exist__c, &apos;True&apos;) &amp;&amp; NOT(ISBLANK(Account__r.Payor__c))), Account__r.Payor__r.Tax_Exempt__c,
+IF(NOT(ISBLANK(First_Order__c)) &amp;&amp; NOT(ISBLANK(First_Order__r.Payor__c)), First_Order__r.Payor__r.Tax_Exempt__c, Account__r.Tax_Exempt__c
+)))</formula>
+    <label>Effective Tax Exempt Flag</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

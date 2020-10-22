@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SI_Zip_Should_Be_4_Chars_In_Length</fullName>
+    <active>true</active>
+    <description>Zip cannot be more or less than 4 characters in Length for Slovenia</description>
+    <errorConditionFormula>AND(
+	TEXT(Country__c) = &apos;Slovenia&apos;, 
+	OR (LEN(Postal_Code__c) &gt; 4, LEN(Postal_Code__c) &lt; 4)  
+)</errorConditionFormula>
+    <errorMessage>Postal Code should be 4 chars in length.</errorMessage>
+</ValidationRule>

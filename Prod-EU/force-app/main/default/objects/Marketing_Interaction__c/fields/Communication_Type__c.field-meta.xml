@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Communication_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Communication Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CA - Customer Onboarding</fullName>
+                <default>false</default>
+                <label>CA - Customer Onboarding</label>
+            </value>
+            <value>
+                <fullName>CA - Product Onboarding - G5</fullName>
+                <default>false</default>
+                <label>CA - Product Onboarding - G5</label>
+            </value>
+            <value>
+                <fullName>CA - Reorder Reminder - G5</fullName>
+                <default>false</default>
+                <label>CA - Reorder Reminder - G5</label>
+            </value>
+            <value>
+                <fullName>CA - Product Onboarding - G6</fullName>
+                <default>false</default>
+                <label>CA - Product Onboarding - G6</label>
+            </value>
+            <value>
+                <fullName>CA - Reorder Reminder - G6 Starter Kit</fullName>
+                <default>false</default>
+                <label>CA - Reorder Reminder - G6 Starter Kit</label>
+            </value>
+            <value>
+                <fullName>CA - Subscription Renewal - Signature</fullName>
+                <default>false</default>
+                <label>CA - Subscription Renewal - Signature</label>
+            </value>
+            <value>
+                <fullName>CA - Subscription Renewal - Auto</fullName>
+                <default>false</default>
+                <label>CA - Subscription Renewal - Auto</label>
+            </value>
+            <value>
+                <fullName>CA - Subscription Upsell - G6</fullName>
+                <default>false</default>
+                <label>CA - Subscription Upsell - G6</label>
+            </value>
+            <value>
+                <fullName>UKIE - Customer Onboarding - G6</fullName>
+                <default>false</default>
+                <label>UKIE - Customer Onboarding - G6</label>
+            </value>
+            <value>
+                <fullName>UKIE - Customer Review</fullName>
+                <default>false</default>
+                <label>UKIE - Customer Review</label>
+            </value>
+            <value>
+                <fullName>UKIE - Warrior Recruitment</fullName>
+                <default>false</default>
+                <label>UKIE - Warrior Recruitment</label>
+            </value>
+            <value>
+                <fullName>UKIE - Subscription Renewal - G6</fullName>
+                <default>false</default>
+                <label>UKIE - Subscription Renewal - G6</label>
+            </value>
+            <value>
+                <fullName>UKIE - Subscription Upsell - G6</fullName>
+                <default>false</default>
+                <label>UKIE - Subscription Upsell - G6</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,46 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId" access="global" controller="ClsFinanceDetailsCon">
+	
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="isValid" type="boolean" default="false"/>
+    <aura:attribute name="isInValid" type="boolean" default="false"/>
+    <aura:attribute name="isAlreadyValidated" type="boolean" default="false"/>
+    <aura:attribute name="VatNum" type="string" default=""/>
+    
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}" />
+    
+    <div class="slds-p-top_xxx-small">
+    <lightning:card title="VAT Validation" iconName="action:add_relationship" >
+    	
+        <lightning:recordEditForm objectApiName="Account" >
+                 <div class="slds-grid slds-gutters">
+                     <div class="slds-col slds-size_1-of-12" style="padding-top: 15px;">
+                         <aura:if isTrue="{!v.isValid}">
+                      		<lightning:icon iconName="action:approval" size="small" alternativeText="Validated" />
+                         </aura:if>
+                      </div>
+                      <div class="slds-col slds-size_7-of-12">
+     <lightning:input fieldName="Tax_Registration_Number__c" label="VAT Number" class="field"  aura:id="fd_VATNum" required="true" 
+                      value="{!v.VatNum}" placeholder="Enter VAT Number" 		
+         />
+                      </div>
+                      <div class="slds-col slds-size_4-of-12" style="padding-top: 22px;">                          
+                      	<lightning:button variant="brand" label="Add/Update" title="Add New VAT #" onclick="{! c.submitVAT }"/>
+                      </div>
+				</div>
+            <aura:if isTrue="{!v.isInValid}">
+                <ui:message title="Error" severity="error" closable="false">
+                    VAT # could not be validated.
+                </ui:message>
+            </aura:if>
+            <aura:if isTrue="{!v.isAlreadyValidated}">
+                <ui:message title="Already Validated" severity="info" closable="true">
+                    VAT # is already validated.
+                </ui:message>
+            </aura:if>
+            
+                <lightning:messages />
+        </lightning:recordEditForm>
+       
+    </lightning:card>        
+    </div>
+</aura:component>

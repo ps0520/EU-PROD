@@ -1,0 +1,74 @@
+<!-- Function: DocuSign template selection tool needs to be launched from Opportunity/Account page.
+            Tool needs to be dynamic so there is 1 version for both opportunity and account.
+            Tool needs to context aware of page from which it is launched. 
+            This tool dynamically queries opportunity/account fields and presents a list of DocuSign templates that are applicable for a record.
+            A custom meta data setting named DocuSign_Templates__mdt needs to be set up that stores a list of applicable docusign templates for opportunity/account.
+            End user using this tool sees a a drop down list of DocuSign templates that are applicable to that specific record from which this tool is launched.
+            This list is driven by a custom setting DocuSign_Templates__mdt.
+-->
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId,force:hasSObjectName,force:lightningQuickAction" 
+                Controller="CtrlDocuSignTemplateSel">
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="entityId" type="String"/>
+    <aura:attribute name="recepientId" type="String"/>
+    <aura:attribute name="recordTypeId" type="String"/>
+    <aura:attribute name="sObjectName" type="String" />
+    <aura:attribute name="sObjectRecordName" type="String" />
+    <aura:attribute name="optTemplates" type="List" />
+    <aura:attribute name="selectedTemplate" type="String"/>
+	<aura:attribute name="data" type="Object" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <!-- PAGE HEADER -->
+    <lightning:layout class="slds-page-header slds-page-header--object-home">
+        <lightning:layoutItem>
+            <lightning:icon iconName="standard:scan_card" alternativeText="{!v.sObjectRecordName}"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem padding="horizontal-small">
+            <div class="page-section page-header">
+                <h1 class="slds-text-heading--label">{!v.sObjectRecordName}</h1>
+                <h2 class="slds-text-heading--medium">Select DocuSign Template</h2>
+            </div>
+        </lightning:layoutItem>
+    </lightning:layout>
+    <!-- / PAGE HEADER -->
+    <!-- NEW Template FORM -->
+    <lightning:layout>
+        <lightning:layoutItem padding="around-small" flexibility="grow">
+        
+                <!-- CREATE NEW EXPENSE -->
+    <div aria-labelledby="newexpenseform">
+        <!-- BOXED AREA -->
+        
+  
+        <!-- CREATE NEW EXPENSE FORM -->
+        <form class="slds-form--stacked">
+           
+            <lightning:input aura:id="tf_recepientName" label="Recepient Name" disabled="true"  /> 
+            <lightning:input aura:id="tf_recepientEmail" label="Recepient Email" required="true" />
+            
+            
+           <lightning:select name="selTemplate" label="Template" aura:id="tf_selTemplate" value="{!v.selectedTemplate}" onchange="{! c.onselTmpChange }"  >
+                <aura:iteration var="option" items="{! v.optTemplates }">
+            		<option value="{! option.value }">{! option.label }</option>
+        		</aura:iteration>
+    		</lightning:select>
+            <lightning:input type="text" aura:id="tf_EmailSubject" label="Email Subject" name="emailSubject" />
+            <lightning:textarea aura:id="tf_EmailMsg" label="Email Message" name="emailMsg" />
+           
+            <div class="slds-align_absolute-center" style="height:3rem">
+                <lightning:button label="Send With DocuSign" aura:id="tf_SendDSButton"
+                 variant="brand" disabled="true" onclick="{!c.handleClickSendDS}" />
+            </div>
+        </form>
+        <!-- / CREATE NEW EXPENSE FORM -->
+  
+     
+      <!-- / BOXED AREA -->
+    </div>
+    <!-- / CREATE NEW EXPENSE -->
+            
+        </lightning:layoutItem>
+    </lightning:layout>
+    <!-- / NEW Template FORM -->
+</aura:component>

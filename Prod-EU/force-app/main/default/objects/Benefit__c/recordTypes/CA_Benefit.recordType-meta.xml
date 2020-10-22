@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CA_Benefit</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>CA_Benefit_Compact_Page</compactLayoutAssignment>
+    <description>Benefit for Canada</description>
+    <label>CA Benefit</label>
+    <picklistValues>
+        <picklist>Benefit_Hierarchy__c</picklist>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Primary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Secondary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tertiary</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CA_Benefit_Plan_Year_Type__c</picklist>
+        <values>
+            <fullName>Benefit Year</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plan Year</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Country__c</picklist>
+        <values>
+            <fullName>Canada</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Ireland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Luxembourg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United Kingdom</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Insurance_Holder_s_Relationship__c</picklist>
+        <values>
+            <fullName>Domestic Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guardian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Self</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spouse</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Prior_Auth_Denied_or_Approved__c</picklist>
+        <values>
+            <fullName>APPROVED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DENIED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Applicable</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Review_Reason__c</picklist>
+        <values>
+            <fullName>Approval to Rejection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejection to Approval</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

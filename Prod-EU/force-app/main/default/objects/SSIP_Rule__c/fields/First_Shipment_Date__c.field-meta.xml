@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>First_Shipment_Date__c</fullName>
+    <description>Date when the first shipment needs to happen for this Schedule. It cam be immediate or in the future and should fall between the Rule Start and End date.</description>
+    <encryptionScheme>None</encryptionScheme>
+    <externalId>false</externalId>
+    <inlineHelpText>Date should be within the Rule Start Date and Rule End Date (if applicable). This date is set with the first order is shipped. Setting this date will create the Schedules.</inlineHelpText>
+    <label>First Shipment Date</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

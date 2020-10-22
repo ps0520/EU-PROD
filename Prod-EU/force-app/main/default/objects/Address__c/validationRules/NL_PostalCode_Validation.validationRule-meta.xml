@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NL_PostalCode_Validation</fullName>
+    <active>false</active>
+    <description>Postal Code validation for Netherlands.</description>
+    <errorConditionFormula>AND(NOT($Profile.Name = &quot;System Administrator&quot;),NOT($User.Alias = &quot;autoproc&quot;),
+BEGINS(RecordType.DeveloperName, &apos;NL&apos;),
+NOT(ISBLANK( Postal_Code__c)),
+NOT(REGEX(Postal_Code__c, &apos;[0-9]{4}s?[A-Z]{2}&apos;))
+/*NOT(REGEX(Postal_Code__c, &apos;(\\d{4})\\s*([A-Z]{2})&apos;)) */
+)</errorConditionFormula>
+    <errorMessage>Invalid Postal Code. It should be like 3072 DB</errorMessage>
+</ValidationRule>

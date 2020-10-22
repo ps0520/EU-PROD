@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Shipping_Method__c</fullName>
+    <description>Shipping Method will be defaulted based on the country default value.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Value can be overridden only for this schedule. 
+Make sure all other product schedules that will be shipped out on the same day for this account is also chosen the corresponding Shipping method.</inlineHelpText>
+    <label>Shipping Method</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Shipping_Method</valueSetName>
+    </valueSet>
+</CustomField>
